@@ -5,6 +5,12 @@ export default function NavBar() {
             <Link href="/">
                 <a>Home</a>
             </Link>
+            <Link href="/explorer">
+                <a>Explorer</a>
+            </Link>
+            <Link href="/chats">
+                <a>Group Chats</a>
+            </Link>
         </nav>
     )
 }
