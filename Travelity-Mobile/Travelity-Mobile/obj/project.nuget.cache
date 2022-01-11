@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "+O2IPncfKic0fp0/kx7E5rD9PjguWtT+jnyg6TZtIdcZV/0PauXBrWelS6g/PRi948M5LJeFZPbIMymsl5z+dg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\msh\\source\\repos\\Slash1y\\Travelity\\Travelity-Mobile\\Travelity-Mobile\\Travelity-Mobile.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\msh\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\msh\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\msh\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\msh\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",
+    "C:\\Users\\msh\\.nuget\\packages\\xamarin.forms\\5.0.0.2196\\xamarin.forms.5.0.0.2196.nupkg.sha512"
+  ],
+  "logs": []
+}
