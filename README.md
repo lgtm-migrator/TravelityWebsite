@@ -23,3 +23,6 @@ The website is created using [![Vue.js](https://img.shields.io/badge/vuejs-%2335
 
 ### Mobile App
 The mobile app is created using [![Xamarin](https://img.shields.io/badge/Xamarin-3199DC?style=for-the-badge&logo=xamarin&logoColor=white)](https://dotnet.microsoft.com/en-us/apps/xamarin), and we use a [![IOS](https://img.shields.io/badge/iOS-000000?style=for-the-badge&logo=ios&logoColor=white)](https://www.apple.com/ios/) and [![Android](https://img.shields.io/badge/Android-000000?style=for-the-badge&logo=android&logoColor=white)](https://developer.android.com/index.html) emulator for both platforms.
+
+### Database
+The database will use [![MicrosoftSQLServer](https://img.shields.io/badge/Microsoft%20SQL%20Sever-CC2927?style=for-the-badge&logo=microsoft%20sql%20server&logoColor=white)](https://www.microsoft.com/da-dk/sql-server?rtc=1) and use a panel to access and look inside the database it is going to be run using [![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)](https://www.docker.com).
