@@ -26,3 +26,6 @@ The mobile app is created using [![Xamarin](https://img.shields.io/badge/Xamarin
 
 ### Database
 The database will use [![MicrosoftSQLServer](https://img.shields.io/badge/Microsoft%20SQL%20Sever-CC2927?style=for-the-badge&logo=microsoft%20sql%20server&logoColor=white)](https://www.microsoft.com/da-dk/sql-server?rtc=1) and use a panel to access and look inside the database it is going to be run using [![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)](https://www.docker.com).
+
+### Backend
+Backend is built on using [![Swagger](https://img.shields.io/badge/-Swagger-%23Clojure?style=for-the-badge&logo=swagger&logoColor=white)](https://swagger.io) and using ASP.NET Core Web Api and Entity Framework Core.
