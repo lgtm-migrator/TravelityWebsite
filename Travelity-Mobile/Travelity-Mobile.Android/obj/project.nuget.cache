@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "jm1wXpK+RWANQ7RqKiyuN7Wz0sh8Gi+gI+ZU0BPwPiuhy/wU9GBi0EifddoupzNwsFyoyGZjiDmUAPQE2o41AQ==",
+  "dgSpecHash": "xCEEZOF7hLxf7+t1JyeEP6KS/8+gRQvhe9Q8jdEgvJTYHebJIqaR7rRlaXiEu2PGw6tVTJ8tZOfFAK0eo9dfmw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\msh\\source\\repos\\Slash1y\\Travelity\\Travelity-Mobile\\Travelity-Mobile.Android\\Travelity-Mobile.Android.csproj",
+  "projectFilePath": "C:\\Users\\msh\\Source\\Repos\\Slash1y\\Travelity\\Travelity-Mobile\\Travelity-Mobile.Android\\Travelity-Mobile.Android.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\msh\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Users\\msh\\.nuget\\packages\\xamarin.androidx.activity\\1.2.4.1\\xamarin.androidx.activity.1.2.4.1.nupkg.sha512",

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\msh\\source\\repos\\Slash1y\\Travelity\\Travelity-Mobile\\Travelity-Mobile\\Travelity-Mobile.csproj": {}
+    "C:\\Users\\msh\\Source\\Repos\\Slash1y\\Travelity\\Travelity-Mobile\\Travelity-Mobile\\Travelity-Mobile.csproj": {}
   },
   "projects": {
-    "C:\\Users\\msh\\source\\repos\\Slash1y\\Travelity\\Travelity-Mobile\\Travelity-Mobile\\Travelity-Mobile.csproj": {
+    "C:\\Users\\msh\\Source\\Repos\\Slash1y\\Travelity\\Travelity-Mobile\\Travelity-Mobile\\Travelity-Mobile.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\msh\\source\\repos\\Slash1y\\Travelity\\Travelity-Mobile\\Travelity-Mobile\\Travelity-Mobile.csproj",
+        "projectUniqueName": "C:\\Users\\msh\\Source\\Repos\\Slash1y\\Travelity\\Travelity-Mobile\\Travelity-Mobile\\Travelity-Mobile.csproj",
         "projectName": "Travelity-Mobile",
-        "projectPath": "C:\\Users\\msh\\source\\repos\\Slash1y\\Travelity\\Travelity-Mobile\\Travelity-Mobile\\Travelity-Mobile.csproj",
+        "projectPath": "C:\\Users\\msh\\Source\\Repos\\Slash1y\\Travelity\\Travelity-Mobile\\Travelity-Mobile\\Travelity-Mobile.csproj",
         "packagesPath": "C:\\Users\\msh\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\msh\\source\\repos\\Slash1y\\Travelity\\Travelity-Mobile\\Travelity-Mobile\\obj\\",
+        "outputPath": "C:\\Users\\msh\\Source\\Repos\\Slash1y\\Travelity\\Travelity-Mobile\\Travelity-Mobile\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

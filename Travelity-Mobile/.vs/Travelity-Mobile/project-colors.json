@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "a8b3ec64-6113-442d-a68f-74f69c83de78": {
+      "ProjectGuid": "a8b3ec64-6113-442d-a68f-74f69c83de78",
+      "DisplayName": "Travelity-Mobile",
+      "ColorIndex": 0
+    },
+    "9b059190-2779-4187-bc07-95f116593fde": {
+      "ProjectGuid": "9b059190-2779-4187-bc07-95f116593fde",
+      "DisplayName": "Travelity-Mobile.Android",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}
