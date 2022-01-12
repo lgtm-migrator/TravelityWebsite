@@ -1,4 +1,5 @@
 ﻿using System;
+using Travelity.Views;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -10,7 +11,12 @@ namespace Travelity
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+
+            MainPage = new AppShell()
+            {
+                
+            };
+
         }
 
         protected override void OnStart()
