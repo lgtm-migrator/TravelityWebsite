@@ -3,7 +3,7 @@
     <v-row class="text-center">
       <v-col cols="12">
         <v-img
-          :src="require('../assets/logo.svg')"
+          :src="logo"
           class="my-3"
           contain
           height="200"
@@ -12,8 +12,10 @@
 
       <v-col class="mb-4">
         <h1 class="display-2 font-weight-bold mb-3">
-          Welcome to Vuetify
+          <div>Welcome to the Vuetify 3 Alpha</div>
         </h1>
+
+          <small>Vite Preview</small>
 
         <p class="subheading font-weight-regular">
           For help and collaboration with other Vuetify developers,
@@ -29,7 +31,7 @@
         class="mb-5"
         cols="12"
       >
-        <h2 class="headline font-weight-bold mb-3">
+        <h2 class="headline font-weight-bold mb-5">
           What's next?
         </h2>
 
@@ -50,7 +52,7 @@
         class="mb-5"
         cols="12"
       >
-        <h2 class="headline font-weight-bold mb-3">
+        <h2 class="headline font-weight-bold mb-5">
           Important Links
         </h2>
 
@@ -71,7 +73,7 @@
         class="mb-5"
         cols="12"
       >
-        <h2 class="headline font-weight-bold mb-3">
+        <h2 class="headline font-weight-bold mb-5">
           Ecosystem
         </h2>
 
@@ -92,6 +94,8 @@
 </template>
 
 <script>
+import logo from '../assets/logo.svg'
+
 export default {
   name: 'HelloWorld',
 
@@ -99,53 +103,50 @@ export default {
     ecosystem: [
       {
         text: 'vuetify-loader',
-        href: 'https://github.com/vuetifyjs/vuetify-loader'
+        href: 'https://github.com/vuetifyjs/vuetify-loader',
       },
       {
         text: 'github',
-        href: 'https://github.com/vuetifyjs/vuetify'
+        href: 'https://github.com/vuetifyjs/vuetify',
       },
       {
         text: 'awesome-vuetify',
-        href: 'https://github.com/vuetifyjs/awesome-vuetify'
-      }
+        href: 'https://github.com/vuetifyjs/awesome-vuetify',
+      },
     ],
     importantLinks: [
       {
-        text: 'Documentation',
-        href: 'https://vuetifyjs.com'
-      },
-      {
         text: 'Chat',
-        href: 'https://community.vuetifyjs.com'
+        href: 'https://community.vuetifyjs.com',
       },
       {
         text: 'Made with Vuetify',
-        href: 'https://madewithvuejs.com/vuetify'
+        href: 'https://madewithvuejs.com/vuetify',
       },
       {
         text: 'Twitter',
-        href: 'https://twitter.com/vuetifyjs'
+        href: 'https://twitter.com/vuetifyjs',
       },
       {
         text: 'Articles',
-        href: 'https://medium.com/vuetify'
-      }
+        href: 'https://medium.com/vuetify',
+      },
     ],
+    logo,
     whatsNext: [
       {
         text: 'Explore components',
-        href: 'https://vuetifyjs.com/components/api-explorer'
+        href: 'https://vuetifyjs.com',
       },
       {
-        text: 'Select a layout',
-        href: 'https://vuetifyjs.com/getting-started/pre-made-layouts'
+        text: 'Roadmap',
+        href: 'https://vuetifyjs.com/introduction/roadmap/',
       },
       {
         text: 'Frequently Asked Questions',
-        href: 'https://vuetifyjs.com/getting-started/frequently-asked-questions'
-      }
-    ]
-  })
+        href: 'https://vuetifyjs.com/getting-started/frequently-asked-questions',
+      },
+    ],
+  }),
 }
 </script>
