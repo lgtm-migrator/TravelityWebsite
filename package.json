@@ -10,6 +10,7 @@
   "dependencies": {
     "@mdi/font": "5.9.55",
     "gsap": "^3.9.1",
+    "jquery": "^3.6.0",
     "locomotive-scroll": "^4.1.3",
     "roboto-fontface": "*",
     "v-smooth-scroll": "^2.0.0-beta.1",
