@@ -10,10 +10,10 @@ const router = createRouter({
   routes: []
 })
 
+
 loadFonts()
 
 createApp(App)
   .use(vuetify)
   .use(VueSmoothScroll)
-  .use(router)
   .mount('#app')

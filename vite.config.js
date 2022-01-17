@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import vuetify from '@vuetify/vite-plugin'
+import inject from '@rollup/plugin-inject'
 
 import path from 'path'
 
@@ -11,6 +12,9 @@ export default defineConfig({
     // https://github.com/vuetifyjs/vuetify-loader/tree/next/packages/vite-plugin
     vuetify({
       autoImport: true,
+    }),
+    inject({
+      $: 'jquery',
     }),
   ],
   define: { 'process.env': {} },
