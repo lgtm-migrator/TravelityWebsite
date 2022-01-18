@@ -45,8 +45,6 @@ export default {
         }
         navwrap.classList.remove("nav-wrapper-scrolled");
       }
-
-      //onOverHash();
       onHas();
     }
 
@@ -62,12 +60,15 @@ export default {
 
       navLinks.forEach((item) => {
         item.classList.remove("navbar-link-active");
-        if (item.attributes.getNamedItem("href").value === "#" + current) {
+        if (item.attributes.getNamedItem("href").value === "#" + "home") {
+          item.classList.add("navbar-link-active-home");
+        } else if (item.attributes.getNamedItem("href").value === "#" + current) {
           item.classList.add("navbar-link-active");
         }
       });
     }
     window.addEventListener("DOMContentLoaded", function () {
+      onHas();
       document.addEventListener("scroll", onScroll);
     });
   },
@@ -78,39 +79,43 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #92b2fd;
   padding: 1.5rem;
   position: fixed;
   z-index: 9999999;
   width: 100%;
   top: 0;
   overflow: hidden;
-  transition: 0.4s;
+  transition: 0.1s;
 }
 
 .link-item {
-  color: black;
+  color: white;
   text-align: center;
   text-decoration: none;
   font-size: 18px;
+  font-family: "Exo 2", sans-serif;
+  font-weight: 600;
   line-height: 15px;
-  padding: 10px;
-  font-weight: bold;
+  padding: 25px;
+  letter-spacing: 2px;
   transition: 0.4s;
 }
 
 .navbar p {
   font-size: 25px;
-  font-weight: bold;
+  font-weight: 700;
+  font-family: "Exo 2", sans-serif;
   transition: 0.4s;
+  letter-spacing: 1.5px;
+  color: white;
 }
 
 .link-item:hover {
-  color: white;
+  color: black;
 }
 
 .navbar-scrolled {
-  color: white;
+  color: black;
 }
 
 .nav-wrapper-scrolled {
@@ -118,11 +123,14 @@ export default {
 }
 
 .navbar-links-scrolled {
-  color: white;
-  font-weight: normal;
+  color: black;
 }
 
 .navbar-link-active {
+  color: white;
+}
+
+.navbar-link-active-home {
   color: black;
 }
 </style>
