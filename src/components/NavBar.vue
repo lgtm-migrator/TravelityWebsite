@@ -53,16 +53,14 @@ export default {
       const navLinks = document.querySelectorAll(".link-item");
       document.querySelectorAll("div").forEach((div) => {
         const divTop = div.offsetTop;
-        if (scrollY >= divTop - 60) {
+        if (scrollY >= divTop - 65) {
           current = div.getAttribute("id");
         }
       });
 
       navLinks.forEach((item) => {
         item.classList.remove("navbar-link-active");
-        if (item.attributes.getNamedItem("href").value === "#" + "home") {
-          item.classList.add("navbar-link-active-home");
-        } else if (item.attributes.getNamedItem("href").value === "#" + current) {
+        if (item.attributes.getNamedItem("href").value === "#" + current) {
           item.classList.add("navbar-link-active");
         }
       });
@@ -123,14 +121,10 @@ export default {
 }
 
 .navbar-links-scrolled {
-  color: black;
-}
-
-.navbar-link-active {
   color: white;
 }
 
-.navbar-link-active-home {
+.navbar-link-active {
   color: black;
 }
 </style>
