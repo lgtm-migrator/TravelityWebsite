@@ -4,7 +4,7 @@
  * webfontloader documentation: https://github.com/typekit/webfontloader
  */
 
-export async function loadFonts () {
+export async function loadFonts() {
   const webFontLoader = await import(/* webpackChunkName: "webfontloader" */'webfontloader')
 
   webFontLoader.load({
@@ -15,6 +15,5 @@ export async function loadFonts () {
         'Exo+2:200,300,400,500,600,700,800,900&display=swap',
       ],
     },
-
   })
 }

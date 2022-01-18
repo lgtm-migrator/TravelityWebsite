@@ -5,18 +5,18 @@
       class="d-flex align-center justify-center c-height c-width welcome"
       fluid
     >
-      <Welcome />
+      <!-- <Welcome /> -->
     </v-container>
     <v-container fluid id="about" class="c-height c-width about">
-      <About />
+      <!-- <About /> -->
     </v-container>
     <v-container fluid id="whyus" class="c-height c-width">
-      <Why />
+      <!-- <Why /> -->
     </v-container>
     <v-container fluid id="team" class="c-height c-width">
-      <Team />
+      <!-- <Team /> -->
     </v-container>
-    <v-footer></v-footer>
+    <v-footer><FooterVue /></v-footer>
   </v-row>
 </template>
 <script>
@@ -24,7 +24,8 @@ import Team from "./Team.vue";
 import Why from "./Why.vue";
 import About from "./About.vue";
 import Welcome from "./Welcome.vue";
-export default { components: { Welcome, About, Why, Team } };
+import FooterVue from "./Footer.vue";
+export default { components: { Welcome, About, Why, Team, FooterVue } };
 </script>
 <style lang="scss" scoped>
 .c-height {
