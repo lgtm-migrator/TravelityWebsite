@@ -9,7 +9,12 @@ export async function loadFonts () {
 
   webFontLoader.load({
     google: {
-      families: ['Roboto:100,300,400,500,700,900&display=swap'],
+      families: [
+        'Karla:200,300,400,500,600,700,800,900&display=swap',
+        'Mulish:200,300,400,500,600,700,800,900&display=swap',
+        'Exo+2:200,300,400,500,600,700,800,900&display=swap',
+      ],
     },
+
   })
 }
