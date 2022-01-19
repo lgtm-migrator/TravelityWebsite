@@ -2,21 +2,23 @@
   <v-row>
     <v-container
       id="home"
-      class="d-flex align-center justify-center c-height c-width welcome"
+      class="d-flex align-center justify-center c-height welcome"
       fluid
     >
       <!-- <Welcome /> -->
     </v-container>
-    <v-container fluid id="about" class="c-height c-width about">
+    <v-container fluid id="about" class="c-height about">
       <!-- <About /> -->
     </v-container>
-    <v-container fluid id="whyus" class="c-height c-width whyus">
+    <v-container fluid id="whyus" class="c-height whyus">
       <!-- <Why /> -->
     </v-container>
-    <v-container fluid id="team" class="c-height c-width team">
+    <v-container fluid id="team" class="c-height team">
       <!-- <Team /> -->
     </v-container>
-    <v-footer><FooterVue /></v-footer>
+    <v-footer>
+      <FooterVue />
+    </v-footer>
   </v-row>
 </template>
 <script>
@@ -32,10 +34,6 @@ export default { components: { Welcome, About, Why, Team, FooterVue } };
   height: 100%;
 }
 
-.c-width {
-  width: 100%;
-}
-
 .v-row {
   height: 100%;
   width: 100%;
@@ -47,14 +45,14 @@ export default { components: { Welcome, About, Why, Team, FooterVue } };
 }
 
 .about {
-  background-color: #f7f7f7;
+  background-color: #a8c2fe;
 }
 
 .whyus {
-  background-color: #f7f7f7;
+  background-color: #bed2fe;
 }
 
 .team {
-  background-color: #f7f7f7;
+  background-color: #d4e2ff;
 }
 </style>
