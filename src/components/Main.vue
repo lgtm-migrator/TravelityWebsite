@@ -10,10 +10,10 @@
     <v-container fluid id="about" class="c-height c-width about">
       <!-- <About /> -->
     </v-container>
-    <v-container fluid id="whyus" class="c-height c-width">
+    <v-container fluid id="whyus" class="c-height c-width whyus">
       <!-- <Why /> -->
     </v-container>
-    <v-container fluid id="team" class="c-height c-width">
+    <v-container fluid id="team" class="c-height c-width team">
       <!-- <Team /> -->
     </v-container>
     <v-footer><FooterVue /></v-footer>
@@ -47,6 +47,14 @@ export default { components: { Welcome, About, Why, Team, FooterVue } };
 }
 
 .about {
+  background-color: #f7f7f7;
+}
+
+.whyus {
+  background-color: #f7f7f7;
+}
+
+.team {
   background-color: #f7f7f7;
 }
 </style>
