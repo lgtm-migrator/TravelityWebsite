@@ -1,7 +1,7 @@
 <template>
   <nav class="nav-wrapper">
     <div class="navbar">
-      <p>Travelity</p>
+      <p v-for="t in titleArr" :key="t" class="navbar-title">{{ t }}</p>
     </div>
     <div class="navbar-links">
       <a href="#home" class="link-item" v-smooth-scroll>Home</a>
@@ -15,16 +15,19 @@
 export default {
   data() {
     return {
-      //
+      title: "Travelity",
+      titleArr: ["T", "r", "a", "v", "e", "l", "i", "t", "y"],
     };
   },
 
   methods: {},
 
   mounted() {
+    const titleText = this.title;
     function onScroll(event) {
       const scrollPos = window.scrollY;
       const navbar = document.querySelector(".navbar");
+      const navbarTitle = document.querySelectorAll(".navbar-title");
       const navwrap = document.querySelector(".nav-wrapper");
       const navbarLinks = document.querySelector(".navbar-links");
       const navbarLinkItems = document.querySelectorAll(".link-item");
@@ -33,6 +36,9 @@ export default {
       if (scrollPos > 800) {
         navbar.classList.add("navbar-scrolled");
         navbarLinks.classList.add("navbar-links-scrolled");
+        navbarTitle.forEach((item) => {
+          item.classList.add("navbar-title-scrolled");
+        });
         for (let i = 0; i < navbarLinksArrayLength; i++) {
           navbarLinkItems[i].classList.add("navbar-links-scrolled");
         }
@@ -40,15 +46,18 @@ export default {
       } else {
         navbar.classList.remove("navbar-scrolled");
         navbarLinks.classList.remove("navbar-links-scrolled");
+        navbarTitle.forEach((item) => {
+          item.classList.remove("navbar-title-scrolled");
+        });
         for (let i = 0; i < navbarLinksArrayLength; i++) {
           navbarLinkItems[i].classList.remove("navbar-links-scrolled");
         }
         navwrap.classList.remove("nav-wrapper-scrolled");
       }
-      onHas();
+      onHash();
     }
 
-    function onHas() {
+    function onHash() {
       var current = "";
       const navLinks = document.querySelectorAll(".link-item");
       document.querySelectorAll("div").forEach((div) => {
@@ -65,8 +74,28 @@ export default {
         }
       });
     }
+
+    // function splitTitle() {
+    //   const titleEl = document.querySelector(".navbar-title");
+    //   const titleTextLength = titleText.length;
+    //   const titleTextSplit = titleText.split("");
+    //   const titleTextSplitLength = titleTextSplit.length;
+    //   const titleTextSplitArray = [];
+    //   for (let i = 0; i < titleTextSplitLength; i++) {
+    //     titleTextSplitArray.push(titleTextSplit[i]);
+    //   }
+    //   for (let i = 0; i < titleTextSplitLength; i++) {
+    //     titleTextSplitArray[i] = titleTextSplitArray[i];
+    //   }
+    //   for (let i = 0; i < titleTextSplitLength; i++) {
+    //     titleEl.innerHTML += titleTextSplitArray[i];
+    //     console.log(titleEl);
+    //   }
+    // }
+
     window.addEventListener("DOMContentLoaded", function () {
-      onHas();
+      onHash();
+      // splitTitle();
       document.addEventListener("scroll", onScroll);
     });
   },
@@ -103,9 +132,13 @@ export default {
   font-size: 25px;
   font-weight: 700;
   font-family: "Exo 2", sans-serif;
-  transition: 0.4s;
+  transition: 0.4s all ease-in;
   letter-spacing: 1.5px;
   color: white;
+}
+
+.navbar {
+  display: flex;
 }
 
 .link-item:hover {
@@ -122,6 +155,10 @@ export default {
 
 .navbar-links-scrolled {
   color: white;
+}
+
+.navbar-title-scrolled {
+  transform: (rotate(-20deg));
 }
 
 .navbar-link-active {
