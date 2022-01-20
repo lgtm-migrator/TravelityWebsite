@@ -58,10 +58,10 @@ export default {
     function onHash() {
       var current = "";
       const navLinks = document.querySelectorAll(".link-item");
-      document.querySelectorAll("div").forEach((div) => {
-        const divTop = div.offsetTop;
-        if (scrollY >= divTop - 65) {
-          current = div.getAttribute("id");
+      document.querySelectorAll("section").forEach((section) => {
+        const sectionTop = section.offsetTop;
+        if (scrollY >= sectionTop - 65) {
+          current = section.getAttribute("id");
         }
       });
 

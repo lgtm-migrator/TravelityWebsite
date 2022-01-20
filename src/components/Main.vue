@@ -4,16 +4,17 @@
       id="home"
       class="d-flex align-center justify-center c-height welcome"
       fluid
+      tag="section"
     >
-      <!-- <Welcome /> -->
+      <Welcome />
     </v-container>
-    <v-container fluid id="about" class="c-height about">
+    <v-container fluid id="about" class="c-height about" tag="section">
       <!-- <About /> -->
     </v-container>
-    <v-container fluid id="whyus" class="c-height whyus">
+    <v-container fluid id="whyus" class="c-height whyus" tag="section">
       <!-- <Why /> -->
     </v-container>
-    <v-container fluid id="team" class="c-height team">
+    <v-container fluid id="team" class="c-height team" tag="section">
       <!-- <Team /> -->
     </v-container>
     <v-footer>
