@@ -15,7 +15,6 @@
 export default {
   data() {
     return {
-      title: "Travelity",
       titleArr: ["T", "r", "a", "v", "e", "l", "i", "t", "y"],
     };
   },
@@ -23,7 +22,6 @@ export default {
   methods: {},
 
   mounted() {
-    const titleText = this.title;
     function onScroll(event) {
       const scrollPos = window.scrollY;
       const navbar = document.querySelector(".navbar");
@@ -75,30 +73,11 @@ export default {
       });
     }
 
-    // function splitTitle() {
-    //   const titleEl = document.querySelector(".navbar-title");
-    //   const titleTextLength = titleText.length;
-    //   const titleTextSplit = titleText.split("");
-    //   const titleTextSplitLength = titleTextSplit.length;
-    //   const titleTextSplitArray = [];
-    //   for (let i = 0; i < titleTextSplitLength; i++) {
-    //     titleTextSplitArray.push(titleTextSplit[i]);
-    //   }
-    //   for (let i = 0; i < titleTextSplitLength; i++) {
-    //     titleTextSplitArray[i] = titleTextSplitArray[i];
-    //   }
-    //   for (let i = 0; i < titleTextSplitLength; i++) {
-    //     titleEl.innerHTML += titleTextSplitArray[i];
-    //     console.log(titleEl);
-    //   }
-    // }
-
     window.addEventListener("DOMContentLoaded", function () {
       onHash();
-      // splitTitle();
       document.addEventListener("scroll", onScroll);
     });
-  },
+  }, // auyaud
 };
 </script>
 <style lang="scss" scoped>
@@ -132,7 +111,7 @@ export default {
   font-size: 25px;
   font-weight: 700;
   font-family: "Exo 2", sans-serif;
-  transition: 0.4s all ease-in;
+  transition: 0.2s all ease-in;
   letter-spacing: 1.5px;
   color: white;
 }
