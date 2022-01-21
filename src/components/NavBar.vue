@@ -4,10 +4,18 @@
       <p v-for="t in titleArr" :key="t" class="navbar-title">{{ t }}</p>
     </div>
     <div class="navbar-links">
-      <a href="#home" class="link-item" v-smooth-scroll>Home</a>
-      <a href="#about" class="link-item" v-smooth-scroll>About</a>
-      <a href="#whyus" class="link-item" v-smooth-scroll>Why Us</a>
-      <a href="#team" class="link-item" v-smooth-scroll>The Team</a>
+      <a href="#home" class="link-item" v-smooth-scroll="{ updateHistory: false }"
+        >Home</a
+      >
+      <a href="#about" class="link-item" v-smooth-scroll="{ updateHistory: false }"
+        >About</a
+      >
+      <a href="#whyus" class="link-item" v-smooth-scroll="{ updateHistory: false }"
+        >Why Us</a
+      >
+      <a href="#team" class="link-item" v-smooth-scroll="{ updateHistory: false }"
+        >The Team</a
+      >
     </div>
   </nav>
 </template>
