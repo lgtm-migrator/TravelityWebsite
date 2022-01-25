@@ -85,7 +85,7 @@ export default {
       onHash();
       document.addEventListener("scroll", onScroll);
     });
-  }, // auyaud
+  },
 };
 </script>
 <style lang="scss" scoped>

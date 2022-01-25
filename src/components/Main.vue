@@ -8,13 +8,18 @@
     >
       <v-row align="end" justify="center">
         <Welcome />
-        <div class="skyContainer">
+        <div class="sky-container-above">
           <canvas id="sky"></canvas>
         </div>
       </v-row>
     </v-container>
     <v-container fluid id="about" class="c-height about" tag="section">
       <!-- <About /> -->
+      <v-row justify="center">
+        <div class="sky-container-under">
+          <canvas id="skyUnder"></canvas>
+        </div>
+      </v-row>
     </v-container>
     <v-container fluid id="whyus" class="c-height whyus" tag="section">
       <!-- <Why /> -->
@@ -55,6 +60,14 @@ export default {
         cloudColor2: "#fff2f1",
         bgColor: "#92b2fd",
       });
+      klouds.create({
+        selector: "#skyUnder",
+        speed: 1,
+        layerCount: 7,
+        cloudColor1: "#a8c2fe",
+        cloudColor2: "#fff2f1",
+        bgColor: "#a8c2fe",
+      });
     },
   },
 };
@@ -90,8 +103,14 @@ export default {
   background-color: #d4e2ff;
 }
 
-.skyContainer {
+.sky-container-above {
   width: 100%;
   height: 260px;
+}
+
+.sky-container-under {
+  width: 100%;
+  height: 260px;
+  transform: rotate(-180deg);
 }
 </style>
