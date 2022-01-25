@@ -7,7 +7,7 @@
       tag="section"
     >
       <v-row align="end" justify="center">
-        <Welcome />
+        <Home />
         <div class="sky-container-above">
           <canvas id="sky"></canvas>
         </div>
@@ -36,11 +36,11 @@
 import Team from "./Team.vue";
 import Why from "./Why.vue";
 import About from "./About.vue";
-import Welcome from "./Welcome.vue";
+import Home from "./Home.vue";
 import FooterVue from "./Footer.vue";
 import * as klouds from "klouds";
 export default {
-  components: { Welcome, About, Why, Team, FooterVue },
+  components: { Home, About, Why, Team, FooterVue },
   data() {
     return {
       //
