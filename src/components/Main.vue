@@ -4,16 +4,27 @@
       id="home"
       class="d-flex align-center justify-center c-height welcome"
       fluid
+      tag="section"
     >
-      <!-- <Welcome /> -->
+      <v-row align="end" justify="center">
+        <Welcome />
+        <div class="sky-container-above">
+          <canvas id="sky"></canvas>
+        </div>
+      </v-row>
     </v-container>
-    <v-container fluid id="about" class="c-height about">
+    <v-container fluid id="about" class="c-height about" tag="section">
       <!-- <About /> -->
+      <v-row justify="center">
+        <div class="sky-container-under">
+          <canvas id="skyUnder"></canvas>
+        </div>
+      </v-row>
     </v-container>
-    <v-container fluid id="whyus" class="c-height whyus">
+    <v-container fluid id="whyus" class="c-height whyus" tag="section">
       <!-- <Why /> -->
     </v-container>
-    <v-container fluid id="team" class="c-height team">
+    <v-container fluid id="team" class="c-height team" tag="section">
       <!-- <Team /> -->
     </v-container>
     <v-footer>
@@ -27,7 +38,39 @@ import Why from "./Why.vue";
 import About from "./About.vue";
 import Welcome from "./Welcome.vue";
 import FooterVue from "./Footer.vue";
-export default { components: { Welcome, About, Why, Team, FooterVue } };
+import * as klouds from "klouds";
+export default {
+  components: { Welcome, About, Why, Team, FooterVue },
+  data() {
+    return {
+      //
+    };
+  },
+  mounted() {
+    //
+    this.createClouds();
+  },
+  methods: {
+    createClouds: function () {
+      klouds.create({
+        selector: "#sky",
+        speed: 1,
+        layerCount: 7,
+        cloudColor1: "#a8c2fe",
+        cloudColor2: "#fff2f1",
+        bgColor: "#92b2fd",
+      });
+      klouds.create({
+        selector: "#skyUnder",
+        speed: 1,
+        layerCount: 7,
+        cloudColor1: "#a8c2fe",
+        cloudColor2: "#fff2f1",
+        bgColor: "#a8c2fe",
+      });
+    },
+  },
+};
 </script>
 <style lang="scss" scoped>
 .c-height {
@@ -38,6 +81,10 @@ export default { components: { Welcome, About, Why, Team, FooterVue } };
   height: 100%;
   width: 100%;
   margin: 0;
+}
+
+.v-container {
+  padding: 0;
 }
 
 .welcome {
@@ -54,5 +101,16 @@ export default { components: { Welcome, About, Why, Team, FooterVue } };
 
 .team {
   background-color: #d4e2ff;
+}
+
+.sky-container-above {
+  width: 100%;
+  height: 260px;
+}
+
+.sky-container-under {
+  width: 100%;
+  height: 260px;
+  transform: rotate(-180deg);
 }
 </style>

@@ -1,13 +1,21 @@
 <template>
   <nav class="nav-wrapper">
     <div class="navbar">
-      <p>Travelity</p>
+      <p v-for="t in titleArr" :key="t" class="navbar-title">{{ t }}</p>
     </div>
     <div class="navbar-links">
-      <a href="#home" class="link-item" v-smooth-scroll>Home</a>
-      <a href="#about" class="link-item" v-smooth-scroll>About</a>
-      <a href="#whyus" class="link-item" v-smooth-scroll>Why Us</a>
-      <a href="#team" class="link-item" v-smooth-scroll>The Team</a>
+      <a href="#home" class="link-item" v-smooth-scroll="{ updateHistory: false }"
+        >Home</a
+      >
+      <a href="#about" class="link-item" v-smooth-scroll="{ updateHistory: false }"
+        >About</a
+      >
+      <a href="#whyus" class="link-item" v-smooth-scroll="{ updateHistory: false }"
+        >Why Us</a
+      >
+      <a href="#team" class="link-item" v-smooth-scroll="{ updateHistory: false }"
+        >The Team</a
+      >
     </div>
   </nav>
 </template>
@@ -15,7 +23,7 @@
 export default {
   data() {
     return {
-      //
+      titleArr: ["T", "r", "a", "v", "e", "l", "i", "t", "y"],
     };
   },
 
@@ -25,6 +33,7 @@ export default {
     function onScroll(event) {
       const scrollPos = window.scrollY;
       const navbar = document.querySelector(".navbar");
+      const navbarTitle = document.querySelectorAll(".navbar-title");
       const navwrap = document.querySelector(".nav-wrapper");
       const navbarLinks = document.querySelector(".navbar-links");
       const navbarLinkItems = document.querySelectorAll(".link-item");
@@ -33,6 +42,9 @@ export default {
       if (scrollPos > 800) {
         navbar.classList.add("navbar-scrolled");
         navbarLinks.classList.add("navbar-links-scrolled");
+        navbarTitle.forEach((item) => {
+          item.classList.add("navbar-title-scrolled");
+        });
         for (let i = 0; i < navbarLinksArrayLength; i++) {
           navbarLinkItems[i].classList.add("navbar-links-scrolled");
         }
@@ -40,21 +52,24 @@ export default {
       } else {
         navbar.classList.remove("navbar-scrolled");
         navbarLinks.classList.remove("navbar-links-scrolled");
+        navbarTitle.forEach((item) => {
+          item.classList.remove("navbar-title-scrolled");
+        });
         for (let i = 0; i < navbarLinksArrayLength; i++) {
           navbarLinkItems[i].classList.remove("navbar-links-scrolled");
         }
         navwrap.classList.remove("nav-wrapper-scrolled");
       }
-      onHas();
+      onHash();
     }
 
-    function onHas() {
+    function onHash() {
       var current = "";
       const navLinks = document.querySelectorAll(".link-item");
-      document.querySelectorAll("div").forEach((div) => {
-        const divTop = div.offsetTop;
-        if (scrollY >= divTop - 65) {
-          current = div.getAttribute("id");
+      document.querySelectorAll("section").forEach((section) => {
+        const sectionTop = section.offsetTop;
+        if (scrollY >= sectionTop - 65) {
+          current = section.getAttribute("id");
         }
       });
 
@@ -65,8 +80,9 @@ export default {
         }
       });
     }
+
     window.addEventListener("DOMContentLoaded", function () {
-      onHas();
+      onHash();
       document.addEventListener("scroll", onScroll);
     });
   },
@@ -103,9 +119,13 @@ export default {
   font-size: 25px;
   font-weight: 700;
   font-family: "Exo 2", sans-serif;
-  transition: 0.4s;
+  transition: 0.2s all ease-in;
   letter-spacing: 1.5px;
   color: white;
+}
+
+.navbar {
+  display: flex;
 }
 
 .link-item:hover {
@@ -122,6 +142,10 @@ export default {
 
 .navbar-links-scrolled {
   color: white;
+}
+
+.navbar-title-scrolled {
+  transform: (rotate(-20deg));
 }
 
 .navbar-link-active {
