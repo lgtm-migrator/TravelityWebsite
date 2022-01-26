@@ -17,7 +17,7 @@
       <!-- <About /> -->
       <v-row justify="center">
         <div class="sky-container-under">
-          <canvas id="skyUnder"></canvas>
+          <canvas id="sky-under"></canvas>
         </div>
       </v-row>
     </v-container>
@@ -61,7 +61,7 @@ export default {
         bgColor: "#92b2fd",
       });
       klouds.create({
-        selector: "#skyUnder",
+        selector: "#sky-under",
         speed: 1,
         layerCount: 7,
         cloudColor1: "#a8c2fe",
