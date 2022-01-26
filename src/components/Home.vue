@@ -5,6 +5,7 @@
 </template>
 <script>
 import * as klouds from "klouds";
+import lottie from "lottie-web";
 export default {
   data() {
     return {
@@ -14,20 +15,10 @@ export default {
 
   mounted() {
     //
-    this.createClouds();
   },
 
   methods: {
-    createClouds: function () {
-      klouds.create({
-        selector: "#sky",
-        layerCount: 5,
-        speed: 1,
-        cloudColor1: "#fff",
-        cloudColor2: "#fff",
-        bgColor: "#92b2fd",
-      });
-    },
+    //
   },
 };
 </script>
