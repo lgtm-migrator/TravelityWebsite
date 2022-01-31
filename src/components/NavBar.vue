@@ -63,10 +63,12 @@ export default {
       this.onHash();
     },
 
-    /* When the user scrolls the page, the function onHash() is called. It checks the current scroll
-    position and compares it to the offsetTop of each section. If the scroll position is greater than
-    the offsetTop minus 65, then the section's id is set as the current section. The navbar links are
-    then updated to reflect the current section. */
+    /* When the user scrolls the page, the onHash function is called. The onHash function iterates through
+    all the sections on the page and checks if the user's current scroll position is greater than the
+    section's offsetTop. If it is, the section's id is set as the current section. Then, the navLinks
+    are iterated through and the navbar-link-active class is removed from all the links. Finally, the
+    navbar-link-active class is added to the link that has an href attribute equal to the current
+    section. */
     onHash: function () {
       var current = "";
       const navLinks = document.querySelectorAll(".link-item");
