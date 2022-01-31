@@ -106,6 +106,11 @@ export default {
 
 .whyus {
   background-color: #bed2fe;
+  background: linear-gradient(
+    180deg,
+    rgba(190, 210, 254, 1) 0%,
+    rgba(212, 226, 255, 1) 100%
+  );
 }
 
 .team {
