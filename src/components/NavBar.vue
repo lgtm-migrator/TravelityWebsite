@@ -38,7 +38,7 @@ export default {
       const navbarLinkItems = document.querySelectorAll(".link-item");
       const navbarLinksArrayLength = navbarLinkItems.length;
 
-      if (scrollPos > 800) {
+      if (scrollPos > 5) {
         navbar.classList.add("navbar-scrolled");
         navbarLinks.classList.add("navbar-links-scrolled");
         navbarTitle.forEach((item) => {
