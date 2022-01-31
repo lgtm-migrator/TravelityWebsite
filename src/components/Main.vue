@@ -47,7 +47,6 @@ export default {
     };
   },
   mounted() {
-    //
     this.createClouds();
   },
   methods: {
@@ -62,7 +61,7 @@ export default {
       });
       klouds.create({
         selector: "#sky-under",
-        speed: 1,
+        speed: -1,
         layerCount: 7,
         cloudColor1: "#a8c2fe",
         cloudColor2: "#fff2f1",
