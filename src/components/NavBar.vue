@@ -29,6 +29,7 @@ export default {
   },
 
   methods: {
+    // When the user scrolls down, the navbar and navbar links will be scrolled.
     onScroll: function (event) {
       const scrollPos = window.scrollY;
       const navbar = document.querySelector(".navbar");
@@ -62,6 +63,10 @@ export default {
       this.onHash();
     },
 
+    /* When the user scrolls the page, the function onHash() is called. It checks the current scroll
+    position and compares it to the offsetTop of each section. If the scroll position is greater than
+    the offsetTop minus 65, then the section's id is set as the current section. The navbar links are
+    then updated to reflect the current section. */
     onHash: function () {
       var current = "";
       const navLinks = document.querySelectorAll(".link-item");

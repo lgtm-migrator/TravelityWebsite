@@ -50,6 +50,10 @@ export default {
     this.createClouds();
   },
   methods: {
+    /* Create a new Klouds object,
+    passing in the selector for the sky and the speed of the clouds. Then create a
+    second Klouds object, this time passing in the selector for the sky-under
+    element and the speed of the clouds. */
     createClouds: function () {
       klouds.create({
         selector: "#sky",
