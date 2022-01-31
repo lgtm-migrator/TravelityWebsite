@@ -7,7 +7,7 @@
       tag="section"
     >
       <v-row align="end" justify="center">
-        <Welcome />
+        <Home />
         <div class="sky-container-above">
           <canvas id="sky"></canvas>
         </div>
@@ -17,7 +17,7 @@
       <!-- <About /> -->
       <v-row justify="center">
         <div class="sky-container-under">
-          <canvas id="skyUnder"></canvas>
+          <canvas id="sky-under"></canvas>
         </div>
       </v-row>
     </v-container>
@@ -36,18 +36,17 @@
 import Team from "./Team.vue";
 import Why from "./Why.vue";
 import About from "./About.vue";
-import Welcome from "./Welcome.vue";
+import Home from "./Home.vue";
 import FooterVue from "./Footer.vue";
 import * as klouds from "klouds";
 export default {
-  components: { Welcome, About, Why, Team, FooterVue },
+  components: { Home, About, Why, Team, FooterVue },
   data() {
     return {
       //
     };
   },
   mounted() {
-    //
     this.createClouds();
   },
   methods: {
@@ -58,15 +57,15 @@ export default {
         layerCount: 7,
         cloudColor1: "#a8c2fe",
         cloudColor2: "#fff2f1",
-        bgColor: "#92b2fd",
+        bgColor: "#a2bdfe",
       });
       klouds.create({
-        selector: "#skyUnder",
-        speed: 1,
+        selector: "#sky-under",
+        speed: -1,
         layerCount: 7,
         cloudColor1: "#a8c2fe",
         cloudColor2: "#fff2f1",
-        bgColor: "#a8c2fe",
+        bgColor: "#aec6fe",
       });
     },
   },
@@ -89,10 +88,20 @@ export default {
 
 .welcome {
   background-color: #92b2fd;
+  background: linear-gradient(
+    180deg,
+    rgba(146, 178, 253, 1) 0%,
+    rgba(168, 194, 254, 1) 100%
+  );
 }
 
 .about {
   background-color: #a8c2fe;
+  background: linear-gradient(
+    180deg,
+    rgba(168, 194, 254, 1) 0%,
+    rgba(190, 210, 254, 1) 100%
+  );
 }
 
 .whyus {

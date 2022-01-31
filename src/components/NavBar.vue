@@ -20,6 +20,7 @@
   </nav>
 </template>
 <script>
+import lottie from "lottie-web";
 export default {
   data() {
     return {
@@ -27,10 +28,8 @@ export default {
     };
   },
 
-  methods: {},
-
-  mounted() {
-    function onScroll(event) {
+  methods: {
+    onScroll: function (event) {
       const scrollPos = window.scrollY;
       const navbar = document.querySelector(".navbar");
       const navbarTitle = document.querySelectorAll(".navbar-title");
@@ -39,7 +38,7 @@ export default {
       const navbarLinkItems = document.querySelectorAll(".link-item");
       const navbarLinksArrayLength = navbarLinkItems.length;
 
-      if (scrollPos > 800) {
+      if (scrollPos > 5) {
         navbar.classList.add("navbar-scrolled");
         navbarLinks.classList.add("navbar-links-scrolled");
         navbarTitle.forEach((item) => {
@@ -60,10 +59,10 @@ export default {
         }
         navwrap.classList.remove("nav-wrapper-scrolled");
       }
-      onHash();
-    }
+      this.onHash();
+    },
 
-    function onHash() {
+    onHash: function () {
       var current = "";
       const navLinks = document.querySelectorAll(".link-item");
       document.querySelectorAll("section").forEach((section) => {
@@ -79,12 +78,12 @@ export default {
           item.classList.add("navbar-link-active");
         }
       });
-    }
+    },
+  },
 
-    window.addEventListener("DOMContentLoaded", function () {
-      onHash();
-      document.addEventListener("scroll", onScroll);
-    });
+  mounted() {
+    this.onHash();
+    window.addEventListener("scroll", this.onScroll);
   },
 };
 </script>
