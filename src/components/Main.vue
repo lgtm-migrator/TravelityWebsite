@@ -57,7 +57,7 @@ export default {
         layerCount: 7,
         cloudColor1: "#a8c2fe",
         cloudColor2: "#fff2f1",
-        bgColor: "#92b2fd",
+        bgColor: "#a2bdfe",
       });
       klouds.create({
         selector: "#sky-under",
@@ -65,7 +65,7 @@ export default {
         layerCount: 7,
         cloudColor1: "#a8c2fe",
         cloudColor2: "#fff2f1",
-        bgColor: "#a8c2fe",
+        bgColor: "#aec6fe",
       });
     },
   },
@@ -88,10 +88,20 @@ export default {
 
 .welcome {
   background-color: #92b2fd;
+  background: linear-gradient(
+    180deg,
+    rgba(146, 178, 253, 1) 0%,
+    rgba(168, 194, 254, 1) 100%
+  );
 }
 
 .about {
   background-color: #a8c2fe;
+  background: linear-gradient(
+    180deg,
+    rgba(168, 194, 254, 1) 0%,
+    rgba(190, 210, 254, 1) 100%
+  );
 }
 
 .whyus {
