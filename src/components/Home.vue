@@ -1,11 +1,9 @@
 <template>
   <v-container fluid>
     <h1>Travelity</h1>
-    <p>Tester</p>
   </v-container>
 </template>
 <script>
-import * as klouds from "klouds";
 import lottie from "lottie-web";
 export default {
   data() {
