@@ -1,7 +1,8 @@
 <template>
   <nav class="nav-wrapper">
-    <div class="navbar">
+    <div class="navbar justify-center align-center">
       <p v-for="t in titleArr" :key="t" class="navbar-title">{{ t }}</p>
+      <v-icon icon="md:flight" class="plane"></v-icon>
     </div>
     <div class="navbar-links">
       <a href="#home" class="link-item" v-smooth-scroll="{ updateHistory: false }"
@@ -27,10 +28,9 @@ export default {
     };
   },
 
-  methods: {},
-
-  mounted() {
-    function onScroll(event) {
+  methods: {
+    // When the user scrolls down, the navbar and navbar links will be scrolled.
+    onScroll: function (event) {
       const scrollPos = window.scrollY;
       const navbar = document.querySelector(".navbar");
       const navbarTitle = document.querySelectorAll(".navbar-title");
@@ -39,7 +39,7 @@ export default {
       const navbarLinkItems = document.querySelectorAll(".link-item");
       const navbarLinksArrayLength = navbarLinkItems.length;
 
-      if (scrollPos > 800) {
+      if (scrollPos > 5) {
         navbar.classList.add("navbar-scrolled");
         navbarLinks.classList.add("navbar-links-scrolled");
         navbarTitle.forEach((item) => {
@@ -60,10 +60,16 @@ export default {
         }
         navwrap.classList.remove("nav-wrapper-scrolled");
       }
-      onHash();
-    }
+      this.onHash();
+    },
 
-    function onHash() {
+    /* When the user scrolls the page, the onHash function is called. The onHash function iterates through
+    all the sections on the page and checks if the user's current scroll position is greater than the
+    section's offsetTop. If it is, the section's id is set as the current section. Then, the navLinks
+    are iterated through and the navbar-link-active class is removed from all the links. Finally, the
+    navbar-link-active class is added to the link that has an href attribute equal to the current
+    section. */
+    onHash: function () {
       var current = "";
       const navLinks = document.querySelectorAll(".link-item");
       document.querySelectorAll("section").forEach((section) => {
@@ -79,12 +85,22 @@ export default {
           item.classList.add("navbar-link-active");
         }
       });
-    }
+    },
 
-    window.addEventListener("DOMContentLoaded", function () {
-      onHash();
-      document.addEventListener("scroll", onScroll);
-    });
+    /* When the user scrolls down a animation runs with a plane running out of the screen. And when the user scrolls up, the plane returns to the screen. */
+    onScrollAnimation: function () {
+      var plane = document.querySelector(".plane");
+      if (scrollY > 5) {
+        plane.classList.add("plane-scrolled");
+      } else {
+        plane.classList.remove("plane-scrolled");
+      }
+    },
+  },
+
+  mounted() {
+    this.onHash();
+    window.addEventListener("scroll", this.onScroll);
   },
 };
 </script>
@@ -150,5 +166,10 @@ export default {
 
 .navbar-link-active {
   color: black;
+}
+
+.plane {
+  color: white;
+  transform: (rotate(90deg));
 }
 </style>
