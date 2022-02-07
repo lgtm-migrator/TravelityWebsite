@@ -70,7 +70,7 @@ export default {
     navbar-link-active class is added to the link that has an href attribute equal to the current
     section. */
     onHash: function () {
-      var current = "";
+      let current = "";
       const navLinks = document.querySelectorAll(".link-item");
       document.querySelectorAll("section").forEach((section) => {
         const sectionTop = section.offsetTop;
@@ -89,7 +89,7 @@ export default {
 
     /* When the user scrolls down a animation runs with a plane running out of the screen. And when the user scrolls up, the plane returns to the screen. */
     onScrollAnimation: function () {
-      var plane = document.querySelector(".plane");
+      let plane = document.querySelector(".plane");
       if (scrollY > 5) {
         plane.classList.add("plane-scrolled");
       } else {
