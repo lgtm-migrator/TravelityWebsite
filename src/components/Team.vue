@@ -2,7 +2,19 @@
   <div class="team-bg"></div>
 </template>
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      //
+    };
+  },
+  mounted() {
+    //
+  },
+  methods: {
+    //
+  },
+};
 </script>
 <style scoped>
 .team-bg {
