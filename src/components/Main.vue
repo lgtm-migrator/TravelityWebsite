@@ -25,7 +25,7 @@
       <!-- <Why /> -->
     </v-container>
     <v-container fluid id="team" class="c-height team" tag="section">
-      <!-- <Team /> -->
+      <Team />
     </v-container>
     <v-footer>
       <FooterVue />
@@ -88,6 +88,10 @@ export default {
 
 .v-container {
   padding: 0;
+}
+
+.v-footer {
+  background-color: #0099ff;
 }
 
 .welcome {
