@@ -1,8 +1,21 @@
 <template>
-  <div></div>
+  <v-container fluid></v-container>
 </template>
 <script>
-export default {};
-</script>
-<style></style>
+export default {
+  data() {
+    return {
+      //
+    };
+  },
 
+  methods: {
+    //
+  },
+
+  mounted() {
+    //
+  },
+};
+</script>
+<style scoped></style>
