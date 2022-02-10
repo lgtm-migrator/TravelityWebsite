@@ -2,7 +2,6 @@
   <div></div>
 </template>
 <script>
-import lottie from "lottie-web";
 export default {
   data() {
     return {
