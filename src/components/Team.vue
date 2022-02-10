@@ -1,5 +1,5 @@
 <template>
-  <div class="team-bg"></div>
+  <v-container fluid class="team-bg"></v-container>
 </template>
 <script>
 export default {
