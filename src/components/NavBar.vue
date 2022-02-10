@@ -45,9 +45,11 @@ export default {
         navbarTitle.forEach((item) => {
           item.classList.add("navbar-title-scrolled");
         });
+
         for (let i = 0; i < navbarLinksArrayLength; i++) {
           navbarLinkItems[i].classList.add("navbar-links-scrolled");
         }
+
         navwrap.classList.add("nav-wrapper-scrolled");
       } else {
         navbar.classList.remove("navbar-scrolled");
@@ -55,9 +57,11 @@ export default {
         navbarTitle.forEach((item) => {
           item.classList.remove("navbar-title-scrolled");
         });
+
         for (let i = 0; i < navbarLinksArrayLength; i++) {
           navbarLinkItems[i].classList.remove("navbar-links-scrolled");
         }
+
         navwrap.classList.remove("nav-wrapper-scrolled");
       }
       this.onHash();
