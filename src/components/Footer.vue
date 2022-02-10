@@ -4,12 +4,26 @@
       >&copy; 2022 - {{ new Date().getFullYear() }} - Travelity</span
     >
     <div class="d-flex justify-center align-center">
-      <a href="#" class="footer-link" target="_blank"><v-icon icon="mdi-twitter" /></a>
+      <a href="https://twitter.com/_Travelity" class="footer-link" target="_blank"
+        ><v-icon icon="mdi-twitter"
+      /></a>
     </div>
   </div>
 </template>
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      //
+    };
+  },
+  mounted() {
+    //
+  },
+  methods: {
+    //
+  },
+};
 </script>
 <style scoped>
 .footer-text {
@@ -28,5 +42,10 @@ export default {};
 .footer-link {
   text-decoration: none;
   color: white;
+  transition: 0.1s ease-in;
+}
+
+.footer-link:hover {
+  color: black;
 }
 </style>
