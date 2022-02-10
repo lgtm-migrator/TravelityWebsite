@@ -21,6 +21,7 @@
   </nav>
 </template>
 <script>
+import lottie from "lottie-web";
 export default {
   data() {
     return {
@@ -153,7 +154,7 @@ export default {
 }
 
 .nav-wrapper-scrolled {
-  background-color: transparent;
+  background-color: rgba(146, 178, 253, 0.1);
 }
 
 .navbar-links-scrolled {
