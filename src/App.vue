@@ -18,3 +18,13 @@ export default {
   },
 };
 </script>
+<style>
+html {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+</style>

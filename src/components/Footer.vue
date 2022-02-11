@@ -4,7 +4,11 @@
       >&copy; 2022 - {{ new Date().getFullYear() }} - Travelity</span
     >
     <div class="d-flex justify-center align-center">
-      <a href="https://twitter.com/_Travelity" class="footer-link" target="_blank"
+      <a
+        href="https://twitter.com/_Travelity"
+        alt="twitter"
+        class="footer-link"
+        target="_blank"
         ><v-icon icon="mdi-twitter"
       /></a>
     </div>
