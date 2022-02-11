@@ -2,6 +2,7 @@
   <v-container fluid class="team-bg"></v-container>
 </template>
 <script>
+import gsap from "gsap";
 export default {
   data() {
     return {
