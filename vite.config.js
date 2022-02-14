@@ -12,9 +12,6 @@ export default defineConfig({
     vuetify({
       autoImport: true,
     }),
-    inject({
-      $: 'jquery',
-    }),
   ],
   define: { 'process.env': {} },
   resolve: {
