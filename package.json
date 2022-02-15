@@ -20,7 +20,9 @@
     "scrollmagic": "^2.0.8",
     "v-smooth-scroll": "^2.0.0-beta.1",
     "vue": "^3.2.25",
+    "vue-burger-menu": "^2.0.5",
     "vue-router": "^4.0.12",
+    "vue3-burger-menu": "^1.1.1",
     "vuetify": "^3.0.0-alpha.0",
     "webfontloader": "^1.0.0"
   },
