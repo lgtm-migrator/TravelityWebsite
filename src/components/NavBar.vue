@@ -4,7 +4,7 @@
       <p v-for="t in titleArr" :key="t" class="navbar-title">{{ t }}</p>
       <v-icon icon="md:flight" class="plane"></v-icon>
     </div>
-    <div class="navbar-links">
+    <div class="navbar-links d-none d-sm-flex">
       <a href="#home" class="link-item" v-smooth-scroll="{ updateHistory: false }"
         >Home</a
       >
@@ -18,13 +18,18 @@
         >The Team</a
       >
     </div>
+    <div class="d-flex d-sm-none"></div>
   </nav>
 </template>
 <script>
 export default {
+  components: {
+    //
+  },
   data() {
     return {
       titleArr: ["T", "r", "a", "v", "e", "l", "i", "t", "y"],
+      drawer: null,
     };
   },
 
@@ -109,6 +114,7 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+@import "vuetify/lib/styles/settings/_variables.scss";
 .nav-wrapper {
   display: flex;
   justify-content: space-between;
@@ -133,6 +139,13 @@ export default {
   padding: 25px;
   letter-spacing: 2px;
   transition: 0.4s;
+}
+
+@media #{map-get($display-breakpoints, 'xs')} {
+  .link-item {
+    font-size: 20px;
+    padding: 1px;
+  }
 }
 
 .navbar p {
