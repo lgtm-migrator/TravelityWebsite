@@ -39,7 +39,6 @@ export default {
   methods: {
     startLoading: function () {
       let animEl = document.getElementById("loading-animation");
-      console.log(animEl);
       lottie.loadAnimation({
         container: animEl,
         renderer: "svg",
@@ -82,6 +81,8 @@ html {
 
 .loading-wrapper-hidden {
   opacity: 0;
+  display: none;
+  z-index: -9999999999999999999999999999;
 }
 
 #loading-animation {
