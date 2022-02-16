@@ -152,7 +152,7 @@ export default {
   position: fixed;
   height: 30px;
   width: 50px;
-  top: 4.5%;
+  top: 5%;
   right: 5%;
   display: flex;
   flex-direction: column;
@@ -211,7 +211,7 @@ export default {
   margin-left: 100%;
   width: 100%;
   height: 100%;
-  background: #868686;
+  background: #92b2fd;
   z-index: 1;
   display: flex;
   align-items: center;
@@ -223,6 +223,7 @@ export default {
 }
 .menu .nav ul li {
   list-style: none;
+  margin: 5px;
 }
 .menu .nav ul li a {
   position: relative;
