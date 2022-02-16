@@ -18,18 +18,20 @@
         >The Team</a
       >
     </div>
-    <div class="d-flex d-sm-none"></div>
+    <div class="d-flex d-sm-none">
+      <MobileNav />
+    </div>
   </nav>
 </template>
 <script>
+import MobileNav from "./MobileNav.vue";
 export default {
   components: {
-    //
+    MobileNav,
   },
   data() {
     return {
       titleArr: ["T", "r", "a", "v", "e", "l", "i", "t", "y"],
-      drawer: null,
     };
   },
 
