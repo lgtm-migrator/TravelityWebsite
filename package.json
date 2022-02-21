@@ -20,9 +20,7 @@
     "scrollmagic": "2.0.8",
     "v-smooth-scroll": "2.0.0-beta.1",
     "vue": "3.2.31",
-    "vue-burger-menu": "2.0.5",
     "vue-router": "4.0.12",
-    "vue3-burger-menu": "1.1.1",
     "vuetify": "3.0.0-alpha.12",
     "webfontloader": "1.6.28"
   },
@@ -41,6 +39,7 @@
     "sass-loader": "10.2.0",
     "vite": "2.8.4",
     "vue-cli-plugin-vuetify": "2.4.5",
+    "vue-concise-slider": "^4.2.5",
     "vuetify-loader": "2.0.0-alpha.9"
   }
 }
