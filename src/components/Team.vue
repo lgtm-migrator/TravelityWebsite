@@ -4,19 +4,12 @@
   </v-container>
 </template>
 <script>
-import { slider, slideritem } from "vue-concise-slider";
 import gsap from "gsap";
 export default {
-  components: {
-    slider,
-    slideritem,
-  },
+  components: {},
   data() {
     return {
       //
-      options: {
-        currentPage: 0,
-      },
     };
   },
   mounted() {
