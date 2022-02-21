@@ -1,12 +1,22 @@
 <template>
-  <v-container fluid class="team-bg"></v-container>
+  <v-container fluid class="team-bg">
+    <!-- <slider ref="slider" :options="options"> </slider> -->
+  </v-container>
 </template>
 <script>
+import { slider, slideritem } from "vue-concise-slider";
 import gsap from "gsap";
 export default {
+  components: {
+    slider,
+    slideritem,
+  },
   data() {
     return {
       //
+      options: {
+        currentPage: 0,
+      },
     };
   },
   mounted() {
