@@ -17,12 +17,12 @@
     "lottie-web": "5.8.1",
     "parallax-js": "3.1.0",
     "roboto-fontface": "*",
-    "scrollmagic": "^2.0.8",
-    "v-smooth-scroll": "^2.0.0-beta.1",
-    "vue": "^3.2.25",
-    "vue-router": "^4.0.12",
-    "vuetify": "^3.0.0-alpha.0",
-    "webfontloader": "^1.0.0"
+    "scrollmagic": "2.0.8",
+    "v-smooth-scroll": "2.0.0-beta.1",
+    "vue": "3.2.31",
+    "vue-router": "4.0.12",
+    "vuetify": "3.0.0-alpha.12",
+    "webfontloader": "1.6.28"
   },
   "devDependencies": {
     "@rollup/plugin-inject": "4.0.4",
