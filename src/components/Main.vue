@@ -122,6 +122,10 @@ export default {
 }
 
 .team {
+  background: url("../assets/waves.svg") no-repeat center bottom;
+  background-size: 100%;
+  height: 100%;
+  width: 100%;
   background-color: #d4e2ff;
 }
 
