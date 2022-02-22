@@ -1,12 +1,21 @@
 <template>
-  <v-container fluid class="team-bg">
-    <!-- <slider ref="slider" :options="options"> </slider> -->
+  <v-container fluid>
+    <v-row class="d-flex align-center justify-center">
+      <v-col cols="12" sm="8" md="4" lg="6" align="center">
+        <TeamCarousel />
+      </v-col>
+      <v-col cols="12" sm="8" md="4" lg="6" align="center">
+        <Contact />
+      </v-col>
+    </v-row>
   </v-container>
 </template>
 <script>
 import gsap from "gsap";
+import TeamCarousel from "./TeamCarousel.vue";
+import Contact from "./Contact.vue";
 export default {
-  components: {},
+  components: { TeamCarousel, Contact },
   data() {
     return {
       //
@@ -20,11 +29,4 @@ export default {
   },
 };
 </script>
-<style scoped>
-.team-bg {
-  background: url("../assets/waves.svg") no-repeat center bottom;
-  background-size: 100%;
-  height: 100%;
-  width: 100%;
-}
-</style>
+<style scoped></style>
