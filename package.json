@@ -40,7 +40,6 @@
     "sass-loader": "10.2.0",
     "vite": "2.8.4",
     "vue-cli-plugin-vuetify": "2.4.5",
-    "vue-concise-slider": "^4.2.5",
     "vuetify-loader": "2.0.0-alpha.9"
   }
 }
