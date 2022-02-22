@@ -13,7 +13,7 @@
 <script>
 import gsap from "gsap";
 import TeamCarousel from "./TeamCarousel.vue";
-import Contact from "./Contact.vue";
+import Contact from "./ContactForm.vue";
 export default {
   components: { TeamCarousel, Contact },
   data() {
