@@ -24,7 +24,7 @@
     <v-container fluid id="whyus" class="c-height whyus" tag="section">
       <!-- <Why /> -->
     </v-container>
-    <v-container fluid id="team" class="c-height team" tag="section">
+    <v-container fluid id="team" class="c-height team d-flex" tag="section">
       <Team />
     </v-container>
     <v-footer>
@@ -33,12 +33,12 @@
   </v-row>
 </template>
 <script>
-import Team from "./Team.vue";
-import Why from "./Why.vue";
-import About from "./About.vue";
-import Home from "./Home.vue";
-import FooterVue from "./Footer.vue";
-import * as klouds from "klouds";
+import Team from './Team.vue';
+import Why from './Why.vue';
+import About from './About.vue';
+import Home from './Home.vue';
+import FooterVue from './Footer.vue';
+import * as klouds from 'klouds';
 export default {
   components: { Home, About, Why, Team, FooterVue },
   data() {
@@ -56,20 +56,20 @@ export default {
     element and the speed of the clouds. */
     createClouds: function () {
       klouds.create({
-        selector: "#sky",
+        selector: '#sky',
         speed: 1,
         layerCount: 7,
-        cloudColor1: "#a8c2fe",
-        cloudColor2: "#fff2f1",
-        bgColor: "#a2bdfe",
+        cloudColor1: '#a8c2fe',
+        cloudColor2: '#fff2f1',
+        bgColor: '#a2bdfe',
       });
       klouds.create({
-        selector: "#sky-under",
+        selector: '#sky-under',
         speed: -1,
         layerCount: 7,
-        cloudColor1: "#a8c2fe",
-        cloudColor2: "#fff2f1",
-        bgColor: "#aec6fe",
+        cloudColor1: '#a8c2fe',
+        cloudColor2: '#fff2f1',
+        bgColor: '#aec6fe',
       });
     },
   },
@@ -122,7 +122,7 @@ export default {
 }
 
 .team {
-  background: url("../assets/waves.svg") no-repeat center bottom;
+  background: url('../assets/waves.svg') no-repeat center bottom;
   background-size: 100%;
   height: 100%;
   width: 100%;
