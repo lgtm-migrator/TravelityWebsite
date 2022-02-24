@@ -24,7 +24,7 @@
     <v-container fluid id="whyus" class="c-height whyus" tag="section">
       <!-- <Why /> -->
     </v-container>
-    <v-container fluid id="team" class="c-height team d-flex" tag="section">
+    <v-container fluid id="team" class="c-height team d-flex align-center" tag="section">
       <Team />
     </v-container>
     <v-footer>
