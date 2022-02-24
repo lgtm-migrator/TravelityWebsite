@@ -93,7 +93,6 @@ export default {
 
   methods: {
     //This is the submit function that is called when the form is submitted.
-    // https://script.google.com/macros/s/AKfycbz__EOnsE5J3l4YHxRHx2_tLXxgpU6zLqWSfynd1A/exec
     async submit() {
       console.log(this.v$);
       const result = await this.v$.$validate();
