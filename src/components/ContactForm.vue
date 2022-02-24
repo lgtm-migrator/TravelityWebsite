@@ -63,6 +63,7 @@ export default {
     formUrl:
       'https://script.google.com/macros/s/AKfycbyDyRD1oL-GT1U8RYJEmS166j0mYKbG74rM0ljtlqZ1FR9MsYZU/exec',
     rules: {
+      // This is a regular expression that checks if the email is valid.
       email: (value) => {
         const pattern = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
         return pattern.test(value) || 'Invalid e-mail';
@@ -92,29 +93,32 @@ export default {
   },
 
   methods: {
-    //This is the submit function that is called when the form is submitted.
+    // This is the code that sends the form data to the server.
     async submit() {
-      console.log(this.v$);
       const result = await this.v$.$validate();
       const formData = new FormData();
       formData.append('name', this.name);
       formData.append('email', this.email);
       formData.append('message', this.message);
       if (result && this.honey === '') {
-        console.log('Submitted');
+        // For debugging
+        // console.log('Submitted');
         this.loading = true;
-        await axios.post(this.formUrl, formData).then((data) => {
-          console.log(data);
+        await axios.post(this.formUrl, formData).then((_data) => {
+          // For debugging
+          // console.log(_data);
         });
         this.loading = false;
         this.reset();
         this.successToast();
       } else {
         this.errorToast();
-        console.log('Form submitted had an error');
+        // For debugging
+        // console.log('Form submitted had an error');
       }
     },
 
+    //This is a function that resets the form.
     reset(event) {
       this.$refs.form.reset();
       this.v$.$reset();
