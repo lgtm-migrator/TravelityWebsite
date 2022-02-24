@@ -3,6 +3,7 @@
     <v-row class="d-flex align-center justify-center">
       <v-col cols="12" sm="8" md="4" lg="6" align="center">
         <TeamCarousel />
+        <!-- <TeamGsap /> -->
       </v-col>
       <v-col cols="12" sm="8" md="4" lg="6" align="center">
         <Contact />
@@ -11,11 +12,11 @@
   </v-container>
 </template>
 <script>
-import gsap from "gsap";
-import TeamCarousel from "./TeamCarousel.vue";
-import Contact from "./ContactForm.vue";
+import TeamGsap from './TeamGsap.vue';
+import TeamCarousel from './TeamCarousel.vue';
+import Contact from './ContactForm.vue';
 export default {
-  components: { TeamCarousel, Contact },
+  components: { TeamCarousel, Contact, TeamGsap },
   data() {
     return {
       //
