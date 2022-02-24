@@ -1,7 +1,181 @@
 <template>
-  <div>hej</div>
+  <v-form class="form" align="start" ref="form" @submit="submit">
+    <v-text-field
+      label="Name"
+      name="name"
+      type="text"
+      :rules="[rules.requiredName]"
+      :counter="0"
+      :value="name"
+      v-model="name"
+      class="inputWidth"
+    ></v-text-field>
+    <v-text-field
+      name="email"
+      :rules="[rules.requiredEmail, rules.email]"
+      :value="email"
+      v-model="email"
+      label="Email"
+      class="inputWidth"
+    ></v-text-field>
+    <v-text-field
+      name="honey"
+      class="honey"
+      :value="honey"
+      v-model="honey"
+    ></v-text-field>
+    <v-textarea
+      name="message"
+      :rules="[rules.requiredMessage, rules.counter]"
+      counter
+      maxLength="200"
+      :value="message"
+      v-model="message"
+      label="Message"
+      class="inputWidth"
+      no-resize
+    ></v-textarea>
+    <v-btn
+      :loading="loading"
+      max-width="25%"
+      width="100%"
+      :disabled="loading"
+      type="submit"
+      @submit.prevent="loader = 'loading'"
+      >Send
+    </v-btn>
+  </v-form>
 </template>
+
 <script>
-export default {};
+import { useVuelidate } from '@vuelidate/core';
+import { email, required, maxLength } from '@vuelidate/validators';
+import axios from 'axios';
+import { createToast } from 'mosha-vue-toastify';
+import 'mosha-vue-toastify/dist/style.css';
+export default {
+  setup: () => ({ v$: useVuelidate() }),
+  data: () => ({
+    name: '',
+    email: '',
+    message: '',
+    honey: '',
+    formUrl:
+      'https://script.google.com/macros/s/AKfycbyDyRD1oL-GT1U8RYJEmS166j0mYKbG74rM0ljtlqZ1FR9MsYZU/exec',
+    rules: {
+      email: (value) => {
+        const pattern = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return pattern.test(value) || 'Invalid e-mail';
+      },
+      requiredName: (value) => !!value || 'Name is required',
+      requiredEmail: (value) => !!value || 'Email is required',
+      requiredMessage: (value) => !!value || 'Message is required',
+      counter: (value) => value.length <= 200 || 'Max 200 characters',
+    },
+    loading: false,
+    loader: null,
+  }),
+  validations() {
+    return {
+      name: {
+        required,
+      },
+      email: {
+        required,
+        email,
+      },
+      message: {
+        required,
+        maxLength: maxLength(200),
+      },
+    };
+  },
+
+  methods: {
+    //This is the submit function that is called when the form is submitted.
+    async submit() {
+      console.log(this.v$);
+      const result = await this.v$.$validate();
+      const formData = new FormData();
+      formData.append('name', this.name);
+      formData.append('email', this.email);
+      formData.append('message', this.message);
+      if (result && this.honey === '') {
+        console.log('Submitted');
+        this.loading = true;
+        await axios.post(this.formUrl, formData).then((data) => {
+          console.log(data);
+        });
+        this.loading = false;
+        this.reset();
+        this.successToast();
+      } else {
+        this.errorToast();
+        console.log('Form submitted had an error');
+      }
+    },
+
+    reset(event) {
+      this.$refs.form.reset();
+      this.v$.$reset();
+      this.honey = '';
+    },
+
+    //This is a function that creates a toast notification.
+    successToast() {
+      return createToast(
+        {
+          title: 'Success!',
+          description: 'We successfully received your message!',
+        },
+        {
+          position: 'bottom-right',
+          type: 'success',
+          timeout: 3000,
+          transition: 'slide',
+        }
+      );
+    },
+
+    //This is a function that creates a toast notification.
+    errorToast() {
+      return createToast(
+        {
+          title: 'Error!',
+          description: 'There was an error sending your message.\n Try again later.',
+        },
+        {
+          position: 'bottom-right',
+          type: 'danger',
+          timeout: 3000,
+          transition: 'slide',
+        }
+      );
+    },
+  },
+  watch: {
+    loader() {
+      const l = this.loader;
+      this[l] = !this[l];
+
+      setTimeout(() => (this[l] = false), 3000);
+
+      this.loader = null;
+    },
+  },
+};
 </script>
-<style lang=""></style>
+
+<style lang="scss" scoped>
+.honey {
+  display: none;
+}
+
+.inputWidth {
+  max-width: 75%;
+}
+
+.form {
+  font-family: 'Karla', sans-serif;
+}
+</style>
