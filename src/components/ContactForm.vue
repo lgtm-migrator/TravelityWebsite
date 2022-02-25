@@ -28,7 +28,7 @@
       name="message"
       :rules="[rules.requiredMessage, rules.counter]"
       counter
-      maxLength="200"
+      maxLength="300"
       :value="message"
       v-model="message"
       label="Message"
@@ -71,7 +71,7 @@ export default {
       requiredName: (value) => !!value || 'Name is required',
       requiredEmail: (value) => !!value || 'Email is required',
       requiredMessage: (value) => !!value || 'Message is required',
-      counter: (value) => value.length <= 200 || 'Max 200 characters',
+      counter: (value) => value.length <= 350 || 'Max 200 characters',
     },
     loading: false,
     loader: null,
