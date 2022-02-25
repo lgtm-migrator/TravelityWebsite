@@ -3,9 +3,7 @@
     <div class="slider-item active">
       <img src="https://via.placeholder.com/400" />
     </div>
-    <div class="slider-item tile hero-1">
-      <img class="slider-image" src="../assets/lukas.png" />
-    </div>
+    <div class="slider-item tile hero-1"></div>
     <div class="slider-item tile"><img src="https://via.placeholder.com/400" /></div>
     <div class="slider-item tile"><img src="https://via.placeholder.com/400" /></div>
     <div class="slider-item tile"><img src="https://via.placeholder.com/400" /></div>
@@ -87,9 +85,8 @@ export default defineComponent({
         let from = calculatePosition(fromHero);
         let to = calculatePosition(toHero);
 
-        gsap.set([fromHero, toHero], { visibility: 'hidden', opacity: 0 });
+        gsap.set([fromHero, toHero], { visibility: 'hidden' });
         gsap.set(clone, {
-          duration: 0.3,
           position: 'absolute',
           margin: 0,
         });
@@ -98,29 +95,19 @@ export default defineComponent({
 
         gsap.set(clone, from);
         gsap.to(clone, {
-          duration: 1,
+          duration: 0.5,
           x: to.left - from.left,
           y: to.top - from.top,
           width: to.width,
           height: to.height,
           autoRound: false,
-          opacity: 1,
           ease: 'Power1.easeOut',
           onComplete: onComplete,
         });
 
         function onComplete() {
           gsap.set(toHero, {
-            duration: 1,
             visibility: 'visible',
-            backgroundColor: 'white',
-            opacity: 1,
-            ease: 'Power1.easeIn',
-          });
-          gsap.set(fromHero, {
-            duration: 1,
-            opacity: 1,
-            ease: 'Power1.easeOut',
           });
           body.removeChild(clone);
         }
