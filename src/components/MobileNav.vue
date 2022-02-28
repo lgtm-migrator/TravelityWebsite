@@ -31,7 +31,7 @@
   </div>
 </template>
 <script>
-import gsap from "gsap";
+import gsap from 'gsap';
 export default {
   data() {
     return {
@@ -40,94 +40,92 @@ export default {
   },
   methods: {
     NaviAnim: function () {
-      const bars = document.querySelector(".bars");
-      const navBefore = document.querySelector(".navBefore");
-      const navItem = document.querySelectorAll(".nav-item");
-      const linkItem = document.querySelectorAll(".link-item");
+      const bars = document.querySelector('.bars');
+      const navItem = document.querySelectorAll('.nav-item');
 
-      bars.addEventListener("click", function (e) {
-        this.classList.toggle("active");
-        if (this.classList.contains("active")) {
-          gsap.to(".menu", {
+      bars.addEventListener('click', function (e) {
+        this.classList.toggle('active');
+        if (this.classList.contains('active')) {
+          gsap.to('.menu', {
             duration: 0.1,
-            display: "flex",
-            ease: "expo.in",
+            display: 'flex',
+            ease: 'expo.in',
           });
-          gsap.to(".navBefore", {
+          gsap.to('.navBefore', {
             duration: 0.4,
-            marginLeft: "0",
-            ease: "ease.in",
-            clipPath: "circle(100% at 100% 50%)",
+            marginLeft: '0',
+            ease: 'ease.in',
+            clipPath: 'circle(100% at 100% 50%)',
           });
-          gsap.to(".nav", {
+          gsap.to('.nav', {
             duration: 0.6,
-            marginLeft: "0",
+            marginLeft: '0',
             delay: 0.1,
-            ease: "ease.in",
-            clipPath: "circle(100% at 100% 50%)",
+            ease: 'ease.in',
+            clipPath: 'circle(100% at 100% 50%)',
           });
-          gsap.to(".navigation", {
+          gsap.to('.navigation', {
             duration: 0.7,
-            opacity: "1",
+            opacity: '1',
             delay: 0.6,
-            ease: "expo.in",
+            ease: 'expo.in',
           });
         } else {
-          gsap.to(".navigation", {
+          gsap.to('.navigation', {
             duration: 0.2,
-            opacity: "0",
-            ease: "expo.in",
+            opacity: '0',
+            ease: 'expo.in',
           });
-          gsap.to(".nav", {
+          gsap.to('.nav', {
             duration: 1,
-            marginLeft: "100%",
+            marginLeft: '100%',
             delay: 0.3,
-            ease: "ease.out",
-            clipPath: "circle(0% at 100% 50%)",
+            ease: 'ease.out',
+            clipPath: 'circle(0% at 100% 50%)',
           });
-          gsap.to(".navBefore", {
+          gsap.to('.navBefore', {
             duration: 1,
-            marginLeft: "100%",
+            marginLeft: '100%',
             delay: 0.5,
-            ease: "ease.out",
-            clipPath: "circle(0% at 100% 50%)",
+            ease: 'ease.out',
+            clipPath: 'circle(0% at 100% 50%)',
           });
-          gsap.to(".menu", {
+          gsap.to('.menu', {
             duration: 1,
-            display: "none",
+            display: 'none',
             delay: 1,
-            ease: "expo.in",
+            ease: 'expo.in',
           });
         }
       });
 
       navItem.forEach((item) => {
-        item.addEventListener("click", function (e) {
-          bars.classList.remove("active");
-          gsap.to(".navigation", {
+        item.addEventListener('click', function (e) {
+          bars.classList.remove('active');
+          gsap.to('.navigation', {
             duration: 0.2,
-            opacity: "0",
-            ease: "expo.in",
+            opacity: '0',
+            ease: 'expo.in',
           });
-          gsap.to(".nav", {
+          gsap.to('.nav', {
             duration: 1,
-            marginLeft: "100%",
+            marginLeft: '100%',
             delay: 0.3,
-            ease: "ease.out",
-            clipPath: "circle(0% at 100% 50%)",
+            ease: 'ease.out',
+            clipPath: 'circle(0% at 100% 50%)',
           });
-          gsap.to(".navBefore", {
+          gsap.to('.navBefore', {
             duration: 1,
-            marginLeft: "100%",
+            marginLeft: '100%',
             delay: 0.5,
-            ease: "ease.out",
-            clipPath: "circle(0% at 100% 50%)",
+            ease: 'ease.out',
+            clipPath: 'circle(0% at 100% 50%)',
           });
-          gsap.to(".menu", {
+          gsap.to('.menu', {
             duration: 1,
-            display: "none",
+            display: 'none',
             delay: 1,
-            ease: "expo.in",
+            ease: 'expo.in',
           });
         });
       });
@@ -161,7 +159,7 @@ export default {
 }
 .main .bars::before {
   position: absolute;
-  content: "";
+  content: '';
   height: 2px;
   width: 90%;
   background: #fff;
@@ -175,7 +173,7 @@ export default {
 }
 .main .bars::after {
   position: absolute;
-  content: "";
+  content: '';
   height: 2px;
   width: 90%;
   background: #fff;
@@ -227,7 +225,7 @@ export default {
 }
 .menu .nav ul li a {
   position: relative;
-  font-family: "Karla", sans-serif;
+  font-family: 'Karla', sans-serif;
   font-weight: 500;
   font-size: 1.5rem;
   text-decoration: none;
