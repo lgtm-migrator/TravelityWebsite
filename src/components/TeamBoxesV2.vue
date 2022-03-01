@@ -15,23 +15,63 @@ export default {
       persons: [
         {
           name: 'Lukas',
-          socials: [],
+          description: '',
+          socials: [
+            {
+              twitter: '',
+              facebook: '',
+              instagram: '',
+              github: '',
+            },
+          ],
         },
         {
           name: 'Owen',
-          socials: [],
+          description: '',
+          socials: [
+            {
+              twitter: '',
+              facebook: '',
+              instagram: '',
+              github: '',
+            },
+          ],
         },
         {
           name: 'Manish',
-          socials: [],
+          description: '',
+          socials: [
+            {
+              twitter: '',
+              facebook: '',
+              instagram: '',
+              github: '',
+            },
+          ],
         },
         {
           name: 'Nikolaj',
-          socials: [],
+          description: '',
+          socials: [
+            {
+              twitter: '',
+              facebook: '',
+              instagram: '',
+              github: '',
+            },
+          ],
         },
         {
           name: 'Nirakash',
-          socials: [],
+          description: '',
+          socials: [
+            {
+              twitter: '',
+              facebook: '',
+              instagram: '',
+              github: '',
+            },
+          ],
         },
       ],
     };
