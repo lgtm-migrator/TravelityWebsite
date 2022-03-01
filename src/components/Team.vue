@@ -2,7 +2,8 @@
   <v-container fluid>
     <v-row class="d-flex align-center justify-center">
       <v-col cols="12" sm="8" md="4" lg="7" align="center">
-        <TeamBoxes />
+        <!-- <TeamBoxes /> -->
+        <TeamBoxesV2 />
       </v-col>
       <v-col class="height-100" cols="12" sm="8" md="4" lg="5" align="center">
         <Contact />
@@ -11,10 +12,11 @@
   </v-container>
 </template>
 <script>
+import TeamBoxesV2 from './TeamBoxesV2.vue';
 import TeamBoxes from './TeamBoxes.vue';
 import Contact from './ContactForm.vue';
 export default {
-  components: { Contact, TeamBoxes },
+  components: { Contact, TeamBoxes, TeamBoxesV2 },
   data() {
     return {
       //
