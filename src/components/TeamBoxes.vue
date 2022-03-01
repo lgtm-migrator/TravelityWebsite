@@ -1,11 +1,11 @@
 <template>
   <div class="tile-container">
-    <div v-for="k in persons" :key="k" :class="'tile ' + 'person-' + k"></div>
+    <div v-for="(k, item) in persons" :key="k" :class="'tile ' + 'person-' + item">
+      <p>{{ k.name }}</p>
+    </div>
   </div>
   <div class="page-container">
-    <div v-for="i in persons" :key="i" :class="'page ' + 'person-' + i">
-      <!-- <img :src="'/src/assets/person' + i + '.png'" /> -->
-    </div>
+    <div v-for="(i, item) in persons" :key="i" :class="'page ' + 'person-' + item"></div>
   </div>
 </template>
 
@@ -15,7 +15,20 @@ export default {
   created() {},
   data() {
     return {
-      persons: 5,
+      persons: [
+        {
+          name: 'Lukas',
+        },
+        {
+          name: 'Owen',
+        },
+        {
+          name: 'Manish',
+        },
+        {
+          name: 'Nikolaj',
+        },
+      ],
     };
   },
 
@@ -112,7 +125,9 @@ export default {
             });
           }
           setTimeout(() => {
+            console.log('die start');
             body.removeChild(clone);
+            console.log('die end');
           }, 250);
         }
       }
@@ -155,12 +170,12 @@ export default {
   z-index: 10000000000;
 }
 
-@for $i from 1 through 5 {
+@for $i from 0 through 4 {
   .person-#{$i} {
     background: center 10% no-repeat white;
     background-size: auto;
     opacity: 1;
-    background-image: url('../assets/person#{$i}.png');
+    background-image: url('/src/assets/person#{$i}.png');
   }
 }
 </style>
