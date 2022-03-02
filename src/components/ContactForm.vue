@@ -1,5 +1,10 @@
 <template>
-  <v-form class="form" align="start" ref="form" @submit="submit">
+  <v-form
+    class="form d-flex flex-column align-start"
+    align="end"
+    ref="form"
+    @submit="submit"
+  >
     <v-text-field
       label="Name"
       name="name"
@@ -176,6 +181,7 @@ export default {
 }
 
 .inputWidth {
+  width: 100%;
   max-width: 75%;
 }
 

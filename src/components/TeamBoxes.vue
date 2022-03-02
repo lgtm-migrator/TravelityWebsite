@@ -1,17 +1,11 @@
 <template>
   <div class="tile-container">
-    <div class="tile person-1"></div>
-    <div class="tile person-2"></div>
-    <div class="tile person-3"></div>
-    <div class="tile person-4"></div>
-    <div class="tile person-5"></div>
+    <div v-for="(k, item) in persons" :key="k" :class="'tile ' + 'person-' + item">
+      <p>{{ k.name }}</p>
+    </div>
   </div>
   <div class="page-container">
-    <div class="page person-1"></div>
-    <div class="page person-2"></div>
-    <div class="page person-3"></div>
-    <div class="page person-4"></div>
-    <div class="page person-5"></div>
+    <div v-for="(i, item) in persons" :key="i" :class="'page ' + 'person-' + item"></div>
   </div>
 </template>
 
@@ -20,7 +14,22 @@ import gsap from 'gsap';
 export default {
   created() {},
   data() {
-    return {};
+    return {
+      persons: [
+        {
+          name: 'Lukas',
+        },
+        {
+          name: 'Owen',
+        },
+        {
+          name: 'Manish',
+        },
+        {
+          name: 'Nikolaj',
+        },
+      ],
+    };
   },
 
   mounted() {
@@ -35,6 +44,7 @@ export default {
     addListeners(tile, page) {
       let root = document.documentElement;
       let body = document.body;
+
       page.addEventListener('click', function () {
         animateHero(page, tile);
       });
@@ -61,11 +71,10 @@ export default {
 
       function animateHero(fromHero, toHero) {
         let clone = fromHero.cloneNode(true);
-
         let from = calculatePosition(fromHero);
         let to = calculatePosition(toHero);
 
-        gsap.set([fromHero, toHero], { visibility: 'hidden' });
+        gsap.set([fromHero, toHero], { visibility: 'hidden', opacity: 0 });
         gsap.set(clone, {
           position: 'absolute',
           margin: 0,
@@ -82,14 +91,44 @@ export default {
           height: to.height,
           autoRound: false,
           ease: 'Power1.easeOut',
+          zIndex: 9999999999999,
           onComplete: onComplete,
         });
 
         function onComplete() {
-          gsap.set(toHero, {
-            visibility: 'visible',
-          });
-          body.removeChild(clone);
+          if (toHero.classList.contains('page')) {
+            gsap.set(toHero, {
+              delay: 0.1,
+              duration: 0.5,
+              opacity: 1,
+              ease: 'Power1.easeIn',
+            });
+            gsap.set('.page-container', {
+              duration: 0.5,
+              opacity: 1,
+            });
+            gsap.set(toHero, {
+              visibility: 'visible',
+            });
+          } else if (toHero.classList.contains('tile')) {
+            gsap.set(toHero, {
+              delay: 0.1,
+              duration: 0.5,
+              opacity: 1,
+            });
+            gsap.set('.page-container', {
+              duration: 0.5,
+              opacity: 1,
+            });
+            gsap.set(toHero, {
+              visibility: 'visible',
+            });
+          }
+          setTimeout(() => {
+            console.log('die start');
+            body.removeChild(clone);
+            console.log('die end');
+          }, 250);
         }
       }
     },
@@ -117,6 +156,7 @@ export default {
 
 .page-container {
   visibility: hidden;
+  opacity: 0;
 }
 
 .page {
@@ -130,9 +170,12 @@ export default {
   z-index: 10000000000;
 }
 
-@for $i from 1 through 5 {
+@for $i from 0 through 4 {
   .person-#{$i} {
-    background-color: white;
+    background: center 10% no-repeat white;
+    background-size: auto;
+    opacity: 1;
+    background-image: url('/src/assets/person#{$i}.png');
   }
 }
 </style>
