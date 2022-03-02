@@ -16,62 +16,52 @@ export default {
         {
           name: 'Lukas',
           description: '',
-          socials: [
-            {
-              twitter: '',
-              facebook: '',
-              instagram: '',
-              github: '',
-            },
-          ],
+          socials: {
+            twitter: '',
+            facebook: '',
+            instagram: '',
+            github: '',
+          },
         },
         {
           name: 'Owen',
           description: '',
-          socials: [
-            {
-              twitter: '',
-              facebook: '',
-              instagram: '',
-              github: '',
-            },
-          ],
+          socials: {
+            twitter: '',
+            facebook: '',
+            instagram: '',
+            github: '',
+          },
         },
         {
           name: 'Manish',
           description: '',
-          socials: [
-            {
-              twitter: '',
-              facebook: '',
-              instagram: '',
-              github: '',
-            },
-          ],
+          socials: {
+            twitter: '',
+            facebook: '',
+            instagram: '',
+            github: '',
+          },
         },
         {
           name: 'Nikolaj',
           description: '',
-          socials: [
-            {
-              twitter: '',
-              facebook: '',
-              instagram: '',
-              github: '',
-            },
-          ],
+          socials: {
+            twitter: '',
+            facebook: '',
+            instagram: '',
+            github: '',
+          },
         },
         {
           name: 'Nirakash',
           description: '',
-          socials: [
-            {
-              twitter: '',
-              facebook: '',
-              instagram: '',
-              github: '',
-            },
-          ],
+          socials: {
+            twitter: '',
+            facebook: '',
+            instagram: '',
+            github: '',
+          },
         },
       ],
     };
