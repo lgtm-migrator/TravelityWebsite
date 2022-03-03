@@ -2,6 +2,8 @@
   <div class="tile-container">
     <div v-for="(k, item) in persons" :key="k" :class="'tile ' + 'person-' + item">
       <p>{{ k.name }}</p>
+      <p>{{ k.description }}</p>
+      <a href="">{{ k.socials.twitter }}</a>
     </div>
   </div>
 </template>
@@ -15,28 +17,49 @@ export default {
       persons: [
         {
           name: 'Lukas',
-          description: '',
-          socials: [{ twitter: '' }, { instagram: '' }, { github: '' }],
-        },
-        {
-          name: 'Owen',
-          description: '',
-          socials: [{ twitter: '' }, { instagram: '' }, { github: '' }],
+          description:
+            'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum saepe cupiditate natus dicta, harum quas, eum blanditiis enim delectus minima sapiente nobis consequuntur explicabo! Corporis recusandae culpa dolorum sequi adipisci.',
+          socials: {
+            twitter: 't',
+            instagram: '',
+            github: '',
+          },
         },
         {
           name: 'Manish',
           description: '',
-          socials: [{ twitter: '' }, { instagram: '' }, { github: '' }],
+          socials: {
+            twitter: 't',
+            instagram: '',
+            github: '',
+          },
         },
         {
           name: 'Nikolaj',
           description: '',
-          socials: [{ twitter: '' }, { instagram: '' }, { github: '' }],
+          socials: {
+            twitter: 't',
+            instagram: '',
+            github: '',
+          },
         },
         {
           name: 'Nirakash',
           description: '',
-          socials: [{ twitter: '' }, { instagram: '' }, { github: '' }],
+          socials: {
+            twitter: '',
+            instagram: '',
+            github: '',
+          },
+        },
+        {
+          name: 'Owen',
+          description: '',
+          socials: {
+            twitter: '',
+            instagram: '',
+            github: '',
+          },
         },
       ],
     };
