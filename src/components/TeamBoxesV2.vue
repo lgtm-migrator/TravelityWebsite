@@ -3,7 +3,7 @@
     <div v-for="(k, item) in persons" :key="k" :class="'tile ' + 'person-' + item">
       <p>{{ k.name }}</p>
       <p>{{ k.description }}</p>
-      <a href="">{{ k.socials.twitter }}</a>
+      <a :href="k.socials.github" target="_blank">GitHub</a>
     </div>
   </div>
 </template>
@@ -20,45 +20,35 @@ export default {
           description:
             'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum saepe cupiditate natus dicta, harum quas, eum blanditiis enim delectus minima sapiente nobis consequuntur explicabo! Corporis recusandae culpa dolorum sequi adipisci.',
           socials: {
-            twitter: 't',
-            instagram: '',
-            github: '',
+            github: 'https://github.com/Slash1y',
           },
         },
         {
           name: 'Manish',
           description: '',
           socials: {
-            twitter: 't',
-            instagram: '',
-            github: '',
+            github: 'https://github.com/Manish946',
           },
         },
         {
           name: 'Nikolaj',
           description: '',
           socials: {
-            twitter: 't',
-            instagram: '',
-            github: '',
+            github: 'https://github.com/Nicolaj-S',
           },
         },
         {
           name: 'Nirakash',
           description: '',
           socials: {
-            twitter: '',
-            instagram: '',
-            github: '',
+            github: 'https://github.com/CyberNira',
           },
         },
         {
           name: 'Owen',
           description: '',
           socials: {
-            twitter: '',
-            instagram: '',
-            github: '',
+            github: 'https://github.com/RiceBoyy',
           },
         },
       ],
@@ -72,6 +62,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import 'vuetify/lib/styles/settings/_variables.scss';
 .tile-container {
   display: flex;
   justify-content: center;
