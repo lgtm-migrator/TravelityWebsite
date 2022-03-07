@@ -32,7 +32,7 @@ export default {
       persons: [
         {
           name: 'Lukas',
-          image: '/src/assets/person0.png',
+          image: './src/assets/person0.png',
           description:
             'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum saepe cupiditate natus dicta, harum quas, eum blanditiis enim delectus minima sapiente nobis consequuntur explicabo! Corporis recusandae culpa dolorum sequi adipisci.',
           socials: {
@@ -41,7 +41,7 @@ export default {
         },
         {
           name: 'Manish',
-          image: '/src/assets/person1.png',
+          image: './src/assets/person1.png',
           description: '',
           socials: {
             github: 'https://github.com/Manish946',
@@ -49,7 +49,7 @@ export default {
         },
         {
           name: 'Nikolaj',
-          image: '/src/assets/person2.png',
+          image: './src/assets/person2.png',
           description: '',
           socials: {
             github: 'https://github.com/Nicolaj-S',
@@ -57,7 +57,7 @@ export default {
         },
         {
           name: 'Nirakash',
-          image: '/src/assets/person3.png',
+          image: './src/assets/person3.png',
           description: '',
           socials: {
             github: 'https://github.com/CyberNira',
@@ -65,7 +65,7 @@ export default {
         },
         {
           name: 'Owen',
-          image: '/src/assets/person4.png',
+          image: './src/assets/person4.png',
           description: '',
           socials: {
             github: 'https://github.com/RiceBoyy',
