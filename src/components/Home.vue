@@ -21,7 +21,7 @@ export default {
 <style lang="scss" scoped>
 h1 {
   font-size: 2em;
-  font-family: "Karla", sans-serif;
+  font-family: 'Karla', sans-serif;
   font-weight: 900;
   color: #fff;
   text-align: center;
