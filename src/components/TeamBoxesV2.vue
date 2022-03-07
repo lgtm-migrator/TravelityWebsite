@@ -1,11 +1,26 @@
 <template>
-  <div class="tile-container">
+  <!-- <div class="tile-container">
     <div v-for="(k, item) in persons" :key="k" :class="'tile ' + 'person-' + item">
       <p>{{ k.name }}</p>
-      <p>{{ k.description }}</p>
-      <a :href="k.socials.github" target="_blank">GitHub</a>
     </div>
-  </div>
+  </div> -->
+  <v-row>
+    <template v-for="(item, n) in persons" :key="n">
+      <v-col>
+        <v-card class="pa-2" outlined tile>
+          <v-img :src="item.image" cover height="200px"></v-img>
+          <v-card-title v-text="item.name"></v-card-title>
+          <v-card-actions>
+            <v-btn
+              size="small"
+              icon="mdi-github"
+              :href="item.socials.github"
+            ></v-btn> </v-card-actions
+        ></v-card>
+      </v-col>
+      <v-responsive v-if="n === 2" :key="`width-${n}`" width="100%"></v-responsive>
+    </template>
+  </v-row>
 </template>
 
 <script>
@@ -17,6 +32,7 @@ export default {
       persons: [
         {
           name: 'Lukas',
+          image: '/src/assets/person0.png',
           description:
             'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum saepe cupiditate natus dicta, harum quas, eum blanditiis enim delectus minima sapiente nobis consequuntur explicabo! Corporis recusandae culpa dolorum sequi adipisci.',
           socials: {
@@ -25,6 +41,7 @@ export default {
         },
         {
           name: 'Manish',
+          image: '/src/assets/person1.png',
           description: '',
           socials: {
             github: 'https://github.com/Manish946',
@@ -32,6 +49,7 @@ export default {
         },
         {
           name: 'Nikolaj',
+          image: '/src/assets/person2.png',
           description: '',
           socials: {
             github: 'https://github.com/Nicolaj-S',
@@ -39,6 +57,7 @@ export default {
         },
         {
           name: 'Nirakash',
+          image: '/src/assets/person3.png',
           description: '',
           socials: {
             github: 'https://github.com/CyberNira',
@@ -46,6 +65,7 @@ export default {
         },
         {
           name: 'Owen',
+          image: '/src/assets/person4.png',
           description: '',
           socials: {
             github: 'https://github.com/RiceBoyy',
@@ -71,6 +91,12 @@ export default {
   user-select: none;
 }
 
+@media #{map-get($display-breakpoints, 'xs')} {
+  .tile-container {
+    flex-direction: row;
+  }
+}
+
 .tile {
   width: 400px;
   height: 400px;
@@ -80,12 +106,19 @@ export default {
   display: inline-block;
 }
 
-@for $i from 0 through 4 {
-  .person-#{$i} {
-    background: center 10% no-repeat white;
-    background-size: auto;
-    opacity: 1;
-    background-image: url('/src/assets/person#{$i}.png');
+@media #{map-get($display-breakpoints, 'xs')} {
+  .tile {
+    width: 50%;
+    height: 300px;
   }
 }
+
+// @for $i from 0 through 4 {
+//   .person-#{$i} {
+//     background: center 10% no-repeat white;
+//     background-size: auto;
+//     opacity: 1;
+//     background-image: url('/src/assets/person#{$i}.png');
+//   }
+// }
 </style>

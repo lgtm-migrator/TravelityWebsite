@@ -1,7 +1,7 @@
 <template>
-  <v-container fluid>
+  <v-container class="height-100" fluid>
     <v-row class="d-flex align-center justify-center">
-      <v-col cols="12" sm="8" md="4" lg="7" align="center">
+      <v-col cols="12" xs="10" sm="8" md="4" lg="7" align="center">
         <!-- <TeamBoxes /> -->
         <TeamBoxesV2 />
       </v-col>
@@ -33,5 +33,10 @@ export default {
 <style lang="scss" scoped>
 .height-100 {
   height: 100%;
+  overflow: hidden;
+}
+
+.width-100 {
+  width: 100%;
 }
 </style>
