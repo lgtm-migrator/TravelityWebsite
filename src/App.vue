@@ -13,9 +13,9 @@
 </template>
 
 <script>
-import NavBar from "./components/NavBar.vue";
-import Main from "./components/Main.vue";
-import lottie from "lottie-web";
+import NavBar from './components/NavBar.vue';
+import Main from './components/Main.vue';
+import lottie from 'lottie-web';
 
 export default {
   components: {
@@ -38,20 +38,20 @@ export default {
 
   methods: {
     startLoading: function () {
-      let animEl = document.getElementById("loading-animation");
+      const animEl = document.getElementById('loading-animation');
       lottie.loadAnimation({
         container: animEl,
-        renderer: "svg",
+        renderer: 'svg',
         loop: true,
         autoplay: true,
         path:
-          "https://gist.githubusercontent.com/Slash1y/31fe2f5d058ebd47bbe9bc70315597f6/raw/652e1f5799275c7e249ab2091632d9c6db27799f/loading.json",
+          'https://gist.githubusercontent.com/Slash1y/31fe2f5d058ebd47bbe9bc70315597f6/raw/652e1f5799275c7e249ab2091632d9c6db27799f/loading.json',
       });
     },
 
     stopLoading: function () {
-      let loadWrap = document.querySelector(".loading-wrapper");
-      loadWrap.classList.add("loading-wrapper-hidden");
+      const loadWrap = document.querySelector('.loading-wrapper');
+      loadWrap.classList.add('loading-wrapper-hidden');
       lottie.destroy();
     },
   },

@@ -31,7 +31,7 @@ export default {
 </script>
 <style scoped>
 .footer-text {
-  font-family: "Karla", sans-serif;
+  font-family: 'Karla', sans-serif;
   font-size: 12px;
   color: white;
   text-align: center;

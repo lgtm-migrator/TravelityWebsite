@@ -24,14 +24,14 @@
   </nav>
 </template>
 <script>
-import MobileNav from "./MobileNav.vue";
+import MobileNav from './MobileNav.vue';
 export default {
   components: {
     MobileNav,
   },
   data() {
     return {
-      titleArr: ["T", "r", "a", "v", "e", "l", "i", "t", "y"],
+      titleArr: ['T', 'r', 'a', 'v', 'e', 'l', 'i', 't', 'y'],
     };
   },
 
@@ -39,37 +39,37 @@ export default {
     // When the user scrolls down, the navbar and navbar links will be scrolled.
     onScroll: function (event) {
       const scrollPos = window.scrollY;
-      const navbar = document.querySelector(".navbar");
-      const navbarTitle = document.querySelectorAll(".navbar-title");
-      const navwrap = document.querySelector(".nav-wrapper");
-      const navbarLinks = document.querySelector(".navbar-links");
-      const navbarLinkItems = document.querySelectorAll(".link-item");
+      const navbar = document.querySelector('.navbar');
+      const navbarTitle = document.querySelectorAll('.navbar-title');
+      const navwrap = document.querySelector('.nav-wrapper');
+      const navbarLinks = document.querySelector('.navbar-links');
+      const navbarLinkItems = document.querySelectorAll('.link-item');
       const navbarLinksArrayLength = navbarLinkItems.length;
 
       if (scrollPos > 5) {
-        navbar.classList.add("navbar-scrolled");
-        navbarLinks.classList.add("navbar-links-scrolled");
+        navbar.classList.add('navbar-scrolled');
+        navbarLinks.classList.add('navbar-links-scrolled');
         navbarTitle.forEach((item) => {
-          item.classList.add("navbar-title-scrolled");
+          item.classList.add('navbar-title-scrolled');
         });
 
         for (let i = 0; i < navbarLinksArrayLength; i++) {
-          navbarLinkItems[i].classList.add("navbar-links-scrolled");
+          navbarLinkItems[i].classList.add('navbar-links-scrolled');
         }
 
-        navwrap.classList.add("nav-wrapper-scrolled");
+        navwrap.classList.add('nav-wrapper-scrolled');
       } else {
-        navbar.classList.remove("navbar-scrolled");
-        navbarLinks.classList.remove("navbar-links-scrolled");
+        navbar.classList.remove('navbar-scrolled');
+        navbarLinks.classList.remove('navbar-links-scrolled');
         navbarTitle.forEach((item) => {
-          item.classList.remove("navbar-title-scrolled");
+          item.classList.remove('navbar-title-scrolled');
         });
 
         for (let i = 0; i < navbarLinksArrayLength; i++) {
-          navbarLinkItems[i].classList.remove("navbar-links-scrolled");
+          navbarLinkItems[i].classList.remove('navbar-links-scrolled');
         }
 
-        navwrap.classList.remove("nav-wrapper-scrolled");
+        navwrap.classList.remove('nav-wrapper-scrolled');
       }
       this.onHash();
     },
@@ -81,42 +81,42 @@ export default {
     navbar-link-active class is added to the link that has an href attribute equal to the current
     section. */
     onHash: function () {
-      let current = "";
-      const navLinks = document.querySelectorAll(".link-item");
-      document.querySelectorAll("section").forEach((section) => {
+      let current = '';
+      const navLinks = document.querySelectorAll('.link-item');
+      document.querySelectorAll('section').forEach((section) => {
         const sectionTop = section.offsetTop;
         if (scrollY >= sectionTop - 65) {
-          current = section.getAttribute("id");
+          current = section.getAttribute('id');
         }
       });
 
       navLinks.forEach((item) => {
-        item.classList.remove("navbar-link-active");
-        if (item.attributes.getNamedItem("href").value === "#" + current) {
-          item.classList.add("navbar-link-active");
+        item.classList.remove('navbar-link-active');
+        if (item.attributes.getNamedItem('href').value === '#' + current) {
+          item.classList.add('navbar-link-active');
         }
       });
     },
 
     /* When the user scrolls down a animation runs with a plane running out of the screen. And when the user scrolls up, the plane returns to the screen. */
     onScrollAnimation: function () {
-      let plane = document.querySelector(".plane");
+      let plane = document.querySelector('.plane');
       if (scrollY > 5) {
-        plane.classList.add("plane-scrolled");
+        plane.classList.add('plane-scrolled');
       } else {
-        plane.classList.remove("plane-scrolled");
+        plane.classList.remove('plane-scrolled');
       }
     },
   },
 
   mounted() {
     this.onHash();
-    window.addEventListener("scroll", this.onScroll);
+    window.addEventListener('scroll', this.onScroll);
   },
 };
 </script>
 <style lang="scss" scoped>
-@import "vuetify/lib/styles/settings/_variables.scss";
+@import 'vuetify/lib/styles/settings/_variables.scss';
 .nav-wrapper {
   display: flex;
   justify-content: space-between;
@@ -135,7 +135,7 @@ export default {
   text-align: center;
   text-decoration: none;
   font-size: 18px;
-  font-family: "Exo 2", sans-serif;
+  font-family: 'Exo 2', sans-serif;
   font-weight: 600;
   line-height: 15px;
   padding: 25px;
@@ -153,7 +153,7 @@ export default {
 .navbar p {
   font-size: 25px;
   font-weight: 700;
-  font-family: "Exo 2", sans-serif;
+  font-family: 'Exo 2', sans-serif;
   transition: 0.2s all ease-in;
   letter-spacing: 1.5px;
   color: white;
