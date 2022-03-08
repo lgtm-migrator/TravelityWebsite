@@ -1,11 +1,11 @@
 <template>
-  <v-container class="height-100" fluid>
+  <v-container fluid>
     <v-row class="d-flex align-center justify-center">
       <v-col cols="12" sm="8" md="4" lg="7" align="center">
         <!-- <TeamBoxes /> -->
         <TeamBoxesV2 />
       </v-col>
-      <v-col class="height-100" cols="12" sm="8" md="4" lg="5" align="center">
+      <v-col cols="12" sm="8" md="4" lg="5" align="center">
         <Contact />
       </v-col>
     </v-row>

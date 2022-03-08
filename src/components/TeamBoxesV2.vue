@@ -24,7 +24,6 @@
 </template>
 
 <script>
-import gsap from 'gsap';
 export default {
   created() {},
   data() {
@@ -33,8 +32,6 @@ export default {
         {
           name: 'Lukas',
           image: 'https://i.ibb.co/30kV8nx/person0.png',
-          description:
-            'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum saepe cupiditate natus dicta, harum quas, eum blanditiis enim delectus minima sapiente nobis consequuntur explicabo! Corporis recusandae culpa dolorum sequi adipisci.',
           socials: {
             github: 'https://github.com/Slash1y',
           },
@@ -42,7 +39,6 @@ export default {
         {
           name: 'Manish',
           image: '../assets/person1.png',
-          description: '',
           socials: {
             github: 'https://github.com/Manish946',
           },
@@ -50,7 +46,6 @@ export default {
         {
           name: 'Nikolaj',
           image: '../assets/person2.png',
-          description: '',
           socials: {
             github: 'https://github.com/Nicolaj-S',
           },
@@ -58,7 +53,6 @@ export default {
         {
           name: 'Nirakash',
           image: '../assets/person3.png',
-          description: '',
           socials: {
             github: 'https://github.com/CyberNira',
           },
@@ -66,7 +60,6 @@ export default {
         {
           name: 'Owen',
           image: '../assets/person4.png',
-          description: '',
           socials: {
             github: 'https://github.com/RiceBoyy',
           },
