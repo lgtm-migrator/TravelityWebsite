@@ -32,7 +32,7 @@ export default {
       persons: [
         {
           name: 'Lukas',
-          image: '/src/assets/person0.png',
+          image: 'https://i.ibb.co/30kV8nx/person0.png',
           description:
             'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum saepe cupiditate natus dicta, harum quas, eum blanditiis enim delectus minima sapiente nobis consequuntur explicabo! Corporis recusandae culpa dolorum sequi adipisci.',
           socials: {
