@@ -6,12 +6,9 @@
           <v-img :src="item.image" cover height="200px"></v-img>
           <v-card-title v-text="item.name"></v-card-title>
           <v-card-actions>
-            <v-btn
-              size="small"
-              icon="mdi-github"
-              :href="item.socials.github"
-            ></v-btn> </v-card-actions
-        ></v-card>
+            <v-btn size="small" icon="mdi-github" :href="item.socials.github"></v-btn>
+          </v-card-actions>
+        </v-card>
       </v-col>
       <v-responsive v-if="n === 2" :key="`width-${n}`" width="100%"></v-responsive>
     </template>
