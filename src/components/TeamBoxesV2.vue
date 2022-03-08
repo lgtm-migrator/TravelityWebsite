@@ -2,7 +2,7 @@
   <v-row>
     <template v-for="(item, n) in persons" :key="n">
       <v-col>
-        <v-card class="pa-2" outlined tile>
+        <v-card class="pa-2" tile>
           <v-img :src="item.image" cover height="200px"></v-img>
           <v-card-title v-text="item.name"></v-card-title>
           <v-card-actions>
@@ -54,7 +54,7 @@ export default {
         },
         {
           name: 'Owen',
-          image: 'https://i.ibb.co/30kV8nx/person0.png',
+          image: '@/assets/person4.png',
           socials: {
             github: 'https://github.com/RiceBoyy',
           },
