@@ -54,7 +54,7 @@ export default {
         },
         {
           name: 'Owen',
-          image: '@/assets/person4.png',
+          image: 'https://i.ibb.co/30kV8nx/person0.png',
           socials: {
             github: 'https://github.com/RiceBoyy',
           },
