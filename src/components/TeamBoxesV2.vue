@@ -33,28 +33,28 @@ export default {
         },
         {
           name: 'Manish',
-          image: '../assets/person1.png',
+          image: 'https://i.ibb.co/30kV8nx/person0.png',
           socials: {
             github: 'https://github.com/Manish946',
           },
         },
         {
           name: 'Nikolaj',
-          image: '../assets/person2.png',
+          image: 'https://i.ibb.co/30kV8nx/person0.png',
           socials: {
             github: 'https://github.com/Nicolaj-S',
           },
         },
         {
           name: 'Nirakash',
-          image: '../assets/person3.png',
+          image: 'https://i.ibb.co/30kV8nx/person0.png',
           socials: {
             github: 'https://github.com/CyberNira',
           },
         },
         {
           name: 'Owen',
-          image: '../assets/person4.png',
+          image: 'https://i.ibb.co/30kV8nx/person0.png',
           socials: {
             github: 'https://github.com/RiceBoyy',
           },
