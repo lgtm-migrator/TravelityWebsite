@@ -1,9 +1,4 @@
 <template>
-  <!-- <div class="tile-container">
-    <div v-for="(k, item) in persons" :key="k" :class="'tile ' + 'person-' + item">
-      <p>{{ k.name }}</p>
-    </div>
-  </div> -->
   <v-row>
     <template v-for="(item, n) in persons" :key="n">
       <v-col>
@@ -105,13 +100,4 @@ export default {
     height: 300px;
   }
 }
-
-// @for $i from 0 through 4 {
-//   .person-#{$i} {
-//     background: center 10% no-repeat white;
-//     background-size: auto;
-//     opacity: 1;
-//     background-image: url('/src/assets/person#{$i}.png');
-//   }
-// }
 </style>
