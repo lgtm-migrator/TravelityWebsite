@@ -3,32 +3,37 @@
     <div class="cards card-1">
       <div class="cards__inner"></div>
       <div class="card-info">
-        <p>test</p>
+        <p>Name Here</p>
+        <a href="https://github.com/"><v-icon>mdi-github</v-icon></a>
       </div>
     </div>
     <div class="cards card-2">
       <div class="cards__inner"></div>
       <div class="card-info">
-        <p>test</p>
+        <p>Name Here</p>
+        <a href="https://github.com/"><v-icon>mdi-github</v-icon></a>
       </div>
     </div>
     <div class="cards card-3">
       <div class="cards__inner"></div>
       <div class="card-info">
-        <p>test</p>
+        <p>Name Here</p>
+        <a href="#https://github.com/"><v-icon>mdi-github</v-icon></a>
       </div>
     </div>
     <div class="cards card-4">
       <div class="cards__inner"></div>
       <div class="card-info">
-        <p>test</p>
+        <p>Name Here</p>
+        <a href="https://github.com/"><v-icon>mdi-github</v-icon></a>
       </div>
     </div>
 
     <div class="cards card-5">
       <div class="cards__inner"></div>
       <div class="card-info">
-        <p>test</p>
+        <p>Name Here</p>
+        <a href="https://github.com/"><v-icon>mdi-github</v-icon></a>
       </div>
     </div>
   </div>
@@ -162,11 +167,24 @@ export default {
 }
 
 .card-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   height: 2.5rem;
   background-color: #fff;
   border-end-end-radius: 10px;
   border-end-start-radius: 10px;
   text-align: left;
   padding: 0.5em;
+  font-family: 'Karla', sans-serif;
+  a {
+    text-decoration: none;
+    color: black;
+    transition: 0.2s ease;
+  }
+  a:hover {
+    color: rgb(155, 153, 153);
+  }
 }
 </style>
