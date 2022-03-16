@@ -3,37 +3,37 @@
     <div class="cards card-1">
       <div class="cards__inner"></div>
       <div class="card-info">
-        <p>Name Here</p>
-        <a href="https://github.com/"><v-icon>mdi-github</v-icon></a>
+        <p>Lukas</p>
+        <a href="https://github.com/Slash1y"><v-icon>mdi-github</v-icon></a>
       </div>
     </div>
     <div class="cards card-2">
       <div class="cards__inner"></div>
       <div class="card-info">
-        <p>Name Here</p>
-        <a href="https://github.com/"><v-icon>mdi-github</v-icon></a>
+        <p>Manish</p>
+        <a href="https://github.com/Manish946"><v-icon>mdi-github</v-icon></a>
       </div>
     </div>
     <div class="cards card-3">
       <div class="cards__inner"></div>
       <div class="card-info">
-        <p>Name Here</p>
-        <a href="#https://github.com/"><v-icon>mdi-github</v-icon></a>
+        <p>Nicolaj</p>
+        <a href="https://github.com/Nicolaj-S"><v-icon>mdi-github</v-icon></a>
       </div>
     </div>
     <div class="cards card-4">
       <div class="cards__inner"></div>
       <div class="card-info">
-        <p>Name Here</p>
-        <a href="https://github.com/"><v-icon>mdi-github</v-icon></a>
+        <p>Nirakash</p>
+        <a href="https://github.com/CyberNira"><v-icon>mdi-github</v-icon></a>
       </div>
     </div>
 
     <div class="cards card-5">
       <div class="cards__inner"></div>
       <div class="card-info">
-        <p>Name Here</p>
-        <a href="https://github.com/"><v-icon>mdi-github</v-icon></a>
+        <p>Owen</p>
+        <a href="https://github.com/RiceBoyy"><v-icon>mdi-github</v-icon></a>
       </div>
     </div>
   </div>
