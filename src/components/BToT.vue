@@ -53,6 +53,7 @@ export default {
   visibility: hidden;
   z-index: 1000;
 }
+
 #back.btn-show {
   opacity: 1;
   visibility: visible;
