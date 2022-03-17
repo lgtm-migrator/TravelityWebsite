@@ -33,7 +33,6 @@
       name="message"
       :rules="[rules.requiredMessage, rules.counter]"
       counter
-      maxLength="300"
       :value="message"
       v-model="message"
       label="Message"
@@ -76,7 +75,7 @@ export default {
       requiredName: (value) => !!value || 'Name is required',
       requiredEmail: (value) => !!value || 'Email is required',
       requiredMessage: (value) => !!value || 'Message is required',
-      counter: (value) => value.length <= 350 || 'Max 200 characters',
+      counter: (value) => value.length <= 350 || 'Max 350 characters',
     },
     loading: false,
     loader: null,
@@ -92,7 +91,7 @@ export default {
       },
       message: {
         required,
-        maxLength: maxLength(200),
+        maxLength: maxLength(350),
       },
     };
   },
@@ -187,5 +186,6 @@ export default {
 
 .form {
   font-family: 'Karla', sans-serif;
+  width: 100%;
 }
 </style>
