@@ -6,19 +6,25 @@
         <!-- <TeamBoxesV2 /> -->
         <TeamBoxesV3 />
       </v-col>
-      <v-col cols="12" sm="8" md="4" lg="5" align="center">
-        <Contact />
+      <v-col class="height-100" cols="12" sm="8" md="4" lg="5" align="center">
+        <div class="d-none d-sm-flex">
+          <Contact />
+        </div>
+        <div class="d-flex d-sm-none height-100 justify-center align-center">
+          <MobileContact />
+        </div>
       </v-col>
     </v-row>
   </v-container>
 </template>
 <script>
 import TeamBoxesV3 from './TeamBoxesV3.vue';
+import MobileContact from './MobileContact.vue';
 import TeamBoxesV2 from './TeamBoxesV2.vue';
 import TeamBoxes from './TeamBoxes.vue';
 import Contact from './ContactForm.vue';
 export default {
-  components: { Contact, TeamBoxes, TeamBoxesV2, TeamBoxesV3 },
+  components: { Contact, TeamBoxes, TeamBoxesV2, TeamBoxesV3, MobileContact },
   data() {
     return {
       //
