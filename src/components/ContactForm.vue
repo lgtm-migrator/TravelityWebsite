@@ -116,6 +116,7 @@ export default {
           })
           .catch((_err) => {
             console.log(_err);
+            this.errorToast();
           });
         this.loading = false;
         this.reset(); // reset methods call
