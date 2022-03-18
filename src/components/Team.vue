@@ -1,9 +1,10 @@
 <template>
-  <v-container class="height-100" fluid>
+  <v-container fluid>
     <v-row class="d-flex align-center justify-center">
       <v-col cols="12" sm="8" md="4" lg="7" align="center">
         <!-- <TeamBoxes /> -->
-        <TeamBoxesV2 />
+        <!-- <TeamBoxesV2 /> -->
+        <TeamBoxesV3 />
       </v-col>
       <v-col class="height-100" cols="12" sm="8" md="4" lg="5" align="center">
         <div class="d-none d-sm-flex">
@@ -17,12 +18,13 @@
   </v-container>
 </template>
 <script>
+import TeamBoxesV3 from './TeamBoxesV3.vue';
 import MobileContact from './MobileContact.vue';
 import TeamBoxesV2 from './TeamBoxesV2.vue';
 import TeamBoxes from './TeamBoxes.vue';
 import Contact from './ContactForm.vue';
 export default {
-  components: { Contact, TeamBoxes, TeamBoxesV2, MobileContact },
+  components: { Contact, TeamBoxes, TeamBoxesV2, TeamBoxesV3, MobileContact },
   data() {
     return {
       //
