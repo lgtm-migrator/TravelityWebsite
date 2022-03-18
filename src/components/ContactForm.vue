@@ -108,12 +108,17 @@ export default {
         // For debugging
         // console.log('Submitted');
         this.loading = true;
-        await axios.post(this.formUrl, formData).then((_data) => {
-          // For debugging
-          // console.log(_data);
-        });
+        await axios
+          .post(this.formUrl, formData)
+          .then((_data) => {
+            // For debugging
+            // console.log(_data);
+          })
+          .catch((_err) => {
+            console.log(_err);
+          });
         this.loading = false;
-        this.reset();
+        this.reset(); // reset methods call
         this.successToast();
       } else {
         this.errorToast();
@@ -150,7 +155,7 @@ export default {
       return createToast(
         {
           title: 'Error!',
-          description: 'There was an error sending your message.\n Try again later.',
+          description: 'There was an error sending your message.\nTry again later.',
         },
         {
           position: 'bottom-right',
