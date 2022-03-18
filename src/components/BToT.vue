@@ -59,6 +59,12 @@ export default {
   visibility: visible;
 }
 
+#back:active {
+  cursor: pointer;
+  background-color: #d1dffd;
+  color: white;
+}
+
 #back:hover {
   cursor: pointer;
   background-color: #d1dffd;
