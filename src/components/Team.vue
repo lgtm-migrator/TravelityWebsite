@@ -9,7 +9,7 @@
         <div class="d-none d-sm-flex">
           <Contact />
         </div>
-        <div class="d-flex d-sm-none justify-center align-center">
+        <div class="d-flex d-sm-none height-100 justify-center align-center">
           <MobileContact />
         </div>
       </v-col>
