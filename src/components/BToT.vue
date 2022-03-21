@@ -12,8 +12,6 @@ export default {
   methods: {
     backToTop() {
       const btn = document.querySelector('#back');
-      const html = document.querySelector('html');
-      const body = document.body;
       const scrollPos = window.scrollY;
       if (scrollPos > 300) {
         btn.classList.add('btn-show');
