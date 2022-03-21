@@ -33,7 +33,6 @@
       name="message"
       :rules="[rules.requiredMessage, rules.counter]"
       counter
-      maxLength="300"
       :value="message"
       v-model="message"
       label="Message"
@@ -76,7 +75,7 @@ export default {
       requiredName: (value) => !!value || 'Name is required',
       requiredEmail: (value) => !!value || 'Email is required',
       requiredMessage: (value) => !!value || 'Message is required',
-      counter: (value) => value.length <= 350 || 'Max 200 characters',
+      counter: (value) => value.length <= 350 || 'Max 350 characters',
     },
     loading: false,
     loader: null,
@@ -92,7 +91,7 @@ export default {
       },
       message: {
         required,
-        maxLength: maxLength(200),
+        maxLength: maxLength(350),
       },
     };
   },
@@ -109,12 +108,18 @@ export default {
         // For debugging
         // console.log('Submitted');
         this.loading = true;
-        await axios.post(this.formUrl, formData).then((_data) => {
-          // For debugging
-          // console.log(_data);
-        });
+        await axios
+          .post(this.formUrl, formData)
+          .then((_data) => {
+            // For debugging
+            // console.log(_data);
+          })
+          .catch((_err) => {
+            console.log(_err);
+            this.errorToast();
+          });
         this.loading = false;
-        this.reset();
+        this.reset(); // reset methods call
         this.successToast();
       } else {
         this.errorToast();
@@ -151,7 +156,7 @@ export default {
       return createToast(
         {
           title: 'Error!',
-          description: 'There was an error sending your message.\n Try again later.',
+          description: 'There was an error sending your message.\nTry again later.',
         },
         {
           position: 'bottom-right',
@@ -187,5 +192,6 @@ export default {
 
 .form {
   font-family: 'Karla', sans-serif;
+  width: 100%;
 }
 </style>

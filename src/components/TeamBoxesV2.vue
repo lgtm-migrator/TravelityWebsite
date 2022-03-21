@@ -1,22 +1,14 @@
 <template>
-  <!-- <div class="tile-container">
-    <div v-for="(k, item) in persons" :key="k" :class="'tile ' + 'person-' + item">
-      <p>{{ k.name }}</p>
-    </div>
-  </div> -->
   <v-row>
     <template v-for="(item, n) in persons" :key="n">
       <v-col>
-        <v-card class="pa-2" outlined tile>
+        <v-card class="pa-2" tile>
           <v-img :src="item.image" cover height="200px"></v-img>
           <v-card-title v-text="item.name"></v-card-title>
           <v-card-actions>
-            <v-btn
-              size="small"
-              icon="mdi-github"
-              :href="item.socials.github"
-            ></v-btn> </v-card-actions
-        ></v-card>
+            <v-btn size="small" icon="mdi-github" :href="item.socials.github"></v-btn>
+          </v-card-actions>
+        </v-card>
       </v-col>
       <v-responsive v-if="n === 2" :key="`width-${n}`" width="100%"></v-responsive>
     </template>
@@ -24,49 +16,41 @@
 </template>
 
 <script>
-import gsap from 'gsap';
 export default {
-  created() {},
   data() {
     return {
       persons: [
         {
           name: 'Lukas',
-          image: '/src/assets/person0.png',
-          description:
-            'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum saepe cupiditate natus dicta, harum quas, eum blanditiis enim delectus minima sapiente nobis consequuntur explicabo! Corporis recusandae culpa dolorum sequi adipisci.',
+          image: 'https://i.ibb.co/30kV8nx/person0.png',
           socials: {
             github: 'https://github.com/Slash1y',
           },
         },
         {
           name: 'Manish',
-          image: '/src/assets/person1.png',
-          description: '',
+          image: 'https://i.ibb.co/30kV8nx/person0.png',
           socials: {
             github: 'https://github.com/Manish946',
           },
         },
         {
           name: 'Nikolaj',
-          image: '/src/assets/person2.png',
-          description: '',
+          image: 'https://i.ibb.co/30kV8nx/person0.png',
           socials: {
             github: 'https://github.com/Nicolaj-S',
           },
         },
         {
           name: 'Nirakash',
-          image: '/src/assets/person3.png',
-          description: '',
+          image: 'https://i.ibb.co/30kV8nx/person0.png',
           socials: {
             github: 'https://github.com/CyberNira',
           },
         },
         {
           name: 'Owen',
-          image: '/src/assets/person4.png',
-          description: '',
+          image: 'https://i.ibb.co/30kV8nx/person0.png',
           socials: {
             github: 'https://github.com/RiceBoyy',
           },
@@ -112,13 +96,4 @@ export default {
     height: 300px;
   }
 }
-
-// @for $i from 0 through 4 {
-//   .person-#{$i} {
-//     background: center 10% no-repeat white;
-//     background-size: auto;
-//     opacity: 1;
-//     background-image: url('/src/assets/person#{$i}.png');
-//   }
-// }
 </style>
