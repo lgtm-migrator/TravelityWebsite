@@ -33,11 +33,6 @@
 <script>
 import gsap from 'gsap';
 export default {
-  data() {
-    return {
-      //
-    };
-  },
   methods: {
     NaviAnim: function () {
       const bars = document.querySelector('.bars');
