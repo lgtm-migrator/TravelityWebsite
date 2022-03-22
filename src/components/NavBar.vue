@@ -98,7 +98,8 @@ export default {
       });
     },
 
-    /* When the user scrolls down a animation runs with a plane running out of the screen. And when the user scrolls up, the plane returns to the screen. */
+    /* When the user scrolls down a animation runs with a plane running out of the screen.
+    And when the user scrolls up, the plane returns to the screen. */
     onScrollAnimation: function () {
       let plane = document.querySelector('.plane');
       if (scrollY > 5) {
