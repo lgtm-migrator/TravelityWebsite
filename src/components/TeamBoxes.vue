@@ -42,7 +42,7 @@
 <script>
 export default {
   methods: {
-    // Sets classes to det different cards.
+    // Sets classes to the different cards.
     setClasses() {
       const cards = document.querySelectorAll('.cards');
       const classes = ['left2', 'left', 'active', 'right2', 'right'];
