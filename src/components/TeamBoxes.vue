@@ -41,19 +41,16 @@
 
 <script>
 export default {
-  data() {
-    return {
-      //
-    };
-  },
-
   methods: {
+    // Sets classes to det different cards.
     setClasses() {
       const cards = document.querySelectorAll('.cards');
       const classes = ['left2', 'left', 'active', 'right2', 'right'];
       cards.forEach((card, index) => card.classList.add(classes[index]));
     },
 
+    /*This is a method that is called when the user clicks on a card.
+    It changes the position of the cards.*/
     changePosition(e) {
       const clickedCard = e.currentTarget;
       const activeCard = document.querySelector('.cards.active');

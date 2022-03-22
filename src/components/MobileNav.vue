@@ -34,10 +34,12 @@
 import gsap from 'gsap';
 export default {
   methods: {
+    // A function that is called when the user clicks on the bars icon.
     NaviAnim: function () {
       const bars = document.querySelector('.bars');
       const navItem = document.querySelectorAll('.nav-item');
 
+      // A way to toggle the menu on and off.
       bars.addEventListener('click', function (e) {
         this.classList.toggle('active');
         if (this.classList.contains('active')) {

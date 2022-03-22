@@ -3,13 +3,8 @@
 </template>
 <script>
 export default {
-  data() {
-    return {
-      //
-    };
-  },
-
   methods: {
+    // A function that will be called when the user clicks the button.
     backToTop() {
       const btn = document.querySelector('#back');
       const scrollPos = window.scrollY;
@@ -29,7 +24,6 @@ export default {
   },
 
   mounted() {
-    //
     window.addEventListener('scroll', this.backToTop);
   },
 };
