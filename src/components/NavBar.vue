@@ -2,7 +2,6 @@
   <nav class="nav-wrapper">
     <div class="navbar justify-center align-center">
       <p v-for="t in titleArr" :key="t" class="navbar-title">{{ t }}</p>
-      <v-icon icon="md:flight" class="plane"></v-icon>
     </div>
     <div class="navbar-links d-none d-sm-flex">
       <a href="#home" class="link-item" v-smooth-scroll="{ updateHistory: false }"
@@ -96,17 +95,6 @@ export default {
           item.classList.add('navbar-link-active');
         }
       });
-    },
-
-    /* When the user scrolls down a animation runs with a plane running out of the screen.
-    And when the user scrolls up, the plane returns to the screen. */
-    onScrollAnimation: function () {
-      let plane = document.querySelector('.plane');
-      if (scrollY > 5) {
-        plane.classList.add('plane-scrolled');
-      } else {
-        plane.classList.remove('plane-scrolled');
-      }
     },
   },
 
