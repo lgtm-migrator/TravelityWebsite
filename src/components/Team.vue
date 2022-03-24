@@ -45,5 +45,6 @@ export default {
 }
 
 .v-row {
+  margin: 0;
 }
 </style>
