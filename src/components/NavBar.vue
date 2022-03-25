@@ -102,6 +102,10 @@ export default {
     this.onHash();
     window.addEventListener('scroll', this.onScroll);
   },
+
+  beforeUnmount() {
+    window.removeEventListener();
+  },
 };
 </script>
 <style lang="scss" scoped>
