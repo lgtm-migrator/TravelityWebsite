@@ -25,7 +25,7 @@ export default {
   },
 };
 </script>
-<style scoped>
+<style lang="scss" scoped>
 .footer-text {
   font-family: 'Karla', sans-serif;
   font-size: 12px;

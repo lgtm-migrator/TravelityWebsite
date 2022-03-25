@@ -21,17 +21,6 @@ import MobileContact from './MobileContact.vue';
 import Contact from './ContactForm.vue';
 export default {
   components: { Contact, TeamBoxes, MobileContact },
-  data() {
-    return {
-      //
-    };
-  },
-  mounted() {
-    //
-  },
-  methods: {
-    //
-  },
 };
 </script>
 <style lang="scss" scoped>
@@ -40,7 +29,7 @@ export default {
   overflow: hidden;
 }
 
-.width-100 {
-  width: 100%;
+.v-row {
+  margin: 0;
 }
 </style>

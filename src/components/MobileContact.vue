@@ -11,18 +11,16 @@
 
 <script>
 export default {
-  created() {},
   data() {
     return {};
   },
-  props: {},
-  methods: {},
 };
 </script>
 
 <style lang="scss" scoped>
 div {
   font-family: 'Karla', sans-serif;
+  height: 100%;
 }
 
 .slide-center-out {
@@ -40,7 +38,6 @@ div {
   transition: width 0.5s ease, background-color 0.5s ease;
   -webkit-transition: width 0.5s ease, background-color 0.5s ease;
   -moz-transition: width 0.5s ease, background-color 0.5s ease;
-
   margin: auto;
 }
 

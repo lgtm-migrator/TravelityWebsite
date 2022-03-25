@@ -26,6 +26,10 @@ export default {
   mounted() {
     window.addEventListener('scroll', this.backToTop);
   },
+
+  beforeUnmount() {
+    window.removeEventListener('scroll', this.backToTop);
+  },
 };
 </script>
 <style lang="scss" scoped>
