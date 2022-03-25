@@ -104,7 +104,7 @@ export default {
   },
 
   beforeUnmount() {
-    window.removeEventListener();
+    window.removeEventListener('scroll', this.onScroll);
   },
 };
 </script>
