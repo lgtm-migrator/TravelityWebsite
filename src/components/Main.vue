@@ -22,7 +22,7 @@
       </v-row>
     </v-container>
     <v-container fluid id="whyus" class="c-height whyus" tag="section">
-      <!-- <Why /> -->
+      <Why />
     </v-container>
     <v-container fluid id="team" class="c-height team d-flex align-center" tag="section">
       <Team />
