@@ -41,11 +41,6 @@ import FooterVue from './Footer.vue';
 import * as klouds from 'klouds';
 export default {
   components: { Home, About, Why, Team, FooterVue },
-  data() {
-    return {
-      //
-    };
-  },
   mounted() {
     this.createClouds();
   },
@@ -76,6 +71,9 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+/*
+Misc. start
+*/
 .c-height {
   height: 100%;
 }
@@ -93,7 +91,13 @@ export default {
 .v-footer {
   background-color: #0099ff;
 }
+/*
+Misc. end
+*/
 
+/*
+Sections start
+*/
 .welcome {
   background-color: #92b2fd;
   background: linear-gradient(
@@ -128,7 +132,13 @@ export default {
   width: 100%;
   background-color: #d4e2ff;
 }
+/*
+Sections end
+*/
 
+/*
+Klouds start
+*/
 .sky-container-above {
   width: 100%;
   height: 260px;
@@ -139,4 +149,7 @@ export default {
   height: 260px;
   transform: rotate(-180deg);
 }
+/*
+Klouds end
+*/
 </style>

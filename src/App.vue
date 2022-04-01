@@ -40,6 +40,7 @@ export default {
   },
 
   methods: {
+    // It's loading animation.
     startLoading: function () {
       const animEl = document.getElementById('loading-animation');
       lottie.loadAnimation({
@@ -52,6 +53,7 @@ export default {
       });
     },
 
+    // It's hiding the loading animation.
     stopLoading: function () {
       const loadWrap = document.querySelector('.loading-wrapper');
       loadWrap.classList.add('loading-wrapper-hidden');
@@ -61,6 +63,9 @@ export default {
 };
 </script>
 <style>
+/*
+Misc. start
+*/
 html {
   -ms-overflow-style: none;
   scrollbar-width: none;
@@ -70,6 +75,16 @@ html {
   display: none;
 }
 
+.main-page {
+  height: 100vh;
+}
+/*
+Misc. end
+*/
+
+/*
+Loading screen start
+*/
 .loading-wrapper {
   z-index: 9999999999999999999999;
   opacity: 1;
@@ -92,8 +107,7 @@ html {
   color: black;
   height: 25%;
 }
-
-.main-page {
-  height: 100vh;
-}
+/*
+Loading screen end
+*/
 </style>
