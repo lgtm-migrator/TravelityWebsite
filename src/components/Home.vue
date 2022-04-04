@@ -1,5 +1,7 @@
 <template>
-  <v-container fluid> </v-container>
+  <v-container fluid>
+    <h1>Travelity</h1>
+  </v-container>
 </template>
 <script>
 export default {
