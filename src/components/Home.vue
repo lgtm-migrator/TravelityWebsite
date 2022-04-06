@@ -1,6 +1,6 @@
 <template>
   <v-container fluid>
-    <div id="scene" class="scene">
+    <div id="scene">
       <div style="" data-depth="0.4">
         <div class="cloudOne">CLOUDS</div>
       </div>
@@ -49,26 +49,25 @@ h1 {
   align-items: center;
 }
 
-.scene {
-  position: relative;
-}
-
 .cloudOne {
   position: absolute;
   top: 150px;
   left: 400px;
+  background-image: url('');
 }
 
 .cloudTwo {
   position: absolute;
   top: 200px;
   left: 300px;
+  background-image: url('');
 }
 
 .cloudThree {
   position: absolute;
   top: -50px;
   left: 800px;
+  background-image: url('');
 }
 
 .mText {
