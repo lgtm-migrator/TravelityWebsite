@@ -4,10 +4,10 @@
       <div style="" data-depth="0.4">
         <div class="cloudOne">CLOUDS</div>
       </div>
-      <div style="" data-depth="0.4">
+      <div data-depth="0.4">
         <div class="cloudTwo">CLOUDS</div>
       </div>
-      <div style="" data-depth="0.4">
+      <div data-depth="0.4">
         <div class="cloudThree">CLOUDS</div>
       </div>
       <div data-depth="0.4">
