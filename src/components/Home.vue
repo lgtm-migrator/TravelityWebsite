@@ -10,6 +10,9 @@
       <div style="" data-depth="0.4">
         <div class="cloudThree">CLOUDS</div>
       </div>
+      <div data-depth="0.4">
+        <div class="mText">SMTH</div>
+      </div>
     </div>
   </v-container>
 </template>
@@ -66,5 +69,11 @@ h1 {
   position: absolute;
   top: -50px;
   left: 800px;
+}
+
+.mText {
+  position: absolute;
+  left: 775px;
+  top: 175px;
 }
 </style>
