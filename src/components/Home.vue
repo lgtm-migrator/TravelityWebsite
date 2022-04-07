@@ -30,8 +30,9 @@ export default {
 
   methods: {
     HomePara: function () {
+      let pInstance;
       let scene = document.getElementById('scene');
-      let pInstance = new Parallax(scene, {
+      pInstance = new Parallax(scene, {
         relativeInput: true,
       });
     },
