@@ -1,18 +1,23 @@
 <template>
   <v-container fluid>
-    <div id="scene">
-      <div style="" data-depth="0.4">
-        <div class="cloudOne">CLOUDS</div>
+    <div class="d-none d-sm-block">
+      <div id="scene">
+        <div style="" data-depth="0.4">
+          <div class="cloudOne">CLOUDS</div>
+        </div>
+        <div data-depth="0.4">
+          <div class="cloudTwo">CLOUDS</div>
+        </div>
+        <div data-depth="0.4">
+          <div class="cloudThree">CLOUDS</div>
+        </div>
+        <div data-depth="0.4">
+          <div class="mText">SMTH</div>
+        </div>
       </div>
-      <div data-depth="0.4">
-        <div class="cloudTwo">CLOUDS</div>
-      </div>
-      <div data-depth="0.4">
-        <div class="cloudThree">CLOUDS</div>
-      </div>
-      <div data-depth="0.4">
-        <div class="mText">SMTH</div>
-      </div>
+    </div>
+    <div class="d-flex d-sm-none">
+      <div>HEJ</div>
     </div>
   </v-container>
 </template>
