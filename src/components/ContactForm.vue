@@ -54,7 +54,7 @@
 <script>
 import { useVuelidate } from '@vuelidate/core';
 import { email, required, maxLength } from '@vuelidate/validators';
-import { axios } from 'axios';
+import axios from 'axios';
 import { createToast } from 'mosha-vue-toastify';
 import 'mosha-vue-toastify/dist/style.css';
 export default {
