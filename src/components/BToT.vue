@@ -42,7 +42,7 @@ export default {
   height: 50px;
   border-radius: 30px;
   position: fixed;
-  bottom: 40px;
+  bottom: 50px;
   right: 35px;
   transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
   opacity: 0;
