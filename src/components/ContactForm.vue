@@ -186,12 +186,21 @@ export default {
 }
 
 .inputWidth {
-  width: 100%;
-  max-width: 75%;
+  width: 40vw;
 }
 
 .form {
   font-family: 'Karla', sans-serif;
-  width: 100%;
+  width: 50vw;
+}
+@media only screen and (max-width: 991px) {
+    .inputWidth {
+    width: 65vw;
+  }
+
+  .form {
+    font-family: 'Karla', sans-serif;
+    width: 50vw;
+  }
 }
 </style>

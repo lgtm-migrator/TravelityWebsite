@@ -36,4 +36,14 @@ export default {};
 .footer-link:hover {
   color: black;
 }
+@media only screen and (max-height:1280px){
+  .space{
+    padding-top: 10em;
+  }
+}
+@media only screen and (max-height:960px){
+  .space{
+    padding-top: 10em;
+  }
+}
 </style>

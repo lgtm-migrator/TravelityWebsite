@@ -136,7 +136,7 @@ export default {
   transition: 0.4s;
 }
 
-@media #{map-get($display-breakpoints, 'xs')} {
+@media #{map-get($display-breakpoints, 'sm')} {
   .link-item {
     font-size: 20px;
     padding: 1px;
