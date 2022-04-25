@@ -4,11 +4,11 @@
       <v-col cols="12" sm="8" md="4" lg="7" align="center">
         <TeamBoxes />
       </v-col>
-      <v-col class="height-100" cols="12" sm="8" md="4" lg="5" align="center">
+      <v-col cols="12" sm="8" md="4" lg="5" align="center">
         <div class="d-none d-sm-flex">
           <Contact />
         </div>
-        <div class="d-flex d-sm-none height-100 justify-center align-center">
+        <div class="d-flex d-sm-none justify-center align-center">
           <MobileContact />
         </div>
       </v-col>
@@ -24,11 +24,6 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-.height-100 {
-  height: 100%;
-  overflow: hidden;
-}
-
 .v-row {
   margin: 0;
 }
