@@ -7,7 +7,11 @@
   </v-container>
 </template>
 <script>
-export default {};
+export default {
+  data: () => ({}),
+  methods: {},
+  mounted() {},
+};
 </script>
 <style lang="scss" scoped>
 .height-100 {
