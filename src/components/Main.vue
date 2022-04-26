@@ -41,6 +41,7 @@ import FooterVue from './Footer.vue';
 import * as klouds from 'klouds';
 export default {
   components: { Home, About, Why, Team, FooterVue },
+  data: () => ({}),
   mounted() {
     this.createClouds();
   },

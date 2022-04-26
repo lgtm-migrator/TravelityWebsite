@@ -37,6 +37,7 @@ export default {
   methods: {
     // When the user scrolls down, the navbar and navbar links will be scrolled.
     onScroll: function (event) {
+      // Variables
       const scrollPos = window.scrollY;
       const navbar = document.querySelector('.navbar');
       const navbarTitle = document.querySelectorAll('.navbar-title');
@@ -45,6 +46,7 @@ export default {
       const navbarLinkItems = document.querySelectorAll('.link-item');
       const navbarLinksArrayLength = navbarLinkItems.length;
 
+      // Checks scrollPos value and runs if true
       if (scrollPos > 5) {
         navbar.classList.add('navbar-scrolled');
         navbarLinks.classList.add('navbar-links-scrolled');
@@ -70,7 +72,7 @@ export default {
 
         navwrap.classList.remove('nav-wrapper-scrolled');
       }
-      this.onHash();
+      this.onHash(); // calls onHash method
     },
 
     /* When the user scrolls the page, the onHash function is called. The onHash function iterates through
@@ -99,17 +101,22 @@ export default {
   },
 
   mounted() {
+    // Calls onHash method and the adds a listener to scroll
     this.onHash();
     window.addEventListener('scroll', this.onScroll);
   },
 
   beforeUnmount() {
+    // removes the listener
     window.removeEventListener('scroll', this.onScroll);
   },
 };
 </script>
 <style lang="scss" scoped>
+// Imports
 @import 'vuetify/lib/styles/settings/_variables.scss';
+
+// NavBar stuff
 .nav-wrapper {
   display: flex;
   justify-content: space-between;
@@ -178,10 +185,5 @@ export default {
 
 .navbar-link-active {
   color: black;
-}
-
-.plane {
-  color: white;
-  transform: (rotate(90deg));
 }
 </style>

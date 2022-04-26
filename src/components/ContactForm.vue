@@ -101,9 +101,12 @@ export default {
     async submit() {
       const result = await this.v$.$validate();
       const formData = new FormData();
+
+      // append field inputs into FormData object
       formData.append('name', this.name);
       formData.append('email', this.email);
       formData.append('message', this.message);
+
       if (result && this.honey === '') {
         // For debugging
         // console.log('Submitted');
@@ -115,11 +118,12 @@ export default {
             // console.log(_data);
           })
           .catch((_err) => {
+            // Logs the error if it occured.
             console.log(_err);
             this.errorToast();
           });
         this.loading = false;
-        this.reset(); // reset methods call
+        this.reset(); // reset method call
         this.successToast();
       } else {
         this.errorToast();
@@ -130,9 +134,9 @@ export default {
 
     //This is a function that resets the form.
     reset(event) {
-      this.$refs.form.reset();
-      this.v$.$reset();
-      this.honey = '';
+      this.$refs.form.reset(); // resets form fields
+      this.v$.$reset(); // resets dirty check return
+      this.honey = ''; // sets honey fleid to empty, otherwise it will be type null
     },
 
     //This is a function that creates a toast notification.
@@ -168,6 +172,7 @@ export default {
     },
   },
   watch: {
+    // Watching loader state change
     loader() {
       const l = this.loader;
       this[l] = !this[l];
@@ -181,6 +186,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+/*
+Form
+*/
+
 .honey {
   display: none;
 }
@@ -194,4 +203,8 @@ export default {
   font-family: 'Karla', sans-serif;
   width: 100%;
 }
+
+/*
+Form
+*/
 </style>

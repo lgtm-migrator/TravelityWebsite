@@ -25,10 +25,11 @@
 import Parallax from 'parallax-js';
 export default {
   mounted() {
-    this.HomePara();
+    this.HomePara(); // Calls HomePara method
   },
 
   methods: {
+    // Start a instance of Parallax
     HomePara: function () {
       let scene = document.getElementById('scene');
       let pInstance = new Parallax(scene, {
@@ -39,22 +40,24 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+// Imports
 @import 'vuetify/lib/styles/settings/_variables.scss';
-h1 {
-  font-size: 2em;
-  font-family: 'Karla', sans-serif;
-  font-weight: 900;
-  color: #fff;
-  text-align: center;
-  margin: 0;
-}
 
+/*
+Parallax scene
+*/
 #scene {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+/*
+Parallax scene
+*/
 
+/*
+Clouds
+*/
 .cloudOne {
   position: absolute;
   top: 150px;
@@ -102,6 +105,9 @@ h1 {
     background-image: url('');
   }
 }
+/*
+Clouds
+*/
 
 .mText {
   position: absolute;

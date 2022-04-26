@@ -15,9 +15,16 @@
   </v-row>
 </template>
 <script>
-export default {};
+export default {
+  data: () => ({}),
+  methods: {},
+  mounted() {},
+};
 </script>
 <style lang="scss" scoped>
+/*
+Footer
+*/
 .footer-text {
   font-family: 'Karla', sans-serif;
   font-size: 12px;
@@ -36,4 +43,7 @@ export default {};
 .footer-link:hover {
   color: black;
 }
+/*
+Footer
+*/
 </style>

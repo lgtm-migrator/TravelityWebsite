@@ -4,11 +4,8 @@
 
 <script>
 export default {
-  data() {
-    return {};
-  },
+  data: () => ({}),
   methods: {},
-
   mounted() {},
 };
 </script>

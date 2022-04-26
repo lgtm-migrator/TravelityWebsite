@@ -11,9 +11,9 @@
 
 <script>
 export default {
-  data() {
-    return {};
-  },
+  data: () => ({}),
+  methods: {},
+  mounted() {},
 };
 </script>
 
@@ -23,6 +23,9 @@ div {
   height: 100%;
 }
 
+/*
+Underline
+*/
 .slide-center-out {
   text-decoration: none;
   display: inline-block;
@@ -45,4 +48,7 @@ div {
   width: 100%;
   background: #779ffc;
 }
+/*
+Underline
+*/
 </style>
