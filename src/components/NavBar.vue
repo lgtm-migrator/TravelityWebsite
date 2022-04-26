@@ -3,7 +3,7 @@
     <div class="navbar justify-center align-center">
       <p v-for="t in titleArr" :key="t" class="navbar-title">{{ t }}</p>
     </div>
-    <div class="navbar-links d-none d-sm-flex">
+    <div class="navbar-links d-none d-md-flex">
       <a href="#home" class="link-item" v-smooth-scroll="{ updateHistory: false }"
         >Home</a
       >
@@ -17,7 +17,7 @@
         >The Team</a
       >
     </div>
-    <div class="d-flex d-sm-none">
+    <div class="d-flex d-md-none">
       <MobileNav />
     </div>
   </nav>
@@ -116,8 +116,8 @@ export default {
   align-items: center;
   padding: 1.5rem;
   position: fixed;
-  z-index: 9999999;
-  width: 100%;
+  z-index: 6;
+  width: 100vw;
   top: 0;
   overflow: hidden;
   transition: 0.1s;

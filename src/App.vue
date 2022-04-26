@@ -77,6 +77,7 @@ html {
 
 .main-page {
   height: 100vh;
+  width: 100vw;
 }
 /*
 Misc. end
@@ -86,10 +87,10 @@ Misc. end
 Loading screen start
 */
 .loading-wrapper {
-  z-index: 9999999999999999999999;
+  z-index: 7;
   opacity: 1;
-  width: 100%;
-  height: 100vh;
+  width: 100vw;
+  height: 100%;
   position: fixed;
   justify-content: center;
   align-items: center;
@@ -100,7 +101,7 @@ Loading screen start
 .loading-wrapper-hidden {
   opacity: 0;
   display: none;
-  z-index: -9999999999999999999999999999;
+  z-index: -10;
 }
 
 #loading-animation {
@@ -110,4 +111,5 @@ Loading screen start
 /*
 Loading screen end
 */
+
 </style>

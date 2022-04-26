@@ -127,9 +127,8 @@ Sections start
 
 .team {
   background: url('../assets/waves.svg') no-repeat center bottom;
-  background-size: 100%;
+  background-size: 101vw;
   height: 100%;
-  width: 100%;
   background-color: #d4e2ff;
 }
 /*

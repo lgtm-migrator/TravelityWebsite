@@ -47,7 +47,7 @@ export default {
   transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
   opacity: 0;
   visibility: hidden;
-  z-index: 1000;
+  z-index: 5;
 }
 
 #back.btn-show {

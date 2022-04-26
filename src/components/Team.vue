@@ -1,14 +1,14 @@
 <template>
   <v-container fluid>
     <v-row class="d-flex align-center justify-center">
-      <v-col cols="12" sm="8" md="6" lg="7" align="center">
+      <v-col cols="12" sm="8" md="7" lg="7" align="center">
         <TeamBoxes />
       </v-col>
       <v-col class="height" cols="12" sm="8" md="5" lg="5" align="center">
-        <div class="d-none d-sm-flex">
+        <div class="d-none d-md-flex">
           <Contact />
         </div>
-        <div class="d-flex d-sm-none height justify-center align-center">
+        <div class="d-md-none justify-center align-center">
           <MobileContact />
         </div>
       </v-col>
@@ -32,7 +32,12 @@ export default {
 }
 @media only screen and (max-width:1280px){
   .height{
-    height: 52vh;
+    height: 42vh;
+  }
+}
+@media only screen and (max-width:1040px){
+  .height{
+    height: 27vh;
   }
 }
 @media only screen and (max-width:960px){
