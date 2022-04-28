@@ -40,7 +40,7 @@ export default {
   },
 
   methods: {
-    // It's loading animation.
+    // Loading animation.
     startLoading: function () {
       const animEl = document.getElementById('loading-animation');
       lottie.loadAnimation({
@@ -53,7 +53,7 @@ export default {
       });
     },
 
-    // It's hiding the loading animation.
+    // Hides the loading animation.
     stopLoading: function () {
       const loadWrap = document.querySelector('.loading-wrapper');
       loadWrap.classList.add('loading-wrapper-hidden');
