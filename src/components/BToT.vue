@@ -4,6 +4,7 @@
 <script>
 export default {
   methods: {
+    data: () => ({}),
     // A function that will be called when the user clicks the button.
     backToTop() {
       const btn = document.querySelector('#back');
@@ -14,6 +15,7 @@ export default {
         btn.classList.remove('btn-show');
       }
 
+      // Adds listener to button
       btn.addEventListener('click', function (e) {
         window.scrollTo({
           top: 0,
@@ -24,10 +26,12 @@ export default {
   },
 
   mounted() {
+    // Adds scroll listener
     window.addEventListener('scroll', this.backToTop);
   },
 
   beforeUnmount() {
+    // Removes listener
     window.removeEventListener('scroll', this.backToTop);
   },
 };
@@ -42,7 +46,7 @@ export default {
   height: 50px;
   border-radius: 30px;
   position: fixed;
-  bottom: 40px;
+  bottom: 50px;
   right: 35px;
   transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
   opacity: 0;
