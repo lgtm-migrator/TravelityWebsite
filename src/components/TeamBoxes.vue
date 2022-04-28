@@ -63,16 +63,20 @@ export default {
   },
 
   mounted() {
+    // Variables
     const cards = document.querySelectorAll('.cards');
+
+    // Adds listener to all individual cards
     cards.forEach((item) => {
       item.addEventListener('click', this.changePosition);
     });
-    this.setClasses();
+    this.setClasses(); // calls method
   },
 };
 </script>
 
 <style lang="scss" scoped>
+// Container wrapper
 .container {
   max-width: 800px;
   margin: auto;
@@ -82,6 +86,7 @@ export default {
   position: relative;
 }
 
+// Cards
 .cards {
   border-radius: 10px;
   box-shadow: 0px 0px 30px rgba(black, 0.2);

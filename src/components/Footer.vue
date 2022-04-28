@@ -1,19 +1,30 @@
 <template>
-  <div class="d-flex align-center justify-space-between footer-div">
-    <span class="footer-text"
-      >&copy; 2022 - {{ new Date().getFullYear() }} - Travelity</span
-    >
-    <div class="d-flex justify-center align-center">
-      <a href="https://twitter.com/_Travelity" alt="twitter" class="footer-link">
-        <v-icon icon="mdi-twitter" />
-      </a>
-    </div>
-  </div>
+  <v-row class="d-flex align-center justify-center">
+    <v-col cols="12" sm="6" md="4" lg="6">
+      <span class="footer-text"
+        >&copy; 2022 - {{ new Date().getFullYear() }} - Travelity | Terms and Conditions
+      </span>
+    </v-col>
+    <v-col cols="12" sm="6" md="4" lg="6" align="right">
+      <div>
+        <a href="https://twitter.com/_Travelity" alt="twitter" class="footer-link">
+          <v-icon icon="mdi-twitter" />
+        </a>
+      </div>
+    </v-col>
+  </v-row>
 </template>
 <script>
-export default {};
+export default {
+  data: () => ({}),
+  methods: {},
+  mounted() {},
+};
 </script>
 <style lang="scss" scoped>
+/*
+Footer
+*/
 .footer-text {
   font-family: 'Karla', sans-serif;
   font-size: 12px;
@@ -21,10 +32,6 @@ export default {};
   text-align: center;
   padding: 5px;
   letter-spacing: 2px;
-}
-
-.footer-div {
-  width: 100%;
 }
 
 .footer-link {
@@ -36,4 +43,7 @@ export default {};
 .footer-link:hover {
   color: black;
 }
+/*
+Footer
+*/
 </style>
