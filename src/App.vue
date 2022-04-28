@@ -26,16 +26,16 @@ export default {
     BToT,
   },
 
-  data() {
-    return {
-      loading: true,
-    };
-  },
+  data: () => ({
+    loading: true,
+  }),
 
   mounted() {
-    this.startLoading();
+    this.startLoading(); // Calls start loading method
+
+    // Sets timeout for 3s
     setTimeout(() => {
-      this.stopLoading();
+      this.stopLoading(); // Calls stop loading method
     }, 3000);
   },
 
@@ -57,7 +57,7 @@ export default {
     stopLoading: function () {
       const loadWrap = document.querySelector('.loading-wrapper');
       loadWrap.classList.add('loading-wrapper-hidden');
-      lottie.destroy();
+      lottie.destroy(); // Destroys the animation to decrease memory usage
     },
   },
 };

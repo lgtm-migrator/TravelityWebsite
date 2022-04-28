@@ -7,8 +7,11 @@ export default {
     data: () => ({}),
     // A function that will be called when the user clicks the button.
     backToTop() {
+      // Variables
       const btn = document.querySelector('#back');
       const scrollPos = window.scrollY;
+
+      // Checks scrollPos
       if (scrollPos > 300) {
         btn.classList.add('btn-show');
       } else {

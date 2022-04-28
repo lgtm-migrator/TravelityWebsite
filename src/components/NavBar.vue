@@ -82,8 +82,11 @@ export default {
     navbar-link-active class is added to the link that has an href attribute equal to the current
     section. */
     onHash: function () {
+      // Variables
       let current = '';
       const navLinks = document.querySelectorAll('.link-item');
+
+      // Find the current id you are scrolled over
       document.querySelectorAll('section').forEach((section) => {
         const sectionTop = section.offsetTop;
         if (scrollY >= sectionTop - 65) {
@@ -91,6 +94,7 @@ export default {
         }
       });
 
+      // Sets the currect class to the right section when scrolled over it
       navLinks.forEach((item) => {
         item.classList.remove('navbar-link-active');
         if (item.attributes.getNamedItem('href').value === '#' + current) {
