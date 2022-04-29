@@ -18,13 +18,19 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+/*
+Misc.
+*/
 div {
   font-family: 'Karla', sans-serif;
   height: 100%;
 }
+/*
+Misc.
+*/
 
 /*
-Underline
+Underline hover
 */
 .slide-center-out {
   text-decoration: none;
@@ -49,6 +55,6 @@ Underline
   background: #779ffc;
 }
 /*
-Underline
+Underline hover
 */
 </style>

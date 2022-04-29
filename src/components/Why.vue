@@ -14,7 +14,13 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+/*
+Misc.
+*/
 .height-100 {
   height: 100%;
 }
+/*
+Misc.
+*/
 </style>

@@ -109,6 +109,9 @@ Clouds
 Clouds
 */
 
+/*
+Floating text
+*/
 .mText {
   position: absolute;
   left: 775px;
@@ -122,4 +125,7 @@ Clouds
     top: 175px;
   }
 }
+/*
+Floating text
+*/
 </style>

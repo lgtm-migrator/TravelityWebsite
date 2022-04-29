@@ -40,6 +40,9 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+/*
+Back button
+*/
 #back {
   display: flex;
   align-items: center;
@@ -73,4 +76,7 @@ export default {
   background-color: #d1dffd;
   color: white;
 }
+/*
+Back button
+*/
 </style>

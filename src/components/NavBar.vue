@@ -120,7 +120,9 @@ export default {
 // Imports
 @import 'vuetify/lib/styles/settings/_variables.scss';
 
-// NavBar stuff
+/*
+Nav bar
+*/
 .nav-wrapper {
   display: flex;
   justify-content: space-between;
@@ -190,4 +192,7 @@ export default {
 .navbar-link-active {
   color: black;
 }
+/*
+Nav bar
+*/
 </style>

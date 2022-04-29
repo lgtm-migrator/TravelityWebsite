@@ -73,7 +73,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 /*
-Misc. start
+Misc.
 */
 .c-height {
   height: 100%;
@@ -93,11 +93,11 @@ Misc. start
   background-color: #0099ff;
 }
 /*
-Misc. end
+Misc.
 */
 
 /*
-Sections start
+Sections
 */
 .welcome {
   background-color: #92b2fd;
@@ -134,11 +134,11 @@ Sections start
   background-color: #d4e2ff;
 }
 /*
-Sections end
+Sections
 */
 
 /*
-Klouds start
+Klouds
 */
 .sky-container-above {
   width: 100%;
@@ -151,6 +151,6 @@ Klouds start
   transform: rotate(-180deg);
 }
 /*
-Klouds end
+Klouds
 */
 </style>
