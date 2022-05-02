@@ -1,5 +1,10 @@
 import * as klouds from 'klouds';
 
+/**
+ * Creates kloud instances
+ * @param {string} kloud1
+ * @param {string} kloud2
+ */
 export function createClouds(kloud1, kloud2) {
   klouds.create({
     selector: kloud1,
