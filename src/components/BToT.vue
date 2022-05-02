@@ -3,8 +3,8 @@
 </template>
 <script>
 export default {
+  data: () => ({}),
   methods: {
-    data: () => ({}),
     // A function that will be called when the user clicks the button.
     backToTop() {
       // Variables
