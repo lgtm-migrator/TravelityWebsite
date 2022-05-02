@@ -7,7 +7,7 @@
       <div class="main-page">
         <NavBar />
         <BToT />
-        <Main />
+        <router-view></router-view>
       </div>
     </v-main>
   </v-app>
@@ -16,13 +16,11 @@
 <script>
 import BToT from './components/BToT.vue';
 import NavBar from './components/NavBar.vue';
-import Main from './components/Main.vue';
 import lottie from 'lottie-web';
 
 export default {
   components: {
     NavBar,
-    Main,
     BToT,
   },
 
