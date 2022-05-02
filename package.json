@@ -13,7 +13,7 @@
     "@vuelidate/validators": "2.0.0-alpha.28",
     "axios": "0.27.2",
     "cypress": "9.5.3",
-    "gsap": "3.9.1",
+    "gsap": "3.10.4",
     "klouds": "2.1.1",
     "lottie-web": "5.9.3",
     "mosha-vue-toastify": "1.0.23",
