@@ -27,7 +27,13 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+/*
+Misc.
+*/
 .v-row {
   margin: 0;
 }
+/*
+Misc.
+*/
 </style>

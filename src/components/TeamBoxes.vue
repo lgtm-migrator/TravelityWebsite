@@ -86,7 +86,9 @@ export default {
   position: relative;
 }
 
-// Cards
+/*
+Cards
+*/
 .cards {
   border-radius: 10px;
   box-shadow: 0px 0px 30px rgba(black, 0.2);
@@ -189,4 +191,7 @@ export default {
     color: rgb(155, 153, 153);
   }
 }
+/*
+Cards
+*/
 </style>

@@ -133,11 +133,14 @@ export default {
     },
   },
   mounted() {
-    this.NaviAnim();
+    this.NaviAnim(); // calls method
   },
 };
 </script>
 <style lang="scss" scoped>
+/*
+Nav menu and icon
+*/
 .main {
   position: relative;
   width: 100%;
@@ -234,4 +237,7 @@ export default {
   color: #fff;
   transition: 0.2s linear;
 }
+/*
+Nav menu and icon
+*/
 </style>

@@ -4,12 +4,10 @@
 
 <script>
 export default {
-  data() {
-    return {};
-  },
+  data: () => ({}),
   methods: {},
+  mounted() {},
 };
 </script>
 
 <style lang="scss" scoped></style>
-

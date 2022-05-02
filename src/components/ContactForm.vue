@@ -189,7 +189,6 @@ export default {
 /*
 Form
 */
-
 .honey {
   display: none;
 }
@@ -203,7 +202,6 @@ Form
   font-family: 'Karla', sans-serif;
   width: 100%;
 }
-
 /*
 Form
 */
