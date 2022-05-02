@@ -81,6 +81,7 @@ export default {
     loader: null,
   }),
   validations() {
+    // This is validators from Vuelidate
     return {
       name: {
         required,
