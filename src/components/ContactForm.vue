@@ -55,8 +55,7 @@
 import { useVuelidate } from '@vuelidate/core';
 import { email, required, maxLength } from '@vuelidate/validators';
 import axios from 'axios';
-import { createToast } from 'mosha-vue-toastify';
-import 'mosha-vue-toastify/dist/style.css';
+import { errorToast, successToast } from '../assets/js/toasts';
 export default {
   setup: () => ({ v$: useVuelidate() }),
   data: () => ({
@@ -121,13 +120,13 @@ export default {
           .catch((_err) => {
             // Logs the error if it occured.
             console.log(_err);
-            this.errorToast();
+            errorToast();
           });
         this.loading = false;
         this.reset(); // reset method call
-        this.successToast();
+        successToast();
       } else {
-        this.errorToast();
+        errorToast();
         // For debugging
         // console.log('Form submitted had an error');
       }
@@ -138,38 +137,6 @@ export default {
       this.$refs.form.reset(); // resets form fields
       this.v$.$reset(); // resets dirty check return
       this.honey = ''; // sets honey fleid to empty, otherwise it will be type null
-    },
-
-    //This is a function that creates a toast notification.
-    successToast() {
-      return createToast(
-        {
-          title: 'Success!',
-          description: 'We successfully received your message!',
-        },
-        {
-          position: 'bottom-right',
-          type: 'success',
-          timeout: 3000,
-          transition: 'slide',
-        }
-      );
-    },
-
-    //This is a function that creates a toast notification.
-    errorToast() {
-      return createToast(
-        {
-          title: 'Error!',
-          description: 'There was an error sending your message.\nTry again later.',
-        },
-        {
-          position: 'bottom-right',
-          type: 'danger',
-          timeout: 3000,
-          transition: 'slide',
-        }
-      );
     },
   },
   watch: {
