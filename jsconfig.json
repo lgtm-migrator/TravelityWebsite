@@ -4,5 +4,9 @@
   ],
   "vueCompilerOptions": {
     "experimentalDisableTemplateSupport": true
-  }
+  },
+  // "compilerOptions": {
+  //   "checkJs": true,
+  //   "maxNodeModuleJsDepth": 1
+  // }
 }
