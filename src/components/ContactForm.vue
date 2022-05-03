@@ -133,7 +133,7 @@ export default {
     },
 
     //This is a function that resets the form.
-    reset(event) {
+    reset() {
       this.$refs.form.reset(); // resets form fields
       this.v$.$reset(); // resets dirty check return
       this.honey = ''; // sets honey fleid to empty, otherwise it will be type null
