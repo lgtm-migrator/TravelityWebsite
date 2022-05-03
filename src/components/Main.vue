@@ -1,4 +1,6 @@
 <template>
+  <NavBar />
+  <BToT />
   <v-row>
     <v-container
       id="home"
@@ -38,9 +40,11 @@ import Why from './Why.vue';
 import About from './About.vue';
 import Home from './Home.vue';
 import FooterVue from './Footer.vue';
+import NavBar from './NavBar.vue';
+import BToT from './BToT.vue';
 import { createClouds } from '../assets/js/clouds';
 export default {
-  components: { Home, About, Why, Team, FooterVue },
+  components: { Home, About, Why, Team, FooterVue, NavBar, BToT },
   data: () => ({}),
   mounted() {
     createClouds('#sky', '#sky-under');

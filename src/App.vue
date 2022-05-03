@@ -5,8 +5,6 @@
         <div id="loading-animation"></div>
       </div>
       <div class="main-page">
-        <NavBar />
-        <BToT />
         <router-view></router-view>
       </div>
     </v-main>
@@ -14,16 +12,9 @@
 </template>
 
 <script>
-import BToT from './components/BToT.vue';
-import NavBar from './components/NavBar.vue';
 import lottie from 'lottie-web';
 
 export default {
-  components: {
-    NavBar,
-    BToT,
-  },
-
   data: () => ({
     loading: true,
   }),
