@@ -67,10 +67,32 @@ export default {
   text-align: center;
   background-color: floralwhite;
   border-radius: 1.5em;
+  box-shadow: 7px 7px rgba(0, 0, 0, 0.2);
   width: 19em;
   height: 12em;
 }
 .space {
-  margin-left: 7.4vw;
+  margin-left: 5vw;
+}
+
+@media only screen and (max-width: 1280px) {
+  .space {
+    margin-left: 1vw;
+  }
+}
+@media only screen and (max-width: 960px) {
+  .space {
+    margin-left: 11.5vw;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .space {
+    margin-left: 9vw;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .space {
+    margin-left: 5vw;
+  }
 }
 </style>

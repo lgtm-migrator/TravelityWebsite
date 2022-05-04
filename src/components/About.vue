@@ -1,5 +1,5 @@
 <template>
-  <v-container fluid>
+  <v-container class="height-100">
     <v-row class="align-left">
       <v-cols cols="12">
         <AboutInfo />
@@ -24,4 +24,9 @@ export default {
   components: { AboutInfo },
 };
 </script>
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.height-100 {
+  height: 50vh;
+  width: 100vw;
+}
+</style>
