@@ -44,13 +44,13 @@ export default {
           header: "Photo share",
           text:
             'Yes, the old "we take your photos scheme". Well, the only time we "take" your photos if you allow us, we do not take anything without our' +
-            " user's permission. This is only to show some people how their trip can look like.",
+            " user's permission. This is only to show people how their trip can look like.",
           value: 4,
         },
         {
           header: "This cannot be free?",
           text:
-            "Did someone say free? Well, your eyes do not deceive you our helper is 100% free no need for a credit card just go in on your app store and get our app, free of charge.",
+            "Did someone say free? Well it is, it's 100% free no need for a credit card just go in on your app store and get our app, free of charge.",
           value: 5,
         },
       ],
@@ -74,18 +74,20 @@ export default {
   height: 13em;
 }
 .space {
-  margin-top: 25vh;
+  margin-top: 40vh;
   margin-left: 5vw;
 }
 
 @media only screen and (max-width: 1280px) {
   .space {
-    margin-left: 1vw;
+    margin-top: 15em;
+    margin-left: 12vw;
   }
 }
 @media only screen and (max-width: 960px) {
   .space {
-    margin-left: 11.5vw;
+    margin-top: 30em;
+    margin-left: 8vw;
   }
 }
 @media only screen and (max-width: 800px) {
@@ -95,7 +97,7 @@ export default {
 }
 @media only screen and (max-width: 400px) {
   .space {
-    margin-left: 5vw;
+    margin-left: 1vw;
   }
 }
 </style>

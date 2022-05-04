@@ -26,7 +26,11 @@ export default {
 </script>
 <style lang="scss" scoped>
 .height-100 {
-  height: 50vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
+}
+
+.v-row {
+  margin: 0px;
 }
 </style>

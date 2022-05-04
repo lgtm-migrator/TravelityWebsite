@@ -72,27 +72,34 @@ export default {
   height: 12em;
 }
 .space {
+  margin-top: 40vh;
   margin-left: 5vw;
 }
 
 @media only screen and (max-width: 1280px) {
   .space {
-    margin-left: 1vw;
+    margin-top: 15vh;
+    margin-left: 10vw;
   }
 }
 @media only screen and (max-width: 960px) {
   .space {
-    margin-left: 11.5vw;
+    margin-top: 20vh;
+    margin-left: 8vw;
   }
 }
 @media only screen and (max-width: 800px) {
   .space {
+    margin-top: 20vh;
     margin-left: 9vw;
+    margin-bottom: 10em;
   }
 }
 @media only screen and (max-width: 400px) {
   .space {
-    margin-left: 5vw;
+    margin-top: 10em;
+    margin-left: 1vw;
+    margin-top: 10em;
   }
 }
 </style>

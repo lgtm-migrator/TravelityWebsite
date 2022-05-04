@@ -19,7 +19,7 @@ export default {};
 </script>
 <style lang="scss" scoped>
 .footer-text {
-  font-family: 'Karla', sans-serif;
+  font-family: "Karla", sans-serif;
   font-size: 12px;
   color: white;
   text-align: center;
@@ -36,13 +36,13 @@ export default {};
 .footer-link:hover {
   color: black;
 }
-@media only screen and (max-height:1280px){
-  .space{
+@media only screen and (max-height: 1280px) {
+  .space {
     padding-top: 10em;
   }
 }
-@media only screen and (max-height:960px){
-  .space{
+@media only screen and (max-height: 960px) {
+  .space {
     padding-top: 10em;
   }
 }

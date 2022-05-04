@@ -1,5 +1,6 @@
 <template>
   <v-container fluid>
+    <div class="space"></div>
     <v-row class="d-flex align-center justify-center">
       <v-col cols="12" sm="8" md="7" lg="7" align="center">
         <TeamBoxes />
@@ -16,9 +17,9 @@
   </v-container>
 </template>
 <script>
-import TeamBoxes from './TeamBoxes.vue';
-import MobileContact from './MobileContact.vue';
-import Contact from './ContactForm.vue';
+import TeamBoxes from "./TeamBoxes.vue";
+import MobileContact from "./MobileContact.vue";
+import Contact from "./ContactForm.vue";
 export default {
   components: { Contact, TeamBoxes, MobileContact },
 };
@@ -30,19 +31,34 @@ export default {
 .v-row {
   margin: 0;
 }
-@media only screen and (max-width:1280px){
-  .height{
+@media only screen and (max-width: 1280px) {
+  .height {
     height: 42vh;
   }
 }
-@media only screen and (max-width:1040px){
-  .height{
+@media only screen and (max-width: 1040px) {
+  .height {
     height: 27vh;
   }
 }
-@media only screen and (max-width:960px){
-  .height{
-    height: 40vh;
+@media only screen and (max-width: 960px) {
+  .height {
+    height: 10vh;
+  }
+  .space {
+    margin-top: 28em;
+  }
+}
+
+@media only screen and (max-width: 420px) and (max-height: 870px) {
+  .space {
+    margin-top: 20em;
+  }
+}
+
+@media only screen and (max-width: 400px) and (max-height: 900px) {
+  .space {
+    margin-top: 20em;
   }
 }
 </style>

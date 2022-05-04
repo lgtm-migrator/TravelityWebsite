@@ -52,30 +52,30 @@
 </template>
 
 <script>
-import { useVuelidate } from '@vuelidate/core';
-import { email, required, maxLength } from '@vuelidate/validators';
-import axios from 'axios';
-import { createToast } from 'mosha-vue-toastify';
-import 'mosha-vue-toastify/dist/style.css';
+import { useVuelidate } from "@vuelidate/core";
+import { email, required, maxLength } from "@vuelidate/validators";
+import axios from "axios";
+import { createToast } from "mosha-vue-toastify";
+import "mosha-vue-toastify/dist/style.css";
 export default {
   setup: () => ({ v$: useVuelidate() }),
   data: () => ({
-    name: '',
-    email: '',
-    message: '',
-    honey: '',
+    name: "",
+    email: "",
+    message: "",
+    honey: "",
     formUrl:
-      'https://script.google.com/macros/s/AKfycbyDyRD1oL-GT1U8RYJEmS166j0mYKbG74rM0ljtlqZ1FR9MsYZU/exec',
+      "https://script.google.com/macros/s/AKfycbyDyRD1oL-GT1U8RYJEmS166j0mYKbG74rM0ljtlqZ1FR9MsYZU/exec",
     rules: {
       // This is a regular expression that checks if the email is valid.
       email: (value) => {
         const pattern = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-        return pattern.test(value) || 'Invalid e-mail';
+        return pattern.test(value) || "Invalid e-mail";
       },
-      requiredName: (value) => !!value || 'Name is required',
-      requiredEmail: (value) => !!value || 'Email is required',
-      requiredMessage: (value) => !!value || 'Message is required',
-      counter: (value) => value.length <= 350 || 'Max 350 characters',
+      requiredName: (value) => !!value || "Name is required",
+      requiredEmail: (value) => !!value || "Email is required",
+      requiredMessage: (value) => !!value || "Message is required",
+      counter: (value) => value.length <= 350 || "Max 350 characters",
     },
     loading: false,
     loader: null,
@@ -101,10 +101,10 @@ export default {
     async submit() {
       const result = await this.v$.$validate();
       const formData = new FormData();
-      formData.append('name', this.name);
-      formData.append('email', this.email);
-      formData.append('message', this.message);
-      if (result && this.honey === '') {
+      formData.append("name", this.name);
+      formData.append("email", this.email);
+      formData.append("message", this.message);
+      if (result && this.honey === "") {
         // For debugging
         // console.log('Submitted');
         this.loading = true;
@@ -132,21 +132,21 @@ export default {
     reset(event) {
       this.$refs.form.reset();
       this.v$.$reset();
-      this.honey = '';
+      this.honey = "";
     },
 
     //This is a function that creates a toast notification.
     successToast() {
       return createToast(
         {
-          title: 'Success!',
-          description: 'We successfully received your message!',
+          title: "Success!",
+          description: "We successfully received your message!",
         },
         {
-          position: 'bottom-right',
-          type: 'success',
+          position: "bottom-right",
+          type: "success",
           timeout: 3000,
-          transition: 'slide',
+          transition: "slide",
         }
       );
     },
@@ -155,14 +155,14 @@ export default {
     errorToast() {
       return createToast(
         {
-          title: 'Error!',
-          description: 'There was an error sending your message.\nTry again later.',
+          title: "Error!",
+          description: "There was an error sending your message.\nTry again later.",
         },
         {
-          position: 'bottom-right',
-          type: 'danger',
+          position: "bottom-right",
+          type: "danger",
           timeout: 3000,
-          transition: 'slide',
+          transition: "slide",
         }
       );
     },
@@ -190,16 +190,16 @@ export default {
 }
 
 .form {
-  font-family: 'Karla', sans-serif;
+  font-family: "Karla", sans-serif;
   width: 50vw;
 }
 @media only screen and (max-width: 991px) {
-    .inputWidth {
+  .inputWidth {
     width: 65vw;
   }
 
   .form {
-    font-family: 'Karla', sans-serif;
+    font-family: "Karla", sans-serif;
     width: 50vw;
   }
 }

@@ -13,7 +13,7 @@
         </div>
       </v-row>
     </v-container>
-    <v-container fluid id="about" class="c-height about" tag="section">
+    <v-container fluid id="about" class="spaceing_for_about c-height about" tag="section">
       <v-row justify="center">
         <div class="sky-container-under">
           <canvas id="sky-under"></canvas>
@@ -21,7 +21,7 @@
         <About />
       </v-row>
     </v-container>
-    <v-container fluid id="whyus" class="c-height whyus" tag="section">
+    <v-container fluid id="whyus" class="spaceing_for_info c-height whyus" tag="section">
       <Why />
     </v-container>
     <v-container fluid id="team" class="c-height team d-flex align-center" tag="section">
@@ -139,12 +139,12 @@ Sections end
 Klouds start
 */
 .sky-container-above {
-  width: 100%;
+  width: 100vw;
   height: 260px;
 }
 
 .sky-container-under {
-  width: 100%;
+  width: 100vw;
   height: 260px;
   transform: rotate(-180deg);
   margin-bottom: -21em;
@@ -152,4 +152,13 @@ Klouds start
 /*
 Klouds end
 */
+
+@media screen and (max-width: 400px) {
+  .spaceing_for_info {
+    height: 150vh;
+  }
+  .spaceing_for_about {
+    height: 160vh;
+  }
+}
 </style>

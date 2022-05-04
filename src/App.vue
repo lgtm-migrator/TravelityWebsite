@@ -14,10 +14,10 @@
 </template>
 
 <script>
-import BToT from './components/BToT.vue';
-import NavBar from './components/NavBar.vue';
-import Main from './components/Main.vue';
-import lottie from 'lottie-web';
+import BToT from "./components/BToT.vue";
+import NavBar from "./components/NavBar.vue";
+import Main from "./components/Main.vue";
+import lottie from "lottie-web";
 
 export default {
   components: {
@@ -42,21 +42,21 @@ export default {
   methods: {
     // It's loading animation.
     startLoading: function () {
-      const animEl = document.getElementById('loading-animation');
+      const animEl = document.getElementById("loading-animation");
       lottie.loadAnimation({
         container: animEl,
-        renderer: 'svg',
+        renderer: "svg",
         loop: true,
         autoplay: true,
         path:
-          'https://gist.githubusercontent.com/Slash1y/31fe2f5d058ebd47bbe9bc70315597f6/raw/652e1f5799275c7e249ab2091632d9c6db27799f/loading.json',
+          "https://gist.githubusercontent.com/Slash1y/31fe2f5d058ebd47bbe9bc70315597f6/raw/652e1f5799275c7e249ab2091632d9c6db27799f/loading.json",
       });
     },
 
     // It's hiding the loading animation.
     stopLoading: function () {
-      const loadWrap = document.querySelector('.loading-wrapper');
-      loadWrap.classList.add('loading-wrapper-hidden');
+      const loadWrap = document.querySelector(".loading-wrapper");
+      loadWrap.classList.add("loading-wrapper-hidden");
       lottie.destroy();
     },
   },
@@ -111,5 +111,4 @@ Loading screen start
 /*
 Loading screen end
 */
-
 </style>
