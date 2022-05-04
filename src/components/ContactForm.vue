@@ -54,8 +54,8 @@
 <script>
 import { useVuelidate } from '@vuelidate/core';
 import { email, required, maxLength } from '@vuelidate/validators';
-import axios from 'axios';
 import { errorToast, successToast } from '../assets/js/toasts';
+import { axiosPost } from '../assets/js/axios';
 export default {
   setup: () => ({ v$: useVuelidate() }),
   data: () => ({
@@ -111,24 +111,14 @@ export default {
         // For debugging
         // console.log('Submitted');
         this.loading = true;
-        await axios
-          .post(this.formUrl, formData)
-          .then((_data) => {
-            // For debugging
-            // console.log(_data);
-          })
-          .catch((_err) => {
-            // Logs the error if it occured.
-            console.log(_err);
-            errorToast();
-          });
+
+        await axiosPost(this.formUrl, formData);
         this.loading = false;
+
         this.reset(); // reset method call
         successToast();
       } else {
         errorToast();
-        // For debugging
-        // console.log('Form submitted had an error');
       }
     },
 
