@@ -186,4 +186,14 @@ Klouds
     height: 350vh;
   }
 }
+@media only screen and (max-width: 840px) and (max-height: 1200px) {
+  .spaceing_for_team {
+    margin-top: -50vh;
+  }
+}
+@media only screen and (max-width: 1040px) and (max-height: 1380px) {
+  .spaceing_for_team {
+    margin-top: -50vh;
+  }
+}
 </style>

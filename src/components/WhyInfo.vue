@@ -83,6 +83,12 @@ export default {
     margin-left: 12vw;
   }
 }
+@media only screen and (max-width: 1200px) {
+  .space {
+    margin-top: 15em;
+    margin-left: -3vw;
+  }
+}
 @media only screen and (max-width: 960px) {
   .space {
     margin-top: 30em;
@@ -113,6 +119,29 @@ export default {
 @media only screen and (max-width: 940px) and (max-height: 440px) {
   .space {
     margin-left: 15vw;
+  }
+}
+@media only screen and (max-width: 840px) and (max-height: 1200px) {
+  .space {
+    margin-top: 20vh;
+  }
+}
+
+@media only screen and (max-width: 820px) and (max-height: 1100px) {
+  .space {
+    margin-left: 5vw;
+  }
+}
+
+@media only screen and (max-width: 1100px) and (max-height: 820px) {
+  .space {
+    margin-left: -5vw;
+  }
+}
+
+@media only screen and (max-width: 1040px) and (min-height: 1380px) {
+  .space {
+    margin-left: -5vw;
   }
 }
 </style>
