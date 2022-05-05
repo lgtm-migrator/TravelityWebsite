@@ -1,7 +1,7 @@
 <template>
   <nav class="nav-wrapper">
     <div class="navbar justify-center align-center">
-      <p v-for="t in titleArr" :key="t" class="navbar-title">{{ t }}</p>
+      <p>Travelity</p>
     </div>
     <div class="navbar-links d-none d-md-flex">
       <a href="#home" class="link-item" v-smooth-scroll="{ updateHistory: false }"
@@ -23,15 +23,13 @@
   </nav>
 </template>
 <script>
-import MobileNav from './MobileNav.vue';
+import MobileNav from "./MobileNav.vue";
 export default {
   components: {
     MobileNav,
   },
   data() {
-    return {
-      titleArr: ['T', 'r', 'a', 'v', 'e', 'l', 'i', 't', 'y'],
-    };
+    return {};
   },
 
   methods: {
@@ -39,38 +37,31 @@ export default {
     onScroll: function (event) {
       // Variables
       const scrollPos = window.scrollY;
-      const navbar = document.querySelector('.navbar');
-      const navbarTitle = document.querySelectorAll('.navbar-title');
-      const navwrap = document.querySelector('.nav-wrapper');
-      const navbarLinks = document.querySelector('.navbar-links');
-      const navbarLinkItems = document.querySelectorAll('.link-item');
+      const navbar = document.querySelector(".navbar");
+      const navwrap = document.querySelector(".nav-wrapper");
+      const navbarLinks = document.querySelector(".navbar-links");
+      const navbarLinkItems = document.querySelectorAll(".link-item");
       const navbarLinksArrayLength = navbarLinkItems.length;
 
       // Checks scrollPos value and runs if true
       if (scrollPos > 5) {
-        navbar.classList.add('navbar-scrolled');
-        navbarLinks.classList.add('navbar-links-scrolled');
-        navbarTitle.forEach((item) => {
-          item.classList.add('navbar-title-scrolled');
-        });
+        navbar.classList.add("navbar-scrolled");
+        navbarLinks.classList.add("navbar-links-scrolled");
 
         for (let i = 0; i < navbarLinksArrayLength; i++) {
-          navbarLinkItems[i].classList.add('navbar-links-scrolled');
+          navbarLinkItems[i].classList.add("navbar-links-scrolled");
         }
 
-        navwrap.classList.add('nav-wrapper-scrolled');
+        navwrap.classList.add("nav-wrapper-scrolled");
       } else {
-        navbar.classList.remove('navbar-scrolled');
-        navbarLinks.classList.remove('navbar-links-scrolled');
-        navbarTitle.forEach((item) => {
-          item.classList.remove('navbar-title-scrolled');
-        });
+        navbar.classList.remove("navbar-scrolled");
+        navbarLinks.classList.remove("navbar-links-scrolled");
 
         for (let i = 0; i < navbarLinksArrayLength; i++) {
-          navbarLinkItems[i].classList.remove('navbar-links-scrolled');
+          navbarLinkItems[i].classList.remove("navbar-links-scrolled");
         }
 
-        navwrap.classList.remove('nav-wrapper-scrolled');
+        navwrap.classList.remove("nav-wrapper-scrolled");
       }
       this.onHash(); // calls onHash method
     },
@@ -83,22 +74,22 @@ export default {
     section. */
     onHash: function () {
       // Variables
-      let current = '';
-      const navLinks = document.querySelectorAll('.link-item');
+      let current = "";
+      const navLinks = document.querySelectorAll(".link-item");
 
       // Find the current id you are scrolled over
-      document.querySelectorAll('section').forEach((section) => {
+      document.querySelectorAll("section").forEach((section) => {
         const sectionTop = section.offsetTop;
         if (scrollY >= sectionTop - 65) {
-          current = section.getAttribute('id');
+          current = section.getAttribute("id");
         }
       });
 
       // Sets the currect class to the right section when scrolled over it
       navLinks.forEach((item) => {
-        item.classList.remove('navbar-link-active');
-        if (item.attributes.getNamedItem('href').value === '#' + current) {
-          item.classList.add('navbar-link-active');
+        item.classList.remove("navbar-link-active");
+        if (item.attributes.getNamedItem("href").value === "#" + current) {
+          item.classList.add("navbar-link-active");
         }
       });
     },
@@ -107,18 +98,18 @@ export default {
   mounted() {
     // Calls onHash method and the adds a listener to scroll
     this.onHash();
-    window.addEventListener('scroll', this.onScroll);
+    window.addEventListener("scroll", this.onScroll);
   },
 
   beforeUnmount() {
     // removes the listener
-    window.removeEventListener('scroll', this.onScroll);
+    window.removeEventListener("scroll", this.onScroll);
   },
 };
 </script>
 <style lang="scss" scoped>
 // Imports
-@import 'vuetify/lib/styles/settings/_variables.scss';
+@import "vuetify/lib/styles/settings/_variables.scss";
 
 /*
 Nav bar
@@ -141,7 +132,7 @@ Nav bar
   text-align: center;
   text-decoration: none;
   font-size: 18px;
-  font-family: 'Exo 2', sans-serif;
+  font-family: "Exo 2", sans-serif;
   font-weight: 600;
   line-height: 15px;
   padding: 25px;
@@ -159,7 +150,7 @@ Nav bar
 .navbar p {
   font-size: 25px;
   font-weight: 700;
-  font-family: 'Exo 2', sans-serif;
+  font-family: "Exo 2", sans-serif;
   transition: 0.2s all ease-in;
   letter-spacing: 1.5px;
   color: white;
@@ -178,7 +169,7 @@ Nav bar
 }
 
 .nav-wrapper-scrolled {
-  background-color: rgba(146, 178, 253, 0.1);
+  background-color: rgba(145, 167, 225, 0.1);
 }
 
 .navbar-links-scrolled {

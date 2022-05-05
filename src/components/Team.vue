@@ -52,16 +52,4 @@ export default {
     margin-top: 28em;
   }
 }
-
-@media only screen and (max-width: 420px) and (max-height: 870px) {
-  .space {
-    margin-top: 20em;
-  }
-}
-
-@media only screen and (max-width: 400px) and (max-height: 900px) {
-  .space {
-    margin-top: 20em;
-  }
-}
 </style>

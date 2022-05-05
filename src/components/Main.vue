@@ -26,10 +26,15 @@
     <v-container fluid id="whyus" class="spaceing_for_info c-height whyus" tag="section">
       <Why />
     </v-container>
-    <v-container fluid id="team" class="c-height team d-flex align-center" tag="section">
+    <v-container
+      fluid
+      id="team"
+      class="spaceing_for_team c-height team d-flex align-center"
+      tag="section"
+    >
       <Team />
     </v-container>
-    <v-footer>
+    <v-footer class="spaceing_for_footer">
       <FooterVue />
     </v-footer>
   </v-row>
@@ -135,12 +140,50 @@ Klouds
 Klouds
 */
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 800px) {
   .spaceing_for_info {
     height: 150vh;
   }
   .spaceing_for_about {
-    height: 160vh;
+    height: 100vh;
+  }
+  .spaceing_for_team {
+    height: 100vh;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .spaceing_for_info {
+    height: 150vh;
+  }
+  .spaceing_for_about {
+    height: 100vh;
+  }
+  .spaceing_for_team {
+    height: 100vh;
+  }
+}
+
+@media only screen and (max-width: 900px) and (max-height: 420px) {
+  .spaceing_for_info {
+    height: 150vh;
+  }
+  .spaceing_for_about {
+    height: 100vh;
+  }
+  .spaceing_for_team {
+    height: 350vh;
+  }
+}
+@media only screen and (max-width: 940px) and (max-height: 440px) {
+  .spaceing_for_info {
+    height: 150vh;
+  }
+  .spaceing_for_about {
+    height: 100vh;
+  }
+  .spaceing_for_team {
+    height: 350vh;
   }
 }
 </style>

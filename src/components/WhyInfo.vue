@@ -99,4 +99,20 @@ export default {
     margin-left: 1vw;
   }
 }
+
+@media only screen and (max-width: 820px) and (max-height: 420px) {
+  .space {
+    margin-left: 9vw;
+  }
+}
+@media only screen and (max-width: 900px) and (max-height: 420px) {
+  .space {
+    margin-left: 12.5vw;
+  }
+}
+@media only screen and (max-width: 940px) and (max-height: 440px) {
+  .space {
+    margin-left: 15vw;
+  }
+}
 </style>
