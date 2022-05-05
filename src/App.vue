@@ -5,42 +5,31 @@
         <div id="loading-animation"></div>
       </div>
       <div class="main-page">
-        <NavBar />
-        <BToT />
-        <Main />
+        <router-view></router-view>
       </div>
     </v-main>
   </v-app>
 </template>
 
 <script>
-import BToT from "./components/BToT.vue";
-import NavBar from "./components/NavBar.vue";
-import Main from "./components/Main.vue";
 import lottie from "lottie-web";
 
 export default {
-  components: {
-    NavBar,
-    Main,
-    BToT,
-  },
-
-  data() {
-    return {
-      loading: true,
-    };
-  },
+  data: () => ({
+    loading: true,
+  }),
 
   mounted() {
-    this.startLoading();
+    this.startLoading(); // Calls start loading method
+
+    // Sets timeout for 3s
     setTimeout(() => {
-      this.stopLoading();
+      this.stopLoading(); // Calls stop loading method
     }, 3000);
   },
 
   methods: {
-    // It's loading animation.
+    // Loading animation.
     startLoading: function () {
       const animEl = document.getElementById("loading-animation");
       lottie.loadAnimation({
@@ -53,11 +42,11 @@ export default {
       });
     },
 
-    // It's hiding the loading animation.
+    // Hides the loading animation.
     stopLoading: function () {
       const loadWrap = document.querySelector(".loading-wrapper");
       loadWrap.classList.add("loading-wrapper-hidden");
-      lottie.destroy();
+      lottie.destroy(); // Destroys the animation to decrease memory usage
     },
   },
 };

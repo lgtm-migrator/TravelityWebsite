@@ -11,18 +11,27 @@
 
 <script>
 export default {
-  data() {
-    return {};
-  },
+  data: () => ({}),
+  methods: {},
+  mounted() {},
 };
 </script>
 
 <style lang="scss" scoped>
+/*
+Misc.
+*/
 div {
   font-family: 'Karla', sans-serif;
   height: 100%;
 }
+/*
+Misc.
+*/
 
+/*
+Underline hover
+*/
 .slide-center-out {
   text-decoration: none;
   display: inline-block;
@@ -45,4 +54,7 @@ div {
   width: 100%;
   background: #779ffc;
 }
+/*
+Underline hover
+*/
 </style>

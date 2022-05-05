@@ -39,7 +39,10 @@ export default {
       const bars = document.querySelector('.bars');
       const navItem = document.querySelectorAll('.nav-item');
 
-      // A way to toggle the menu on and off.
+      /*
+      A way to toggle the menu on and off.
+      Adds a listener to click on the bars.
+      */
       bars.addEventListener('click', function (e) {
         this.classList.toggle('active');
         if (this.classList.contains('active')) {
@@ -96,6 +99,7 @@ export default {
         }
       });
 
+      // Adds listener to each item in the navItem array
       navItem.forEach((item) => {
         item.addEventListener('click', function (e) {
           bars.classList.remove('active');
@@ -129,11 +133,14 @@ export default {
     },
   },
   mounted() {
-    this.NaviAnim();
+    this.NaviAnim(); // calls method
   },
 };
 </script>
 <style lang="scss" scoped>
+/*
+Nav menu and icon
+*/
 .main {
   position: relative;
   width: 100%;
@@ -230,4 +237,7 @@ export default {
   color: #fff;
   transition: 0.2s linear;
 }
+/*
+Nav menu and icon
+*/
 </style>

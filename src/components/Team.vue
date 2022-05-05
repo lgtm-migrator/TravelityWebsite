@@ -22,6 +22,9 @@ import MobileContact from "./MobileContact.vue";
 import Contact from "./ContactForm.vue";
 export default {
   components: { Contact, TeamBoxes, MobileContact },
+  data: () => ({}),
+  methods: {},
+  mounted() {},
 };
 </script>
 <style lang="scss" scoped>

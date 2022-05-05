@@ -1,4 +1,6 @@
 <template>
+  <NavBar />
+  <BToT />
   <v-row>
     <v-container
       id="home"
@@ -38,41 +40,21 @@ import Why from "./Why.vue";
 import About from "./About.vue";
 import Home from "./Home.vue";
 import FooterVue from "./Footer.vue";
-import * as klouds from "klouds";
+import NavBar from "./NavBar.vue";
+import BToT from "./BToT.vue";
+import { createClouds } from "../assets/js/clouds";
 export default {
-  components: { Home, About, Why, Team, FooterVue },
+  components: { Home, About, Why, Team, FooterVue, NavBar, BToT },
+  data: () => ({}),
   mounted() {
-    this.createClouds();
+    createClouds("#sky", "#sky-under");
   },
-  methods: {
-    /* Create a new Klouds object,
-    passing in the selector for the sky and the speed of the clouds. Then create a
-    second Klouds object, this time passing in the selector for the sky-under
-    element and the speed of the clouds. */
-    createClouds: function () {
-      klouds.create({
-        selector: "#sky",
-        speed: 1,
-        layerCount: 7,
-        cloudColor1: "#a8c2fe",
-        cloudColor2: "#fff2f1",
-        bgColor: "#a2bdfe",
-      });
-      klouds.create({
-        selector: "#sky-under",
-        speed: -1,
-        layerCount: 7,
-        cloudColor1: "#a8c2fe",
-        cloudColor2: "#fff2f1",
-        bgColor: "#aec6fe",
-      });
-    },
-  },
+  methods: {},
 };
 </script>
 <style lang="scss" scoped>
 /*
-Misc. start
+Misc.
 */
 .c-height {
   height: 100%;
@@ -92,11 +74,11 @@ Misc. start
   background-color: #0099ff;
 }
 /*
-Misc. end
+Misc.
 */
 
 /*
-Sections start
+Sections
 */
 .welcome {
   background-color: #92b2fd;
@@ -132,11 +114,11 @@ Sections start
   background-color: #d4e2ff;
 }
 /*
-Sections end
+Sections
 */
 
 /*
-Klouds start
+Klouds
 */
 .sky-container-above {
   width: 100vw;
@@ -150,7 +132,7 @@ Klouds start
   margin-bottom: -21em;
 }
 /*
-Klouds end
+Klouds
 */
 
 @media screen and (max-width: 400px) {

@@ -1,6 +1,9 @@
 <template>
-  <a id="back"><v-icon>mdi-arrow-up-thick</v-icon></a>
+  ><router-link id="back" :to="{ name: 'Home' }"
+    ><v-icon>mdi-arrow-left-thick</v-icon></router-link
+  >
 </template>
+
 <script>
 export default {
   data: () => ({}),
@@ -12,19 +15,11 @@ export default {
       const scrollPos = window.scrollY;
 
       // Checks scrollPos
-      if (scrollPos > 300) {
+      if (scrollPos > 10) {
         btn.classList.add('btn-show');
       } else {
         btn.classList.remove('btn-show');
       }
-
-      // Adds listener to button
-      btn.addEventListener('click', function (e) {
-        window.scrollTo({
-          top: 0,
-          behavior: 'smooth',
-        });
-      });
     },
   },
 
@@ -39,6 +34,7 @@ export default {
   },
 };
 </script>
+
 <style lang="scss" scoped>
 /*
 Back button
@@ -57,7 +53,7 @@ Back button
   transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
   opacity: 0;
   visibility: hidden;
-  z-index: 5;
+  z-index: 1000;
 }
 
 #back.btn-show {

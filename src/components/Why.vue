@@ -25,6 +25,9 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+/*
+Misc.
+*/
 .height-100 {
   height: 100%;
   width: 100%;
@@ -33,4 +36,7 @@ export default {
 .v-row {
   margin: 0px;
 }
+/*
+Misc.
+*/
 </style>

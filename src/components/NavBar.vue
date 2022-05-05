@@ -37,6 +37,7 @@ export default {
   methods: {
     // When the user scrolls down, the navbar and navbar links will be scrolled.
     onScroll: function (event) {
+      // Variables
       const scrollPos = window.scrollY;
       const navbar = document.querySelector('.navbar');
       const navbarTitle = document.querySelectorAll('.navbar-title');
@@ -45,6 +46,7 @@ export default {
       const navbarLinkItems = document.querySelectorAll('.link-item');
       const navbarLinksArrayLength = navbarLinkItems.length;
 
+      // Checks scrollPos value and runs if true
       if (scrollPos > 5) {
         navbar.classList.add('navbar-scrolled');
         navbarLinks.classList.add('navbar-links-scrolled');
@@ -70,7 +72,7 @@ export default {
 
         navwrap.classList.remove('nav-wrapper-scrolled');
       }
-      this.onHash();
+      this.onHash(); // calls onHash method
     },
 
     /* When the user scrolls the page, the onHash function is called. The onHash function iterates through
@@ -80,8 +82,11 @@ export default {
     navbar-link-active class is added to the link that has an href attribute equal to the current
     section. */
     onHash: function () {
+      // Variables
       let current = '';
       const navLinks = document.querySelectorAll('.link-item');
+
+      // Find the current id you are scrolled over
       document.querySelectorAll('section').forEach((section) => {
         const sectionTop = section.offsetTop;
         if (scrollY >= sectionTop - 65) {
@@ -89,6 +94,7 @@ export default {
         }
       });
 
+      // Sets the currect class to the right section when scrolled over it
       navLinks.forEach((item) => {
         item.classList.remove('navbar-link-active');
         if (item.attributes.getNamedItem('href').value === '#' + current) {
@@ -99,17 +105,24 @@ export default {
   },
 
   mounted() {
+    // Calls onHash method and the adds a listener to scroll
     this.onHash();
     window.addEventListener('scroll', this.onScroll);
   },
 
   beforeUnmount() {
+    // removes the listener
     window.removeEventListener('scroll', this.onScroll);
   },
 };
 </script>
 <style lang="scss" scoped>
+// Imports
 @import 'vuetify/lib/styles/settings/_variables.scss';
+
+/*
+Nav bar
+*/
 .nav-wrapper {
   display: flex;
   justify-content: space-between;
@@ -179,9 +192,7 @@ export default {
 .navbar-link-active {
   color: black;
 }
-
-.plane {
-  color: white;
-  transform: (rotate(90deg));
-}
+/*
+Nav bar
+*/
 </style>

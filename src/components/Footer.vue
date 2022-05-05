@@ -2,7 +2,8 @@
   <v-row class="d-flex align-center justify-center">
     <v-col cols="12" sm="6" md="4" lg="6">
       <span class="footer-text"
-        >&copy; 2022 - {{ new Date().getFullYear() }} - Travelity | Terms and Conditions
+        >&copy; 2022 - {{ new Date().getFullYear() }} - Travelity |
+        <router-link class="footer-terms" to="/terms">Terms and Conditions</router-link>
       </span>
     </v-col>
     <v-col cols="12" sm="6" md="4" lg="6" align="right">
@@ -15,9 +16,16 @@
   </v-row>
 </template>
 <script>
-export default {};
+export default {
+  data: () => ({}),
+  methods: {},
+  mounted() {},
+};
 </script>
 <style lang="scss" scoped>
+/*
+Footer
+*/
 .footer-text {
   font-family: "Karla", sans-serif;
   font-size: 12px;
@@ -25,6 +33,17 @@ export default {};
   text-align: center;
   padding: 5px;
   letter-spacing: 2px;
+  .footer-terms {
+    text-decoration: none;
+    transition: color 0.1s ease-in;
+    color: white;
+  }
+  .footer-terms:hover {
+    color: black;
+  }
+  .footer-terms:active {
+    color: black;
+  }
 }
 
 .footer-link {
@@ -45,5 +64,8 @@ export default {};
   .space {
     padding-top: 10em;
   }
+}
+.footer-link:active {
+  color: black;
 }
 </style>

@@ -54,9 +54,8 @@
 <script>
 import { useVuelidate } from "@vuelidate/core";
 import { email, required, maxLength } from "@vuelidate/validators";
-import axios from "axios";
-import { createToast } from "mosha-vue-toastify";
-import "mosha-vue-toastify/dist/style.css";
+import { errorToast, successToast } from "../assets/js/toasts";
+import { axiosPost } from "../assets/js/axios";
 export default {
   setup: () => ({ v$: useVuelidate() }),
   data: () => ({
@@ -81,6 +80,7 @@ export default {
     loader: null,
   }),
   validations() {
+    // This is validators from Vuelidate
     return {
       name: {
         required,
@@ -101,73 +101,36 @@ export default {
     async submit() {
       const result = await this.v$.$validate();
       const formData = new FormData();
+
+      // append field inputs into FormData object
       formData.append("name", this.name);
       formData.append("email", this.email);
       formData.append("message", this.message);
+
       if (result && this.honey === "") {
         // For debugging
         // console.log('Submitted');
         this.loading = true;
-        await axios
-          .post(this.formUrl, formData)
-          .then((_data) => {
-            // For debugging
-            // console.log(_data);
-          })
-          .catch((_err) => {
-            console.log(_err);
-            this.errorToast();
-          });
+
+        await axiosPost(this.formUrl, formData);
         this.loading = false;
-        this.reset(); // reset methods call
-        this.successToast();
+
+        this.reset(); // reset method call
+        successToast();
       } else {
-        this.errorToast();
-        // For debugging
-        // console.log('Form submitted had an error');
+        errorToast();
       }
     },
 
     //This is a function that resets the form.
-    reset(event) {
-      this.$refs.form.reset();
-      this.v$.$reset();
-      this.honey = "";
-    },
-
-    //This is a function that creates a toast notification.
-    successToast() {
-      return createToast(
-        {
-          title: "Success!",
-          description: "We successfully received your message!",
-        },
-        {
-          position: "bottom-right",
-          type: "success",
-          timeout: 3000,
-          transition: "slide",
-        }
-      );
-    },
-
-    //This is a function that creates a toast notification.
-    errorToast() {
-      return createToast(
-        {
-          title: "Error!",
-          description: "There was an error sending your message.\nTry again later.",
-        },
-        {
-          position: "bottom-right",
-          type: "danger",
-          timeout: 3000,
-          transition: "slide",
-        }
-      );
+    reset() {
+      this.$refs.form.reset(); // resets form fields
+      this.v$.$reset(); // resets dirty check return
+      this.honey = ""; // sets honey fleid to empty, otherwise it will be type null
     },
   },
   watch: {
+    // Watching loader state change
     loader() {
       const l = this.loader;
       this[l] = !this[l];
@@ -181,6 +144,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+/*
+Form
+*/
 .honey {
   display: none;
 }
@@ -203,4 +169,7 @@ export default {
     width: 50vw;
   }
 }
+/*
+Form
+*/
 </style>
