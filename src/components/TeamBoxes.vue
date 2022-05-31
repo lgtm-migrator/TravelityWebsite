@@ -41,11 +41,21 @@
 
 <script>
 export default {
+  mounted() {
+    // Variables
+    const cards = document.querySelectorAll(".cards");
+
+    // Adds listener to all individual cards
+    cards.forEach((item) => {
+      item.addEventListener("click", this.changePosition);
+    });
+    this.setClasses(); // calls method
+  },
   methods: {
     // Sets classes to the different cards.
     setClasses() {
-      const cards = document.querySelectorAll('.cards');
-      const classes = ['left2', 'left', 'active', 'right2', 'right'];
+      const cards = document.querySelectorAll(".cards");
+      const classes = ["left2", "left", "active", "right2", "right"];
       cards.forEach((card, index) => card.classList.add(classes[index]));
     },
 
@@ -53,24 +63,13 @@ export default {
     It changes the position of the cards.*/
     changePosition(e) {
       const clickedCard = e.currentTarget;
-      const activeCard = document.querySelector('.cards.active');
-      if (clickedCard.classList.contains('active')) return;
+      const activeCard = document.querySelector(".cards.active");
+      if (clickedCard.classList.contains("active")) return;
       const classesFrom = e.currentTarget.className;
       const classesTo = activeCard.className;
       clickedCard.className = classesTo;
       activeCard.className = classesFrom;
     },
-  },
-
-  mounted() {
-    // Variables
-    const cards = document.querySelectorAll('.cards');
-
-    // Adds listener to all individual cards
-    cards.forEach((item) => {
-      item.addEventListener('click', this.changePosition);
-    });
-    this.setClasses(); // calls method
   },
 };
 </script>
@@ -150,23 +149,23 @@ Cards
 }
 
 .card-1 {
-  background-image: url('https://i.ibb.co/30kV8nx/person0.png');
+  background-image: url("https://i.ibb.co/30kV8nx/person0.png");
   background-color: #fff;
 }
 .card-2 {
-  background-image: url('https://i.ibb.co/30kV8nx/person0.png');
+  background-image: url("https://i.ibb.co/30kV8nx/person0.png");
   background-color: #fff;
 }
 .card-3 {
-  background-image: url('https://i.ibb.co/30kV8nx/person0.png');
+  background-image: url("https://i.ibb.co/30kV8nx/person0.png");
   background-color: #fff;
 }
 .card-4 {
-  background-image: url('https://i.ibb.co/30kV8nx/person0.png');
+  background-image: url("https://i.ibb.co/30kV8nx/person0.png");
   background-color: #fff;
 }
 .card-5 {
-  background-image: url('https://i.ibb.co/30kV8nx/person0.png');
+  background-image: url("https://i.ibb.co/30kV8nx/person0.png");
   background-color: #fff;
 }
 
@@ -181,7 +180,7 @@ Cards
   border-end-start-radius: 10px;
   text-align: left;
   padding: 0.5em;
-  font-family: 'Karla', sans-serif;
+  font-family: "Karla", sans-serif;
   a {
     text-decoration: none;
     color: black;

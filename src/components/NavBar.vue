@@ -4,16 +4,16 @@
       <p>Travelity</p>
     </div>
     <div class="navbar-links d-none d-md-flex">
-      <a href="#home" class="link-item" v-smooth-scroll="{ updateHistory: false }"
+      <a v-smooth-scroll="{ updateHistory: false }" href="#home" class="link-item"
         >Home</a
       >
-      <a href="#about" class="link-item" v-smooth-scroll="{ updateHistory: false }"
+      <a v-smooth-scroll="{ updateHistory: false }" href="#about" class="link-item"
         >About</a
       >
-      <a href="#whyus" class="link-item" v-smooth-scroll="{ updateHistory: false }"
+      <a v-smooth-scroll="{ updateHistory: false }" href="#whyus" class="link-item"
         >Why Us</a
       >
-      <a href="#team" class="link-item" v-smooth-scroll="{ updateHistory: false }"
+      <a v-smooth-scroll="{ updateHistory: false }" href="#team" class="link-item"
         >The Team</a
       >
     </div>
@@ -32,9 +32,20 @@ export default {
     return {};
   },
 
+  mounted() {
+    // Calls onHash method and the adds a listener to scroll
+    this.onHash();
+    window.addEventListener("scroll", this.onScroll);
+  },
+
+  beforeUnmount() {
+    // removes the listener
+    window.removeEventListener("scroll", this.onScroll);
+  },
+
   methods: {
     // When the user scrolls down, the navbar and navbar links will be scrolled.
-    onScroll: function (event) {
+    onScroll: function () {
       // Variables
       const scrollPos = window.scrollY;
       const navbar = document.querySelector(".navbar");
@@ -93,17 +104,6 @@ export default {
         }
       });
     },
-  },
-
-  mounted() {
-    // Calls onHash method and the adds a listener to scroll
-    this.onHash();
-    window.addEventListener("scroll", this.onScroll);
-  },
-
-  beforeUnmount() {
-    // removes the listener
-    window.removeEventListener("scroll", this.onScroll);
   },
 };
 </script>

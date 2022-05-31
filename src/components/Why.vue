@@ -15,18 +15,18 @@
 <script>
 import WhyInfo from "./WhyInfo.vue";
 export default {
+  components: { WhyInfo },
   data() {
     return {
       //
     };
   },
-  methods: {
-    //
-  },
   mounted() {
     //
   },
-  components: { WhyInfo },
+  methods: {
+    //
+  },
 };
 </script>
 <style lang="scss" scoped>

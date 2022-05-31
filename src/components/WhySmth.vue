@@ -5,8 +5,8 @@
 <script>
 export default {
   data: () => ({}),
-  methods: {},
   mounted() {},
+  methods: {},
 };
 </script>
 

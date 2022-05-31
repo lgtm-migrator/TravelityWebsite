@@ -22,7 +22,7 @@
   </v-container>
 </template>
 <script>
-import Parallax from 'parallax-js';
+import Parallax from "parallax-js";
 export default {
   mounted() {
     this.HomePara(); // Calls HomePara method
@@ -31,8 +31,8 @@ export default {
   methods: {
     // Start a instance of Parallax
     HomePara: function () {
-      let scene = document.getElementById('scene');
-      let pInstance = new Parallax(scene, {
+      let scene = document.getElementById("scene");
+      new Parallax(scene, {
         relativeInput: true,
       });
     },
@@ -41,7 +41,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 // Imports
-@import 'vuetify/lib/styles/settings/_variables.scss';
+@import "vuetify/lib/styles/settings/_variables.scss";
 
 /*
 Parallax scene
@@ -62,7 +62,7 @@ Clouds
   position: absolute;
   top: 150px;
   left: 400px;
-  background-image: url('');
+  background-image: url("");
 }
 
 @media #{map-get($display-breakpoints, 'sm')} {
@@ -70,7 +70,7 @@ Clouds
     position: absolute;
     top: 80px;
     left: 180px;
-    background-image: url('');
+    background-image: url("");
   }
 }
 
@@ -78,7 +78,7 @@ Clouds
   position: absolute;
   top: 200px;
   left: 300px;
-  background-image: url('');
+  background-image: url("");
 }
 
 @media #{map-get($display-breakpoints, 'sm')} {
@@ -86,7 +86,7 @@ Clouds
     position: absolute;
     top: 200px;
     left: 150px;
-    background-image: url('');
+    background-image: url("");
   }
 }
 
@@ -94,7 +94,7 @@ Clouds
   position: absolute;
   top: -50px;
   left: 800px;
-  background-image: url('');
+  background-image: url("");
 }
 
 @media #{map-get($display-breakpoints, 'sm')} {
@@ -102,7 +102,7 @@ Clouds
     position: absolute;
     top: -50px;
     left: 340px;
-    background-image: url('');
+    background-image: url("");
   }
 }
 /*

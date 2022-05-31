@@ -23,8 +23,8 @@ import Contact from "./ContactForm.vue";
 export default {
   components: { Contact, TeamBoxes, MobileContact },
   data: () => ({}),
-  methods: {},
   mounted() {},
+  methods: {},
 };
 </script>
 <style lang="scss" scoped>

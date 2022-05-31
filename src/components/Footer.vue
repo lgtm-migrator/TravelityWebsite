@@ -18,8 +18,8 @@
 <script>
 export default {
   data: () => ({}),
-  methods: {},
   mounted() {},
+  methods: {},
 };
 </script>
 <style lang="scss" scoped>

@@ -43,8 +43,8 @@ export default {
         {
           header: "Photo share",
           text:
-            'Yes, the old "we take your photos scheme". Well, the only time we "take" your photos if you allow us, we do not take anything without our' +
-            " user's permission. This is only to show people how their trip can look like.",
+            'Yes, the old "we take your photos scheme". Well, the only time we "take" your photos is when you allow us, we do not take anything without our' +
+            " user's permission. Also this is only to show people how their trip can look like.",
           value: 4,
         },
         {
@@ -56,8 +56,8 @@ export default {
       ],
     };
   },
-  methods: {},
   mounted() {},
+  methods: {},
 };
 </script>
 

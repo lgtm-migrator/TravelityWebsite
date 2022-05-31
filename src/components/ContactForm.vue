@@ -1,40 +1,40 @@
 <template>
   <v-form
+    ref="form"
     class="form d-flex flex-column align-start"
     align="end"
-    ref="form"
     @submit="submit"
   >
     <v-text-field
+      v-model="name"
       label="Name"
       name="name"
       type="text"
       :rules="[rules.requiredName]"
       :counter="0"
       :value="name"
-      v-model="name"
       class="inputWidth"
     ></v-text-field>
     <v-text-field
+      v-model="email"
       name="email"
       :rules="[rules.requiredEmail, rules.email]"
       :value="email"
-      v-model="email"
       label="Email"
       class="inputWidth"
     ></v-text-field>
     <v-text-field
+      v-model="honey"
       name="honey"
       class="honey"
       :value="honey"
-      v-model="honey"
     ></v-text-field>
     <v-textarea
+      v-model="message"
       name="message"
       :rules="[rules.requiredMessage, rules.counter]"
       counter
       :value="message"
-      v-model="message"
       label="Message"
       class="inputWidth"
       no-resize
@@ -95,6 +95,17 @@ export default {
       },
     };
   },
+  watch: {
+    // Watching loader state change
+    loader() {
+      const l = this.loader;
+      this[l] = !this[l];
+
+      setTimeout(() => (this[l] = false), 3000);
+
+      this.loader = null;
+    },
+  },
 
   methods: {
     // This is the code that sends the form data to the server.
@@ -127,17 +138,6 @@ export default {
       this.$refs.form.reset(); // resets form fields
       this.v$.$reset(); // resets dirty check return
       this.honey = ""; // sets honey fleid to empty, otherwise it will be type null
-    },
-  },
-  watch: {
-    // Watching loader state change
-    loader() {
-      const l = this.loader;
-      this[l] = !this[l];
-
-      setTimeout(() => (this[l] = false), 3000);
-
-      this.loader = null;
     },
   },
 };

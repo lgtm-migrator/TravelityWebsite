@@ -15,7 +15,7 @@
         </div>
       </v-row>
     </v-container>
-    <v-container fluid id="about" class="spaceing_for_about c-height about" tag="section">
+    <v-container id="about" fluid class="spaceing_for_about c-height about" tag="section">
       <v-row justify="center">
         <div class="sky-container-under">
           <canvas id="sky-under"></canvas>
@@ -23,12 +23,12 @@
         <About />
       </v-row>
     </v-container>
-    <v-container fluid id="whyus" class="spaceing_for_info c-height whyus" tag="section">
+    <v-container id="whyus" fluid class="spaceing_for_info c-height whyus" tag="section">
       <Why />
     </v-container>
     <v-container
-      fluid
       id="team"
+      fluid
       class="spaceing_for_team c-height team d-flex align-center"
       tag="section"
     >

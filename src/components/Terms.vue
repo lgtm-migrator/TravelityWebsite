@@ -296,8 +296,8 @@ export default {
     BToM,
   },
   data: () => ({}),
-  methods: {},
   mounted() {},
+  methods: {},
 };
 </script>
 

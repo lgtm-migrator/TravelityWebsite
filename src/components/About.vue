@@ -15,18 +15,18 @@
 <script>
 import AboutInfo from "./AboutInfo.vue";
 export default {
+  components: { AboutInfo },
   data() {
     return {
       //
     };
   },
-  methods: {
-    //
-  },
   mounted() {
     //
   },
-  components: { AboutInfo },
+  methods: {
+    //
+  },
 };
 </script>
 <style lang="scss" scoped>

@@ -12,8 +12,8 @@
 <script>
 export default {
   data: () => ({}),
-  methods: {},
   mounted() {},
+  methods: {},
 };
 </script>
 
@@ -22,7 +22,7 @@ export default {
 Misc.
 */
 div {
-  font-family: 'Karla', sans-serif;
+  font-family: "Karla", sans-serif;
   height: 100%;
 }
 /*
@@ -39,7 +39,7 @@ Underline hover
 }
 
 .slide-center-out:after {
-  content: '';
+  content: "";
   display: block;
   height: 3px;
   width: 0;

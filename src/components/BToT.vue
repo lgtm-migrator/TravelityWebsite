@@ -4,38 +4,38 @@
 <script>
 export default {
   data: () => ({}),
-  methods: {
-    // A function that will be called when the user clicks the button.
-    backToTop() {
-      // Variables
-      const btn = document.querySelector('#back');
-      const scrollPos = window.scrollY;
-
-      // Checks scrollPos
-      if (scrollPos > 300) {
-        btn.classList.add('btn-show');
-      } else {
-        btn.classList.remove('btn-show');
-      }
-
-      // Adds listener to button
-      btn.addEventListener('click', function (e) {
-        window.scrollTo({
-          top: 0,
-          behavior: 'smooth',
-        });
-      });
-    },
-  },
 
   mounted() {
     // Adds scroll listener
-    window.addEventListener('scroll', this.backToTop);
+    window.addEventListener("scroll", this.backToTop);
   },
 
   beforeUnmount() {
     // Removes listener
-    window.removeEventListener('scroll', this.backToTop);
+    window.removeEventListener("scroll", this.backToTop);
+  },
+  methods: {
+    // A function that will be called when the user clicks the button.
+    backToTop() {
+      // Variables
+      const btn = document.querySelector("#back");
+      const scrollPos = window.scrollY;
+
+      // Checks scrollPos
+      if (scrollPos > 300) {
+        btn.classList.add("btn-show");
+      } else {
+        btn.classList.remove("btn-show");
+      }
+
+      // Adds listener to button
+      btn.addEventListener("click", function (e) {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      });
+    },
   },
 };
 </script>
