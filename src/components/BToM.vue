@@ -1,5 +1,5 @@
 <template>
-  ><router-link id="back" :to="{ name: 'Home' }"
+  <router-link id="back" :to="{ name: 'Home' }"
     ><v-icon>mdi-arrow-left-thick</v-icon></router-link
   >
 </template>

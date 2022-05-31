@@ -21,12 +21,12 @@
     <p>
       The following terminology applies to these Terms and Conditions, Privacy Statement
       and Disclaimer Notice and all Agreets: “Client”, “You”, and “Your” refers to you,
-      the person log on this website and compliant to the Service’s terms and conditions.
+      the person log on this website and compliant to the Service's terms and conditions.
       “The Service”, “Ourselves”, “We”, “Our”, and “Us”, refers to our Service. “Party”,
       “Parties”, or “Us”, refers to both the Client and ourselves. All terms refer to the
       offer, acceptance and consideration of payment necessary to undertake the process of
       our assistance to the Client in the most appropriate manner for the express purpose
-      of meeting the Client’s needs in respect of provision of the Service’s stated
+      of meeting the Client's needs in respect of provision of the Service's stated
       service, in accordance with and subject to, prevailing law of Netherlands. Any use
       of the terminology or other words in the singular, plural, capitalization and/or
       he/she or they, are taken as interchangeable and therefore as referring to the same.
@@ -34,10 +34,10 @@
     <br />
     <p class="header">Age Requirement</p>
     <p>
-      If you’re under the age of 18, you must have your legal guardian’s permission to use
-      the Service. Please have your legal guardian read these terms with you. If you’re a
+      If you're under the age of 18, you must have your legal guardian's permission to use
+      the Service. Please have your legal guardian read these terms with you. If you're a
       legal guardian, and you allow your child to use the services, then these Agreements
-      apply to you and you’re responsible for your child’s activity on the Service.
+      apply to you and you're responsible for your child's activity on the Service.
     </p>
     <br />
     <p class="header">Content of the Service</p>
@@ -127,7 +127,7 @@
       You are responsible for the security of your account, we recommend that you choose a
       strong password and only use it for this one. We cannot and will not be held liable
       for the loss or damage caused by you. We do not recommend sharing your password with
-      anyone that you don’t trust that this can violate our policy.
+      anyone that you don't trust that this can violate our policy.
     </p>
     <br />
     <p class="header">
@@ -219,7 +219,7 @@
       These organizations may link to our home page, to publications or to other App information so long as the link:
       (a) is not in any way deceptive;
       (b) does not falsely imply sponsorship, endorsement or approval of the linking party and its products and/or services; and
-      (c) fits within the context of the linking party’s site.
+      (c) fits within the context of the linking party's site.
       <ul>We may consider and approve other link requests from the following types of organizations:
         <li>Commonly-known consumer and/or business information sources;</li>
         <li>dot.com community sites;</li>
@@ -239,7 +239,7 @@
         These organizations may link to our App so long as the link:
         (a) is not in any way deceptive;
         (b) does not falsely imply sponsorship, endorsement or approval of the linking party and its products or services; and
-        (c) fits within the context of the linking party’s site.
+        (c) fits within the context of the linking party's site.
         If you are one of the organizations listed in paragraph 2 above and are interested in linking to our App,
         you must inform us by sending an email to the Service. Please include your name, your organization name,
         contact information as well as the URL of your site, a list of any URLs from which you intend to link to our App,
@@ -249,7 +249,7 @@
         <ul>Approved organizations may hyperlink to our App as follows:
           <li>By use of our corporate name; or</li>
           <li>By use of the uniform resource locator being linked to; or</li>
-          <li>By use of any other description of our App being linked to that makes sense within the context and format of content on the linking party’s site.</li>
+          <li>By use of any other description of our App being linked to that makes sense within the context and format of content on the linking party's site.</li>
         </ul>
         No use of the Service's logo or other artwork will be allowed for linking absent a trademark license agreement.
     </p>

@@ -3,9 +3,9 @@
     <v-row class="align-left">
       <v-cols cols="12">
         <div class="d-none d-md-flex">
-          <div class="header_styling">
+          <header class="header_styling">
             <h3>About us</h3>
-          </div>
+          </header>
         </div>
         <AboutInfo />
       </v-cols>

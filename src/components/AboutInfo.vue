@@ -4,9 +4,9 @@
       <div v-for="option in options" :key="option.value">
         <v-card class="styling">
           <v-card-title class="justify-center">
-            <div class="text-center">
+            <header class="text-center">
               <h5>{{ option.header }}</h5>
-            </div>
+            </header>
           </v-card-title>
           <v-card-text>
             {{ option.text }}
