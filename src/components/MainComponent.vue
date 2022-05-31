@@ -40,11 +40,11 @@
   </v-row>
 </template>
 <script>
-import Team from "./Team.vue";
-import Why from "./Why.vue";
-import About from "./About.vue";
-import Home from "./Home.vue";
-import FooterVue from "./Footer.vue";
+import Team from "./TeamComponent.vue";
+import Why from "./WhyComponent.vue";
+import About from "./AboutComponent.vue";
+import Home from "./HomeComponent.vue";
+import FooterVue from "./FooterComponent.vue";
 import NavBar from "./NavBar.vue";
 import BToT from "./BToT.vue";
 import { createClouds } from "../assets/js/clouds";
